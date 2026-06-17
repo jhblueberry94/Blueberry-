@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open -a Terminal \"/Users/joshhuggins/Documents/Documents/Business/Blueberry Media/Blueberry Media Claude\")"
+    ]
+  }
+}
