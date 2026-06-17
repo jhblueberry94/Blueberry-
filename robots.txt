@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blueberry-media.co.uk/sitemap.xml

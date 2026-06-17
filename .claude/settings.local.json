@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(open -a Terminal \"/Users/joshhuggins/Documents/Documents/Business/Blueberry Media/Blueberry Media Claude\")"
+      "Bash(open -a Terminal \"/Users/joshhuggins/Documents/Documents/Business/Blueberry Media/Blueberry Media Claude\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
