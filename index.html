@@ -62,10 +62,10 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-orb hero-orb-purple"></div>
-  <div class="hero-orb hero-orb-pink"></div>
-  <div class="hero-content">
+<section class="hero" style="position:relative;overflow:hidden">
+  <div style="position:absolute;top:-150px;left:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(105,90,255,0.12) 0%,transparent 65%);pointer-events:none;z-index:0;animation:pulseOrb 6s ease-in-out infinite;"></div>
+  <div style="position:absolute;bottom:-150px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,92,174,0.09) 0%,transparent 65%);pointer-events:none;z-index:0;animation:pulseOrb 6s ease-in-out infinite;animation-delay:-3s;"></div>
+  <div class="hero-content" style="position:relative;z-index:1">
     <div class="animate-fade-in-up stagger-1">
       <span class="badge-glow" style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:50px;font-size:13px;font-weight:500;color:#695AFF;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
@@ -252,24 +252,34 @@
     <h2 class="section-heading scroll-reveal">Trusted by <span class="gradient-text">experienced leaders</span></h2>
     <p class="body-text scroll-reveal" style="margin-bottom:48px">Hover to hear what they have to say</p>
     <div class="testimonials-grid scroll-reveal">
-      <div class="testimonial-card" data-story="story-norm">
+      <div class="testimonial-card" id="card-norm">
         <img src="/images/testimonial-norm.avif" alt="Norm Wilkinson">
-        <div class="testimonial-overlay"></div>
+        <div class="gradient-overlay"></div>
         <div class="stat-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           3,500% increase in visibility in 30 days
         </div>
-        <div class="testimonial-quote">
+        <div class="card-bottom">
           <div class="hover-quote">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <div class="stars">
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
             <blockquote>"What we've managed to achieve in 30 days is remarkable."</blockquote>
           </div>
-          <div class="testimonial-author">
+          <div class="card-divider"></div>
+          <div class="card-meta">
             <div>
-              <span class="author-name">Norm Wilkinson</span>
-              <span class="author-role">CEO, Consultant. Ex-IBM Leader</span>
+              <p class="author-name">Norm Wilkinson</p>
+              <p class="author-role">CEO, Consultant. Ex-IBM Leader</p>
             </div>
-            <button class="view-story-btn">View story</button>
+            <button class="view-story-btn" onclick="toggleStory('norm')">
+              View story
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
           </div>
         </div>
       </div>
@@ -278,30 +288,40 @@
         <p>Let's review your current strategy and where you want to be, no commitment.</p>
         <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener" class="btn-primary" style="font-size:14px;">Book a Call &rarr;</a>
       </div>
-      <div class="testimonial-card" data-story="story-mark">
+      <div class="testimonial-card" id="card-mark">
         <img src="/images/testimonial-mark.jpg" alt="Mark Balaam">
-        <div class="testimonial-overlay"></div>
+        <div class="gradient-overlay"></div>
         <div class="stat-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           173% growth in CEO connections
         </div>
-        <div class="testimonial-quote">
+        <div class="card-bottom">
           <div class="hover-quote">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <div class="stars">
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
             <blockquote>"It was a real pleasure working with you all."</blockquote>
           </div>
-          <div class="testimonial-author">
+          <div class="card-divider"></div>
+          <div class="card-meta">
             <div>
-              <span class="author-name">Mark Balaam</span>
-              <span class="author-role">Founder CEO, Imabi</span>
+              <p class="author-name">Mark Balaam</p>
+              <p class="author-role">Founder CEO, Imabi</p>
             </div>
-            <button class="view-story-btn">View story</button>
+            <button class="view-story-btn" onclick="toggleStory('mark')">
+              View story
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- Story panels -->
-    <div class="story-panel" id="story-norm">
+    <div class="story-panel" id="story-norm" style="display:none">
       <img src="/images/testimonial-norm.avif" alt="Norm Wilkinson">
       <div>
         <span class="story-eyebrow">CLIENT STORY, CONSULTING</span>
@@ -319,7 +339,7 @@
         <blockquote>"Considering what we've managed to achieve in such a short amount of time, from a 40-minute call, is quite remarkable."</blockquote>
       </div>
     </div>
-    <div class="story-panel" id="story-mark">
+    <div class="story-panel" id="story-mark" style="display:none">
       <img src="/images/testimonial-mark.jpg" alt="Mark Balaam">
       <div>
         <span class="story-eyebrow">CLIENT STORY, EDTECH &amp; SAAS</span>
@@ -364,12 +384,11 @@
 </section>
 
 <!-- CTA SECTION -->
-<section class="cta-section grain" style="background:#0E0E44">
-  <div class="cta-orb"></div>
+<section class="cta-section">
   <div class="container scroll-reveal">
     <h2 class="section-heading">Your market is researching your point of view. Make sure they're the <span class="gradient-text">right ones</span>.</h2>
     <p class="body-large" style="margin-bottom:36px">Book a free 30-minute call. We'll look at where you are, where you want to be, and whether we're the right fit to get you there. No pitch, no pressure.</p>
-    <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener" class="btn-primary" style="box-shadow:0 0 60px -15px rgba(105,90,255,0.5)">Book a Call &rarr;</a>
+    <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call &rarr;</a>
   </div>
 </section>
 

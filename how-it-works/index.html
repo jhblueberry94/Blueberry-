@@ -55,120 +55,140 @@
   </div>
 </section>
 
-<section style="padding:80px 0 0;background:#fff">
+<section style="padding:80px 0;background:#fff">
   <div class="container">
-    <div class="timeline-callout scroll-reveal">
-      <p>Most clients are live with content within 10 days of their first call. The average time commitment is under two hours per month.</p>
+
+    <div style="background:#EEEDFE;border-radius:12px;padding:24px 32px;max-width:640px;margin:0 auto 64px;text-align:center">
+      <p style="font-size:15px;font-weight:500;color:#0E0E44">Most clients are live with content within 10 days of their first call. The average time commitment is under two hours per month.</p>
     </div>
+
+    <div style="display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start">
+
+      <!-- Left nav -->
+      <div class="process-nav">
+        <div class="process-step-btn active" onclick="setStep(0)">
+          <span class="step-num">01</span>
+          <span class="step-title">Strategy &amp; ICP Alignment</span>
+        </div>
+        <div class="process-step-btn" onclick="setStep(1)">
+          <span class="step-num">02</span>
+          <span class="step-title">The Content Interview</span>
+        </div>
+        <div class="process-step-btn" onclick="setStep(2)">
+          <span class="step-num">03</span>
+          <span class="step-title">Create &amp; Refine</span>
+        </div>
+        <div class="process-step-btn" onclick="setStep(3)">
+          <span class="step-num">04</span>
+          <span class="step-title">Distribute &amp; Build Visibility</span>
+        </div>
+      </div>
+
+      <!-- Right panels -->
+      <div>
+        <div class="process-panel active" id="panel-0">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <div style="width:36px;height:36px;border-radius:50%;background:#695AFF;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;flex-shrink:0">01</div>
+            <p style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF">Weeks 1 to 2</p>
+          </div>
+          <h3 style="font-size:22px;font-weight:600;color:#0E0E44;letter-spacing:-0.02em;margin-bottom:12px">Strategy &amp; ICP Alignment</h3>
+          <p style="font-size:15px;color:rgba(14,14,68,0.65);line-height:1.7;margin-bottom:24px">The foundation everything else is built on. We define exactly who you are talking to, what you stand for, and how your content should feel, before a single post goes live.</p>
+          <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF;margin-bottom:14px">What's included</p>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px">
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Business and audience analysis</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Ideal Client Profile mapping</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Narrative and messaging framework</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Content territory definition</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Channel and cadence planning</li>
+          </ul>
+        </div>
+
+        <div class="process-panel" id="panel-1" style="display:none">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <div style="width:36px;height:36px;border-radius:50%;background:#695AFF;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;flex-shrink:0">02</div>
+            <p style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF">Every 2 weeks</p>
+          </div>
+          <h3 style="font-size:22px;font-weight:600;color:#0E0E44;letter-spacing:-0.02em;margin-bottom:12px">The Content Interview</h3>
+          <p style="font-size:15px;color:rgba(14,14,68,0.65);line-height:1.7;margin-bottom:24px">A structured 45-minute recorded conversation every two weeks. We send questions in advance. You talk naturally. We record, transcribe, and extract everything.</p>
+          <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF;margin-bottom:14px">What's included</p>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px">
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Questions sent 48 hours in advance</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>No scripting, no prep required</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Full recording and transcript</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Content extraction and ideation</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Asset planning for the next two weeks</li>
+          </ul>
+        </div>
+
+        <div class="process-panel" id="panel-2" style="display:none">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <div style="width:36px;height:36px;border-radius:50%;background:#695AFF;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;flex-shrink:0">03</div>
+            <p style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF">Within 14 days</p>
+          </div>
+          <h3 style="font-size:22px;font-weight:600;color:#0E0E44;letter-spacing:-0.02em;margin-bottom:12px">Create &amp; Refine</h3>
+          <p style="font-size:15px;color:rgba(14,14,68,0.65);line-height:1.7;margin-bottom:24px">We edit, write, and polish everything in your voice, not ours. Posts, video clips, articles, newsletter copy, all produced from a single conversation.</p>
+          <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF;margin-bottom:14px">What's included</p>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px">
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>LinkedIn posts 3 to 4 per week</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Short-form video clips</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Newsletter or article content</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Your review and approval</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Unlimited refinements to voice</li>
+          </ul>
+        </div>
+
+        <div class="process-panel" id="panel-3" style="display:none">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <div style="width:36px;height:36px;border-radius:50%;background:#695AFF;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;flex-shrink:0">04</div>
+            <p style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF">Ongoing, every month</p>
+          </div>
+          <h3 style="font-size:22px;font-weight:600;color:#0E0E44;letter-spacing:-0.02em;margin-bottom:12px">Distribute &amp; Build Visibility</h3>
+          <p style="font-size:15px;color:rgba(14,14,68,0.65);line-height:1.7;margin-bottom:24px">We publish at optimal times, manage connection outreach to your ICP, track performance, and send a monthly report. You stay visible without lifting a finger.</p>
+          <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF;margin-bottom:14px">What's included</p>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px">
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Scheduled publishing and optimisation</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>ICP connection outreach</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Engagement monitoring</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Monthly performance report</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Strategy refinement based on data</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="padding:80px 0 0">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-heading" style="margin-bottom:40px;margin-top:8px">About the process.</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What happens on the first call?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+          <div class="faq-answer"><p>The first session is a 90-minute onboarding conversation. We cover your goals, your audience, your content pillars, and what you want LinkedIn to do commercially. You leave knowing exactly what we're building and why.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How much time will this take from me?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+          <div class="faq-answer"><p>After onboarding, the ongoing commitment is one 45-minute Content Call every two weeks. We send questions in advance so there is no prep required. Everything else we handle.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How quickly will content go live?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+          <div class="faq-answer"><p>First content is live within 10 days of your onboarding call. From that point posts go out consistently every week.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What if I want to make changes?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+          <div class="faq-answer"><p>You approve everything before it goes live. If something does not sound right we refine it until it does. Your voice is the whole point.</p></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section style="background:#fff;padding:40px 0 96px">
-  <div class="container">
-
-    <div class="phase">
-      <div class="phase-inner scroll-reveal">
-        <div>
-          <div class="phase-number">01</div>
-          <h3>Strategy and onboarding</h3>
-          <p>We start with a 90-minute onboarding session covering your goals, your audience, and your three content pillars. We build your initial content framework and give you a clear picture of what the first 90 days will look like. You leave knowing exactly what we're building and why.</p>
-          <p style="margin-top:16px;font-size:14px;color:rgba(14,14,68,0.5)">Time required from you: 90 minutes, once.</p>
-        </div>
-        <div style="background:#EEEDFE;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:flex-start;gap:16px">
-            <span style="width:32px;height:32px;border-radius:50%;background:#695AFF;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</span>
-            <div>
-              <strong style="font-size:14px;color:#0E0E44;display:block;margin-bottom:4px">Goals review</strong>
-              <p style="font-size:13px;color:rgba(14,14,68,0.6);line-height:1.6">We map your commercial objectives to a content strategy. Pipeline, hiring, partnerships, or reputation: each requires a different mix.</p>
-            </div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px">
-            <span style="width:32px;height:32px;border-radius:50%;background:#695AFF;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</span>
-            <div>
-              <strong style="font-size:14px;color:#0E0E44;display:block;margin-bottom:4px">Audience and ICP definition</strong>
-              <p style="font-size:13px;color:rgba(14,14,68,0.6);line-height:1.6">We define who you're talking to so every post is written with the right reader in mind.</p>
-            </div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px">
-            <span style="width:32px;height:32px;border-radius:50%;background:#695AFF;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</span>
-            <div>
-              <strong style="font-size:14px;color:#0E0E44;display:block;margin-bottom:4px">Three content pillars</strong>
-              <p style="font-size:13px;color:rgba(14,14,68,0.6);line-height:1.6">Market, Service, Personal: your framework for showing up consistently without running out of things to say.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="phase">
-      <div class="phase-inner reverse scroll-reveal">
-        <div>
-          <div class="phase-number">02</div>
-          <h3>The content call</h3>
-          <p>Every two weeks, a 45-minute recorded conversation. We send you three to five questions in advance so you know the territory. On the call, we explore your thinking on a theme, a market shift, a recent experience, or a point of view. It's a natural conversation, not an interview.</p>
-          <p style="margin-top:16px;font-size:14px;color:rgba(14,14,68,0.5)">Time required from you: 45 minutes, every two weeks.</p>
-        </div>
-        <div style="background:#0E0E44;border-radius:16px;padding:32px">
-          <p style="font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.4);margin-bottom:20px">Example question types</p>
-          <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:16px;font-size:14px;color:rgba(255,255,255,0.8);line-height:1.6">"What's one thing your best clients understand about [your market] that most people get wrong?"</div>
-            <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:16px;font-size:14px;color:rgba(255,255,255,0.8);line-height:1.6">"What did you learn from a recent client engagement that surprised you?"</div>
-            <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:16px;font-size:14px;color:rgba(255,255,255,0.8);line-height:1.6">"Where do you think your industry is heading in the next two years, and why?"</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="phase">
-      <div class="phase-inner scroll-reveal">
-        <div>
-          <div class="phase-number">03</div>
-          <h3>Content production and approval</h3>
-          <p>We take the recording and extract everything useful. Your language, your thinking, your specific examples. We shape it into posts that sound exactly like you, because they come directly from you. You receive a draft schedule for review, with the option to approve, adjust, or flag anything.</p>
-          <p style="margin-top:16px;font-size:14px;color:rgba(14,14,68,0.5)">Time required from you: 10 to 20 minutes per review cycle.</p>
-        </div>
-        <div style="border:0.5px solid rgba(14,14,68,0.1);border-radius:16px;padding:32px">
-          <p style="font-size:13px;font-weight:600;color:#0E0E44;margin-bottom:16px">What we produce per call</p>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>6 to 8 LinkedIn posts</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>One long-form carousel or document post (Growth+)</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>Newsletter draft (Growth+)</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>Video clip scripts (Authority)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="phase" style="border-bottom:none">
-      <div class="phase-inner reverse scroll-reveal">
-        <div>
-          <div class="phase-number">04</div>
-          <h3>Publishing, outreach, and reporting</h3>
-          <p>We publish your content on schedule, monitor engagement, and manage any outreach programme included in your package. Every month, you receive a clear report covering impressions, profile views, connection growth, and any inbound activity linked to your content. If something needs adjusting, we tell you and we fix it.</p>
-          <p style="margin-top:16px;font-size:14px;color:rgba(14,14,68,0.5)">Time required from you: zero. We handle this entirely.</p>
-        </div>
-        <div style="background:#EEEDFE;border-radius:16px;padding:32px">
-          <p style="font-size:13px;font-weight:600;color:#0E0E44;margin-bottom:16px">Monthly report covers</p>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>Total impressions and reach</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>Engagement rate by post type</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>Profile view growth</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>New ICP connections added</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,14,68,0.75)"><span style="width:8px;height:8px;border-radius:50%;background:#695AFF;flex-shrink:0"></span>Inbound enquiries and signals</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="cta-section grain">
-  <div class="cta-orb"></div>
-  <div class="container scroll-reveal">
-    <h2 class="section-heading">See the process in action.</h2>
-    <p class="body-large" style="margin-bottom:36px">Book a free 30-minute call. We'll walk through your current presence, your goals, and show you exactly what the first 30 days would look like.</p>
-    <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener" class="btn-primary">Book a Free Call &rarr;</a>
+<section class="cta-section" style="background:#0E0E44;border-top:none">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(105,90,255,0.2) 0%,transparent 70%);pointer-events:none"></div>
+  <div class="container scroll-reveal" style="position:relative;z-index:1">
+    <h2 class="section-heading" style="color:#fff;margin-bottom:20px">Your market is researching your point of view. Make sure they're the right ones.</h2>
+    <p class="body-large" style="color:rgba(255,255,255,0.7);margin-bottom:36px">Book a free 30-minute call. We'll look at where you are, where you want to be, and whether we're the right fit to get you there. No pitch, no pressure.</p>
+    <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call &rarr;</a>
   </div>
 </section>
 

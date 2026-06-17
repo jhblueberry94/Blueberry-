@@ -88,26 +88,35 @@ if (tabBtns.length) {
 }
 
 // Testimonial story panels
-const testimonialCards = document.querySelectorAll('.testimonial-card[data-story]');
-const storyPanelsAll = document.querySelectorAll('.story-panel');
-testimonialCards.forEach((card) => {
-  const viewBtn = card.querySelector('.view-story-btn');
-  if (viewBtn) {
-    viewBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const storyId = card.dataset.story;
-      const panel = document.getElementById(storyId);
-      const isActive = card.classList.contains('active');
-      testimonialCards.forEach(c => c.classList.remove('active'));
-      storyPanelsAll.forEach(p => { p.style.display = 'none'; });
-      if (!isActive && panel) {
-        card.classList.add('active');
-        panel.style.display = 'grid';
-        panel.style.animation = 'storyFadeUp 0.3s ease-out forwards';
-      }
-    });
+function toggleStory(person) {
+  const normCard = document.getElementById('card-norm');
+  const markCard = document.getElementById('card-mark');
+  const normPanel = document.getElementById('story-norm');
+  const markPanel = document.getElementById('story-mark');
+  if (person === 'norm') {
+    const isOpen = normCard && normCard.classList.contains('active');
+    if (normCard) normCard.classList.toggle('active', !isOpen);
+    if (markCard) markCard.classList.remove('active');
+    if (normPanel) { normPanel.style.display = isOpen ? 'none' : 'grid'; if (!isOpen) normPanel.style.animation = 'storyFadeUp 0.3s ease-out forwards'; }
+    if (markPanel) markPanel.style.display = 'none';
+  } else {
+    const isOpen = markCard && markCard.classList.contains('active');
+    if (markCard) markCard.classList.toggle('active', !isOpen);
+    if (normCard) normCard.classList.remove('active');
+    if (markPanel) { markPanel.style.display = isOpen ? 'none' : 'grid'; if (!isOpen) markPanel.style.animation = 'storyFadeUp 0.3s ease-out forwards'; }
+    if (normPanel) normPanel.style.display = 'none';
   }
-});
+}
+
+// Process step accordion (how-it-works page)
+function setStep(index) {
+  document.querySelectorAll('.process-step-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+  });
+  document.querySelectorAll('.process-panel').forEach((panel, i) => {
+    panel.style.display = i === index ? 'block' : 'none';
+  });
+}
 
 // FAQ accordion
 document.querySelectorAll('.faq-item').forEach(item => {
