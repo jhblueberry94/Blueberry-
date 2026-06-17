@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "blueberry-site",
+      "runtimeExecutable": "/usr/local/bin/python3.12",
+      "runtimeArgs": ["/Users/joshhuggins/Documents/Documents/Business/Blueberry Media/Blueberry Media Claude/serve.py"],
+      "port": 3456
+    }
+  ]
+}
