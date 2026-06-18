@@ -6,170 +6,500 @@
 <title>LinkedIn Ghostwriting Agency UK | Done-For-You LinkedIn Content | Blueberry Media</title>
 <meta name="description" content="Blueberry Media is a UK LinkedIn ghostwriting agency for B2B founders and business owners. Done-for-you LinkedIn thought leadership that builds pipeline.">
 <link rel="canonical" href="https://blueberry-media.co.uk/services">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"LinkedIn Thought Leadership Service","provider":{"@type":"Organization","name":"Blueberry Media","url":"https://blueberry-media.co.uk"},"serviceType":"LinkedIn Ghostwriting and Thought Leadership","areaServed":"United Kingdom","description":"Done-for-you LinkedIn content creation for B2B founders and executives, including content calls, post writing, profile optimisation, outreach management, and monthly reporting."}
-</script>
+<meta name="geo.region" content="GB-BRK">
+<meta name="geo.placename" content="Berkshire">
+<meta property="og:title" content="Services | Blueberry Media">
+<meta property="og:description" content="Done-for-you LinkedIn thought leadership for B2B founders and business owners.">
+<meta property="og:url" content="https://blueberry-media.co.uk/services">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://blueberry-media.co.uk/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"LinkedIn Thought Leadership","provider":{"@type":"Organization","name":"Blueberry Media"},"areaServed":"United Kingdom","description":"Done-for-you LinkedIn thought leadership for B2B founders and business owners."}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#0E0E44;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.section-heading{font-size:clamp(26px,3.5vw,40px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;line-height:1.2}
+.body-large{font-size:clamp(15px,1.4vw,18px);color:rgba(14,14,68,0.6);line-height:1.75}
+.eyebrow{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.18em;color:rgba(14,14,68,0.4)}
+.gradient-text{background:linear-gradient(135deg,#0E0E44,#695AFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#0E0E44,#695AFF);color:#fff;padding:14px 28px;border-radius:10px;font-weight:500;font-size:15px;font-family:'Poppins',sans-serif;border:none;cursor:pointer;transition:opacity 0.2s,transform 0.2s;text-decoration:none}
+.btn-primary:hover{opacity:0.9;transform:translateY(-1px)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid #0E0E44;color:#0E0E44;padding:13px 28px;border-radius:10px;font-weight:500;font-size:15px;font-family:'Poppins',sans-serif;cursor:pointer;transition:background 0.2s;text-decoration:none}
+.btn-outline:hover{background:rgba(14,14,68,0.05)}
+
+.container{max-width:1120px;margin:0 auto;padding:0 48px}
+@media(max-width:768px){.container{padding:0 24px}}
+
+.grain{position:relative}
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:0.03;pointer-events:none;mix-blend-mode:overlay;z-index:0}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:0.5px solid rgba(14,14,68,0.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1120px;margin:0 auto;padding:0 48px}
+.nav-logo img{height:48px;width:auto}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#695AFF}
+.nav-right{display:flex;align-items:center;gap:24px}
+.nav-right .faq-link{font-size:14px;font-weight:500;color:rgba(14,14,68,0.6)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.mobile-menu{display:none;position:fixed;inset:0;top:72px;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);z-index:99;padding:32px 24px;flex-direction:column;gap:8px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:18px;font-weight:500;color:#0E0E44;padding:12px 0;border-bottom:0.5px solid rgba(14,14,68,0.08)}
+.mobile-menu .btn-primary{margin-top:16px;justify-content:center}
+@media(max-width:900px){.nav-links,.nav-right .faq-link,.nav-right .btn-primary{display:none}.hamburger{display:block}}
+
+/* Animations */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.stagger-1{transition-delay:0.1s}.stagger-2{transition-delay:0.2s}.stagger-3{transition-delay:0.3s}
+
+/* Hero */
+#hero{background:#0E0E44;padding:140px 0 80px;position:relative;overflow:hidden}
+.hero-orb-s{position:absolute;border-radius:50%;pointer-events:none}
+.hero-orb-s1{width:600px;height:600px;top:-120px;right:-120px;background:radial-gradient(circle,rgba(105,90,255,0.28) 0%,transparent 60%)}
+.hero-orb-s2{width:400px;height:400px;bottom:-80px;left:-60px;background:radial-gradient(circle,rgba(255,92,174,0.15) 0%,transparent 60%)}
+.hero-content{position:relative;z-index:1;max-width:720px}
+.hero-content .tag{display:inline-block;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.5);margin-bottom:16px}
+.hero-content h1{font-size:clamp(36px,4.5vw,56px);font-weight:600;color:#fff;letter-spacing:-0.03em;line-height:1.15;margin-bottom:20px}
+.hero-content h1 span{background:linear-gradient(135deg,#695AFF,#FF5CAE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-content p{font-size:17px;color:rgba(255,255,255,0.65);line-height:1.75;max-width:580px}
+
+/* Services grid */
+#services-grid{padding:80px 0}
+.services-intro{max-width:640px;margin-bottom:56px}
+.services-intro h2{margin-bottom:16px}
+
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.card-grid{grid-template-columns:1fr}}
+
+.service-card{background:#fff;border:1px solid rgba(14,14,68,0.1);border-radius:16px;padding:32px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform 0.35s ease,border-color 0.35s ease,box-shadow 0.35s ease;cursor:default}
+.service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(105,90,255,0.05) 0%,transparent 60%);opacity:0;transition:opacity 0.35s ease;pointer-events:none}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 24px 64px -12px rgba(14,14,68,0.15);border-color:rgba(105,90,255,0.35)}
+.service-card:hover::before{opacity:1}
+.service-card.card-pink:hover{border-color:rgba(255,92,174,0.4);box-shadow:0 24px 64px -12px rgba(255,92,174,0.15)}
+.service-card.card-pink::before{background:linear-gradient(135deg,rgba(255,92,174,0.05) 0%,transparent 60%)}
+.service-card.card-navy:hover{border-color:rgba(14,14,68,0.3);box-shadow:0 24px 64px -12px rgba(14,14,68,0.15)}
+.service-card.card-navy::before{background:linear-gradient(135deg,rgba(14,14,68,0.04) 0%,transparent 60%)}
+
+.card-bar{height:3px;border-radius:3px;margin-bottom:28px;transition:width 0.3s ease}
+.card-bar-purple{background:#695AFF}
+.card-bar-pink{background:#FF5CAE}
+.card-bar-navy{background:#0E0E44}
+
+.card-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
+.card-label-purple{color:#695AFF}
+.card-label-pink{color:#FF5CAE}
+.card-label-navy{color:#0E0E44}
+
+.service-card h3{font-size:20px;font-weight:600;color:#0E0E44;letter-spacing:-0.02em;margin-bottom:14px;line-height:1.3}
+.service-card .desc{font-size:14px;color:rgba(14,14,68,0.65);line-height:1.75;margin-bottom:24px}
+.tick-list{list-style:none;margin-bottom:24px;flex:1}
+.tick-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(14,14,68,0.7);margin-bottom:10px;line-height:1.55}
+.tick-list li svg{flex-shrink:0;margin-top:1px}
+.card-stat{margin-top:auto;padding-top:20px;border-top:0.5px solid rgba(14,14,68,0.07)}
+.card-stat-num{font-size:38px;font-weight:700;letter-spacing:-0.03em;line-height:1}
+.card-stat-label{font-size:12px;color:rgba(14,14,68,0.45);margin-top:4px}
+
+/* Lavender banner */
+.lavender-banner{background:#EEEDFE;border-radius:12px;padding:18px 28px;text-align:center;margin-top:24px}
+.lavender-banner p{font-size:14px;font-weight:500;color:#0E0E44}
+
+/* Partnership section */
+#partnership{padding:80px 0;background:#f8f8fb}
+.partnership-inner{max-width:720px;margin:0 auto;text-align:center}
+.partnership-inner h2{margin-bottom:20px}
+.partnership-inner p{font-size:16px;color:rgba(14,14,68,0.65);line-height:1.8;margin-bottom:16px}
+.partnership-inner p:last-of-type{margin-bottom:32px}
+
+/* FAQ */
+#faq{padding:80px 0;background:#fff}
+.faq-inner{max-width:720px;margin:0 auto}
+.faq-list{margin-top:40px}
+.faq-item{border-bottom:0.5px solid rgba(14,14,68,0.09)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:16px;font-weight:500;color:#0E0E44;background:none;border:none;cursor:pointer;font-family:'Poppins',sans-serif;text-align:left;gap:16px}
+.faq-chevron{flex-shrink:0;transition:transform 0.3s;color:#695AFF}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease-out}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding-bottom:20px;font-size:15px;color:rgba(14,14,68,0.65);line-height:1.75}
+
+/* CTA */
+#cta{padding:96px 0;background:linear-gradient(135deg,rgba(105,90,255,0.07) 0%,rgba(105,90,255,0.04) 50%,rgba(255,92,174,0.06) 100%);border-top:0.5px solid rgba(105,90,255,0.12);border-bottom:0.5px solid rgba(105,90,255,0.08);position:relative;overflow:hidden}
+.cta-orb{position:absolute;border-radius:50%;pointer-events:none}
+.cta-orb-1{width:500px;height:500px;top:-100px;right:-100px;background:radial-gradient(circle,rgba(105,90,255,0.1) 0%,transparent 65%)}
+.cta-orb-2{width:350px;height:350px;bottom:-80px;left:-60px;background:radial-gradient(circle,rgba(255,92,174,0.07) 0%,transparent 65%)}
+.cta-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;text-align:center}
+.cta-inner h2{font-size:clamp(26px,3vw,38px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;line-height:1.25;margin-bottom:20px}
+.cta-inner p{font-size:16px;color:rgba(14,14,68,0.6);line-height:1.75;margin-bottom:36px}
+.cta-glow{box-shadow:0 0 60px -15px rgba(105,90,255,0.35)}
+
+/* Footer */
+footer{background:#0E0E44;padding:64px 0 32px;border-top:0.5px solid rgba(255,255,255,0.06)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:0.5px solid rgba(255,255,255,0.1)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+.footer-logo img{height:44px;width:auto;filter:brightness(0) invert(1);margin-bottom:16px}
+.footer-tagline{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:320px}
+.footer-col h4{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.35);margin-bottom:20px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);transition:color 0.2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-cta-link{font-size:15px;color:#fff;display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s}
+.footer-cta-link:hover{gap:10px}
+.footer-bottom{padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.35)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.35);transition:color 0.2s}
+.footer-links a:hover{color:rgba(255,255,255,0.7)}
+
+/* ── Mobile optimisation ── */
+@media(max-width:768px){
+
+  /* Hero */
+  #hero{padding:110px 0 56px}
+  .hero-content h1{font-size:32px;line-height:1.2}
+  .hero-content p{font-size:15px}
+  .hero-orb-s1{width:300px;height:300px;top:-60px;right:-60px}
+  .hero-orb-s2{width:200px;height:200px;bottom:-40px;left:-30px}
+
+  /* Services intro */
+  .services-intro{margin-bottom:36px}
+  .services-intro h2{font-size:26px}
+
+  /* Cards — single column, no hover lift on touch */
+  .card-grid{grid-template-columns:1fr;gap:16px}
+  .service-card{padding:24px}
+  .service-card:hover{transform:none;box-shadow:none}
+  .card-stat-num{font-size:30px}
+
+  /* Lavender banner */
+  .lavender-banner{padding:16px 20px;margin-top:16px}
+  .lavender-banner p{font-size:13px}
+
+  /* Partnership */
+  #partnership{padding:56px 0}
+  .partnership-inner{text-align:left}
+  .partnership-inner h2{font-size:24px}
+  .partnership-inner p{font-size:15px}
+  .partnership-inner .btn-primary{width:100%;justify-content:center}
+
+  /* FAQ */
+  #faq{padding:0 0 56px}
+  .faq-heading{font-size:24px}
+  .faq-q{font-size:15px;padding:18px 0}
+
+  /* CTA */
+  #cta{padding:64px 0}
+  .cta-inner h2{font-size:24px}
+  .cta-inner p{font-size:15px}
+  .cta-inner .btn-primary{width:100%;justify-content:center}
+
+  /* Footer */
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:16px}
+  .footer-links{flex-wrap:wrap;gap:12px}
+}
+
+@media(max-width:480px){
+  .hero-content h1{font-size:28px}
+  .service-card h3{font-size:17px}
+  .card-stat-num{font-size:26px}
+}
+</style>
 </head>
 <body>
 
-<nav id="nav">
+<!-- NAV -->
+<nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media" height="56"></a>
-    <ul class="nav-links">
-      <li><a href="/services">Services</a></li>
-      <li><a href="/how-it-works">Our Process</a></li>
-      <li><a href="/who-its-for">Who It's For</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/blog">Blog</a></li>
-    </ul>
-    <div class="nav-right">
-      <a href="/faq" class="nav-faq">FAQ</a>
-      <a href="/contact" class="btn-primary">Start a Conversation</a>
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media"></a>
+    <div class="nav-links">
+      <a href="/services" class="active">Services</a>
+      <a href="/how-it-works">Our Process</a>
+      <a href="/who-its-for">Who It's For</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
     </div>
-    <button id="menu-btn" aria-label="Open menu" aria-expanded="false">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect y="4" width="24" height="2" fill="#0E0E44"/><rect y="11" width="24" height="2" fill="#0E0E44"/><rect y="18" width="24" height="2" fill="#0E0E44"/></svg>
+    <div class="nav-right">
+      <a href="/faq" class="faq-link">FAQ</a>
+      <a href="/contact" class="btn-primary" style="padding:10px 22px;font-size:14px;border-radius:50px">Start a Conversation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-  </div>
-  <div id="mobile-menu">
-    <ul>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/how-it-works">Our Process</a></li>
-      <li><a href="/who-its-for">Who It's For</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/faq">FAQ</a></li>
-      <li><a href="/contact" class="btn-primary">Start a Conversation</a></li>
-    </ul>
   </div>
 </nav>
 
-<section class="page-hero grain">
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/services">Services</a>
+  <a href="/how-it-works">Our Process</a>
+  <a href="/who-its-for">Who It's For</a>
+  <a href="/about">About</a>
+  <a href="/blog">Blog</a>
+  <a href="/faq">FAQ</a>
+  <a href="/contact" class="btn-primary">Start a Conversation</a>
+</div>
+
+<!-- HERO -->
+<section id="hero" class="grain">
+  <div class="hero-orb-s hero-orb-s1"></div>
+  <div class="hero-orb-s hero-orb-s2"></div>
   <div class="container">
-    <span class="eyebrow" style="color:rgba(255,255,255,0.5)">What we do</span>
-    <h1 class="editorial-heading">Done-for-you LinkedIn thought leadership.</h1>
-    <p>We turn a 45-minute recorded conversation into weeks of content that builds your authority, warms your pipeline, and puts you in front of the buyers who matter.</p>
+    <div class="hero-content fade-up">
+      <p class="tag">What we do</p>
+      <h1>Done-for-you LinkedIn<br>thought leadership.</h1>
+      <p>We turn a 45-minute recorded conversation into weeks of content that builds your authority, warms your pipeline, and puts you in front of the buyers who matter.</p>
+    </div>
   </div>
 </section>
 
-<section style="padding:80px 0;background:#fff">
-  <div style="max-width:1100px;margin:0 auto;padding:0 48px">
-    <p style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF;margin-bottom:12px" class="scroll-reveal">What we do</p>
-    <h2 class="section-heading scroll-reveal">Three ways we build your visibility.</h2>
-    <p class="body-large scroll-reveal" style="max-width:580px;margin-top:12px">Each service works independently. Together they build a compounding content and pipeline engine.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px" class="scroll-reveal">
+<!-- SERVICES GRID -->
+<section id="services-grid">
+  <div class="container">
+    <div class="services-intro fade-up">
+      <p class="eyebrow">The Leader Content Engine</p>
+      <h2 class="section-heading" style="margin-top:12px">Three ways we build your visibility.</h2>
+      <p class="body-large" style="margin-top:12px">Each service works independently. Together they build a compounding content and pipeline engine.</p>
+    </div>
+
+    <div class="card-grid">
 
       <!-- Card 1 -->
-      <div style="background:#fff;border:0.5px solid rgba(14,14,68,0.08);border-radius:16px;padding:32px;display:flex;flex-direction:column">
-        <div style="height:3px;border-radius:3px;margin-bottom:28px;background:#695AFF"></div>
-        <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#695AFF;margin-bottom:8px">Leader Content</p>
-        <h3 style="font-size:20px;font-weight:600;color:#0E0E44;letter-spacing:-0.01em;margin-bottom:12px">Leader LinkedIn Content</h3>
-        <p style="font-size:14px;color:rgba(14,14,68,0.65);line-height:1.7;margin-bottom:24px">A bi-weekly 45-minute recorded conversation turned into 10 or more content assets per session: posts, clips, articles, all published in your voice without taking all your time.</p>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>10+ assets per call</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Video clips and written posts</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>ICP-aligned content strategy</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Posting, scheduling and optimisation</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Monthly performance reporting</li>
+      <div class="service-card fade-up">
+        <div class="card-bar card-bar-purple"></div>
+        <p class="card-label card-label-purple">Leader Content</p>
+        <h3>Leader LinkedIn Content</h3>
+        <p class="desc">A bi-weekly 45-minute recorded conversation turned into 10 or more content assets per session: posts, clips, articles, all published in your voice without taking all your time.</p>
+        <ul class="tick-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>10+ assets per call</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Video clips and written posts</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>ICP-aligned content strategy</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Posting, scheduling and optimisation</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Monthly performance reporting</li>
         </ul>
-        <div style="margin-top:auto;padding-top:24px;border-top:0.5px solid rgba(14,14,68,0.08)">
-          <p style="font-size:36px;font-weight:700;color:#695AFF;letter-spacing:-0.02em;line-height:1">3,600%</p>
-          <p style="font-size:12px;color:rgba(14,14,68,0.5);margin-top:4px">visibility increase in 30 days</p>
+        <div class="card-stat">
+          <p class="card-stat-num" style="color:#695AFF">3,600%</p>
+          <p class="card-stat-label">visibility increase in 30 days</p>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div style="background:#fff;border:0.5px solid rgba(14,14,68,0.08);border-radius:16px;padding:32px;display:flex;flex-direction:column">
-        <div style="height:3px;border-radius:3px;margin-bottom:28px;background:#FF5CAE"></div>
-        <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#FF5CAE;margin-bottom:8px">Growth &amp; Outreach</p>
-        <h3 style="font-size:20px;font-weight:600;color:#0E0E44;letter-spacing:-0.01em;margin-bottom:12px">LinkedIn Growth &amp; Outreach</h3>
-        <p style="font-size:14px;color:rgba(14,14,68,0.65);line-height:1.7;margin-bottom:24px">Daily ICP connection requests and a personalised message sequence that turns familiarity into real conversations, all while your content is putting you front of mind.</p>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5CAE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Daily ICP connection requests</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5CAE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>3 to 4 message personalised sequence</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5CAE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>ICP list building and targeting</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5CAE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Conversation tracking and warm handoff</li>
+      <div class="service-card card-pink fade-up stagger-1">
+        <div class="card-bar card-bar-pink"></div>
+        <p class="card-label card-label-pink">Growth & Outreach</p>
+        <h3>LinkedIn Growth & Outreach</h3>
+        <p class="desc">Daily ICP connection requests and a personalised message sequence that turns familiarity into real conversations, all while your content is putting you front of mind.</p>
+        <ul class="tick-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5CAE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Daily ICP connection requests</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5CAE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>3 to 4 message personalised sequence</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5CAE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>ICP list building and targeting</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5CAE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Conversation tracking and warm handoff</li>
         </ul>
-        <div style="margin-top:auto;padding-top:24px;border-top:0.5px solid rgba(14,14,68,0.08)">
-          <p style="font-size:36px;font-weight:700;color:#FF5CAE;letter-spacing:-0.02em;line-height:1">173%</p>
-          <p style="font-size:12px;color:rgba(14,14,68,0.5);margin-top:4px">CEO network growth in 12 months</p>
+        <div class="card-stat">
+          <p class="card-stat-num" style="color:#FF5CAE">173%</p>
+          <p class="card-stat-label">CEO network growth in 12 months</p>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div style="background:#fff;border:0.5px solid rgba(14,14,68,0.08);border-radius:16px;padding:32px;display:flex;flex-direction:column">
-        <div style="height:3px;border-radius:3px;margin-bottom:28px;background:#0E0E44"></div>
-        <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#0E0E44;margin-bottom:8px">Omnichannel</p>
-        <h3 style="font-size:20px;font-weight:600;color:#0E0E44;letter-spacing:-0.01em;margin-bottom:12px">Omnichannel Distribution</h3>
-        <p style="font-size:14px;color:rgba(14,14,68,0.65);line-height:1.7;margin-bottom:24px">One conversation repurposed into email marketing, website articles, newsletters and more. This goes beyond thought-leadership and builds commercial infrastructure.</p>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Email newsletter strategy and execution</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>LinkedIn newsletter distribution</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>SEO website articles and blogs</li>
-          <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.7);margin-bottom:10px"><svg style="flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>One source, whole business</li>
+      <div class="service-card card-navy fade-up stagger-2">
+        <div class="card-bar card-bar-navy"></div>
+        <p class="card-label card-label-navy">Omnichannel</p>
+        <h3>Omnichannel Distribution</h3>
+        <p class="desc">One conversation repurposed into email marketing, website articles, newsletters and more. This goes beyond thought-leadership and builds commercial infrastructure.</p>
+        <ul class="tick-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Email newsletter strategy and execution</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>LinkedIn newsletter distribution</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>SEO website articles and blogs</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>One source, whole business</li>
         </ul>
-        <div style="margin-top:auto;padding-top:24px;border-top:0.5px solid rgba(14,14,68,0.08)">
-          <p style="font-size:36px;font-weight:700;color:#0E0E44;letter-spacing:-0.02em;line-height:1">2+ days</p>
-          <p style="font-size:12px;color:rgba(14,14,68,0.5);margin-top:4px">saved on content admin every month</p>
+        <div class="card-stat">
+          <p class="card-stat-num" style="color:#0E0E44">2+ days</p>
+          <p class="card-stat-label">saved on content admin every month</p>
         </div>
       </div>
 
     </div>
 
-    <div style="background:#EEEDFE;border-radius:12px;padding:20px 32px;text-align:center;margin-top:24px">
-      <p style="font-size:14px;font-weight:500;color:#0E0E44">Each service works independently. Together they build a compounding content and pipeline engine.</p>
-    </div>
-
-    <div style="padding:64px 0;text-align:center;max-width:640px;margin:0 auto">
-      <h2 class="section-heading" style="margin-bottom:16px">Simple, flexible pricing.</h2>
-      <p class="body-large" style="margin-bottom:32px">The Leader Content Engine starts from £600 per month and scales to £2,000 or more depending on scope. Contracts are monthly rolling with 30 days notice to cancel. No long-term commitments, no setup fees.</p>
-      <a href="/contact" class="btn-primary">Let's talk about what's right for you &rarr;</a>
+    <div class="lavender-banner fade-up" style="margin-top:24px">
+      <p>Each service works independently. Together they build a compounding content and pipeline engine.</p>
     </div>
   </div>
 </section>
 
-<section class="cta-section" style="background:#0E0E44;border-top:none">
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(105,90,255,0.2) 0%,transparent 70%);pointer-events:none"></div>
-  <div class="container scroll-reveal" style="position:relative;z-index:1">
-    <h2 class="section-heading" style="color:#fff;margin-bottom:20px">Your market is researching your point of view. Make sure they're the right ones.</h2>
-    <p class="body-large" style="color:rgba(255,255,255,0.7);margin-bottom:36px">Book a free 30-minute call. We'll look at where you are, where you want to be, and whether we're the right fit to get you there. No pitch, no pressure.</p>
-    <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call &rarr;</a>
+<!-- HOW WE WORK TOGETHER -->
+<section id="partnership" class="grain">
+  <div class="container">
+    <div class="partnership-inner fade-up">
+      <p class="eyebrow" style="color:#695AFF;margin-bottom:16px">How we work</p>
+      <h2 class="section-heading">A working relationship, not a subscription.</h2>
+      <p style="font-size:16px;color:rgba(14,14,68,0.65);line-height:1.8;margin-top:20px">We work with a small number of founders and leaders on an ongoing monthly basis. We get to know your voice, your market, and what you're building — and that understanding compounds over time.</p>
+      <p style="font-size:16px;color:rgba(14,14,68,0.65);line-height:1.8;">Monthly rolling, 30 days notice. No lock-ins, no setup fees. We stay because it's working.</p>
+      <div style="margin-top:32px">
+        <a href="/contact" class="btn-primary">Let's talk about what's right for you →</a>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-inner">
+      <p class="eyebrow fade-up" style="color:#695AFF">FAQ</p>
+      <h2 class="section-heading fade-up stagger-1" style="margin-top:12px">Questions we hear on every call.</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q">
+            How much time will this actually take from me?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p class="faq-a-inner">Very little. Once we've done your initial strategy session, the ongoing commitment is a 45-minute recorded conversation every two weeks. We send you the questions in advance so you can have a think, but there's no scripting or prep required. You join like a normal call, talk naturally, and we handle everything from there: writing, editing, posting, and reporting.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Will the content actually sound like me?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p class="faq-a-inner">Yes, because it comes directly from you. We extract content from your words and your thinking in a recorded conversation, not from a brief or a template. You review everything before it goes live and we refine until it feels right. One client described it as "quite remarkable what you can get from a 40-minute conversation."</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            How quickly will I see results?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p class="faq-a-inner">Visibility builds from the first post. Meaningful commercial momentum — inbound enquiries, warmer sales conversations, people reaching out — typically follows at 60 to 90 days. One client saw a 3,600% increase in visibility within the first 30 days. We track and report monthly so you always know what's working.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Does LinkedIn actually drive pipeline or is it just vanity metrics?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p class="faq-a-inner">It depends entirely on how you use it. Follower counts and likes don't build pipeline. Consistent, credible content that reaches your ICP before they're ready to buy — and keeps you visible while they're deciding — does. That's the difference between vanity and commercial visibility. We focus on the latter.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            We're not sure LinkedIn is the right channel for our industry.
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p class="faq-a-inner">If your buyers are professionals or business owners of any kind, they are on LinkedIn. The question isn't whether the channel works — it's whether your content is good enough to earn their attention. That's what we build. The discovery call is the right place to test whether LinkedIn makes sense for your specific situation.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            What's the contract commitment?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p class="faq-a-inner">Monthly rolling with 30 days notice. No long-term lock-ins, no setup fees, no exit penalties. We work this way because we'd rather earn your business every month than hold you to a contract.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Can we start with just one service and add more later?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><p class="faq-a-inner">Yes. Most clients start with Leader LinkedIn Content as the foundation, then add Growth & Outreach or Omnichannel Distribution once the content engine is running and they can see what's working. We'll talk through what makes sense for your stage on the discovery call.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-orb cta-orb-1"></div>
+  <div class="cta-orb cta-orb-2"></div>
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <h2>Your market is researching your point of view. Make sure they're the right ones.</h2>
+      <p>Book a free 30-minute call. We'll look at where you are, where you want to be, and whether we're the right fit to get you there. No pitch, no pressure.</p>
+      <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener noreferrer" class="btn-primary cta-glow">Book a Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="/images/logo.png" alt="Blueberry Media" height="48" style="filter:brightness(0) invert(1);margin-bottom:16px;display:block">
-      <p>We help founders and executives turn their ideas into high-quality content that builds trust, authority, and commercial momentum.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="/images/logo.png" alt="Blueberry Media"></div>
+        <p class="footer-tagline">We help founders and executives turn their ideas into high-quality content that builds trust, authority, and commercial momentum.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/how-it-works">Our Process</a></li>
+          <li><a href="/who-its-for">Who It's For</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <a href="/contact" class="footer-cta-link">
+          Start a Conversation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
     </div>
-    <div class="footer-nav">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/how-it-works">Our Process</a></li>
-        <li><a href="/who-its-for">Who It's For</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </div>
-    <div class="footer-contact">
-      <h4>Get in Touch</h4>
-      <a href="/contact" class="footer-cta">Start a Conversation &rarr;</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 Blueberry Media Digital Ltd. All rights reserved.</span>
-    <div class="footer-bottom-links">
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-      <a href="/berkshire">LinkedIn Agency, Berkshire</a>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Blueberry Media Digital Ltd. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/berkshire">LinkedIn Agency, Berkshire</a>
+      </div>
     </div>
   </div>
 </footer>
 
-<script src="/js/main.js"></script>
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = '0';
+      const ch = i.querySelector('.faq-chevron');
+      if(ch) ch.style.transform = 'rotate(0deg)';
+    });
+    if(!open){
+      item.classList.add('open');
+      const ans = item.querySelector('.faq-a');
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+      const ch = item.querySelector('.faq-chevron');
+      if(ch) ch.style.transform = 'rotate(180deg)';
+    }
+  });
+});
+</script>
 </body>
 </html>
