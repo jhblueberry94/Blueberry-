@@ -3,186 +3,288 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Blueberry Media | LinkedIn Thought Leadership Agency UK</title>
-<meta name="description" content="Blueberry Media is a UK LinkedIn thought leadership agency founded by Josh Huggins. We help B2B founders and executives build visibility, trust, and pipeline.">
+<title>About | Blueberry Media | LinkedIn Thought Leadership Agency</title>
+<meta name="description" content="Meet the team behind Blueberry Media. A decade helping B2B founders and leaders turn their expertise into LinkedIn content that builds trust and pipeline.">
 <link rel="canonical" href="https://blueberry-media.co.uk/about">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Blueberry Media","url":"https://blueberry-media.co.uk","logo":"https://blueberry-media.co.uk/images/logo.png","foundingDate":"2022","founder":{"@type":"Person","name":"Josh Huggins"},"address":{"@type":"PostalAddress","addressLocality":"Hungerford","addressRegion":"Berkshire","addressCountry":"GB"},"description":"LinkedIn thought leadership agency for B2B founders and executives."}
-</script>
+<meta property="og:title" content="About | Blueberry Media">
+<meta property="og:url" content="https://blueberry-media.co.uk/about">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://blueberry-media.co.uk/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#0E0E44;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.gradient-text{background:linear-gradient(135deg,#0E0E44,#695AFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}#hero .gradient-text{background:none;-webkit-text-fill-color:#fff;color:#fff}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#0E0E44,#695AFF);color:#fff;padding:14px 28px;border-radius:10px;font-weight:500;font-size:15px;font-family:'Poppins',sans-serif;border:none;cursor:pointer;transition:opacity 0.2s,transform 0.2s;text-decoration:none}
+.btn-primary:hover{opacity:0.9;transform:translateY(-1px)}
+.container{max-width:1120px;margin:0 auto;padding:0 48px}
+@media(max-width:768px){.container{padding:0 24px}}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.s1{transition-delay:0.1s}.s2{transition-delay:0.2s}.s3{transition-delay:0.3s}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);border-bottom:0.5px solid rgba(14,14,68,0.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1120px;margin:0 auto;padding:0 48px}
+.nav-logo img{height:48px;width:auto;min-width:120px}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#695AFF}
+.nav-right{display:flex;align-items:center;gap:24px}
+.faq-link{font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s}
+.faq-link:hover{color:#695AFF}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.mobile-menu{display:none;position:fixed;inset:0;top:72px;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);z-index:99;padding:32px 24px;flex-direction:column;gap:8px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:18px;font-weight:500;color:#0E0E44;padding:12px 0;border-bottom:0.5px solid rgba(14,14,68,0.08)}
+.mobile-menu .btn-primary{margin-top:16px;justify-content:center}
+@media(max-width:900px){.nav-links,.faq-link,.nav-right .btn-primary{display:none}.hamburger{display:block}}
+
+/* Hero */
+#hero{background:#0E0E44;padding:140px 0 80px;position:relative;overflow:hidden}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none}
+.hero-orb-1{width:600px;height:600px;top:-100px;right:-100px;background:radial-gradient(circle,rgba(105,90,255,0.28) 0%,transparent 65%)}
+.hero-orb-2{width:400px;height:400px;bottom:-80px;left:-80px;background:radial-gradient(circle,rgba(255,92,174,0.15) 0%,transparent 65%)}
+.hero-inner{position:relative;z-index:1;max-width:720px}
+.hero-tag{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.5);margin-bottom:16px}
+.hero-inner h1{font-size:clamp(32px,3.8vw,48px);font-weight:600;color:#fff;letter-spacing:-0.03em;line-height:1.15;margin-bottom:20px}
+.hero-inner p{font-size:17px;color:rgba(255,255,255,0.65);line-height:1.75;max-width:580px}
+
+/* Story */
+#story{padding:72px 0 80px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:900px){.story-grid{grid-template-columns:1fr;gap:40px}}
+.story-body p{font-size:15px;color:rgba(14,14,68,0.65);line-height:1.8;margin-bottom:18px}
+.story-body p:last-child{margin-bottom:0}
+.story-body h2{font-size:clamp(24px,3vw,34px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;margin-bottom:24px}
+.beliefs-card{background:#f8f8fb;border:0.5px solid rgba(14,14,68,0.09);border-radius:16px;padding:36px}
+.beliefs-card h3{font-size:20px;font-weight:600;color:#0E0E44;margin-bottom:28px;letter-spacing:-0.02em}
+.belief{padding-bottom:20px;margin-bottom:20px;border-bottom:0.5px solid rgba(14,14,68,0.08)}
+.belief:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.belief h4{font-size:14px;font-weight:600;color:#0E0E44;margin-bottom:6px}
+.belief p{font-size:13px;color:rgba(14,14,68,0.55);line-height:1.7}
+
+/* Josh card */
+#meet-josh{padding:0 0 80px}
+.josh-card{background:#0E0E44;border-radius:20px;padding:48px;display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start;position:relative;overflow:hidden}
+@media(max-width:768px){.josh-card{grid-template-columns:1fr;gap:28px;padding:32px}}
+.josh-card-orb{position:absolute;width:400px;height:400px;top:-80px;right:-80px;background:radial-gradient(circle,rgba(105,90,255,0.2) 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.josh-img{position:relative;z-index:1;border-radius:14px;overflow:hidden;aspect-ratio:3/4}
+.josh-img img{width:100%;height:100%;object-fit:cover;object-position:top}
+.josh-content{position:relative;z-index:1}
+.josh-eyebrow{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.4);margin-bottom:12px}
+.josh-content h2{font-size:clamp(22px,2.5vw,32px);font-weight:600;color:#fff;letter-spacing:-0.03em;line-height:1.25;margin-bottom:16px}
+.josh-content p{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:14px}
+.josh-content p:last-of-type{margin-bottom:28px}
+.josh-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.josh-tag{background:rgba(255,255,255,0.08);border:0.5px solid rgba(255,255,255,0.15);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.7)}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0E0E44;padding:12px 24px;border-radius:10px;font-weight:500;font-size:14px;font-family:'Poppins',sans-serif;text-decoration:none;transition:opacity 0.2s}
+.btn-white:hover{opacity:0.9}
+
+/* CTA */
+#cta{padding:96px 0;background:linear-gradient(135deg,rgba(105,90,255,0.07) 0%,rgba(105,90,255,0.04) 50%,rgba(255,92,174,0.06) 100%);border-top:0.5px solid rgba(105,90,255,0.12);border-bottom:0.5px solid rgba(105,90,255,0.08)}
+.cta-inner{max-width:620px;margin:0 auto;text-align:center}
+.cta-inner h2{font-size:clamp(24px,3vw,36px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;line-height:1.25;margin-bottom:16px}
+.cta-inner p{font-size:16px;color:rgba(14,14,68,0.6);line-height:1.75;margin-bottom:32px}
+
+/* Footer */
+footer{background:#0E0E44;padding:64px 0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:0.5px solid rgba(255,255,255,0.1)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+.footer-logo img{height:44px;width:auto;filter:brightness(0) invert(1);margin-bottom:16px}
+.footer-tagline{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:320px}
+.footer-col h4{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.35);margin-bottom:20px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);transition:color 0.2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-cta-link{font-size:15px;color:#fff;display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s}
+.footer-cta-link:hover{gap:10px}
+.footer-bottom{padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.35)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.35);transition:color 0.2s}
+.footer-links a:hover{color:rgba(255,255,255,0.7)}
+
+@media(max-width:768px){
+  #hero{padding:110px 0 56px}
+  .hero-inner h1{font-size:28px;color:#fff}
+  #story{padding:0 0 56px}
+  #meet-josh{padding:0 0 56px}
+  #cta{padding:64px 0}
+  .cta-inner .btn-primary{width:100%;justify-content:center}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
 </head>
 <body>
 
-<nav id="nav">
+<nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media" height="56"></a>
-    <ul class="nav-links">
-      <li><a href="/services">Services</a></li>
-      <li><a href="/how-it-works">Our Process</a></li>
-      <li><a href="/who-its-for">Who It's For</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/blog">Blog</a></li>
-    </ul>
-    <div class="nav-right">
-      <a href="/faq" class="nav-faq">FAQ</a>
-      <a href="/contact" class="btn-primary">Start a Conversation</a>
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media"></a>
+    <div class="nav-links">
+      <a href="/services">Services</a>
+      <a href="/how-it-works">Our Process</a>
+      <a href="/who-its-for">Who It's For</a>
+      <a href="/about" class="active">About</a>
+      <a href="/blog">Blog</a>
     </div>
-    <button id="menu-btn" aria-label="Open menu" aria-expanded="false">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect y="4" width="24" height="2" fill="#0E0E44"/><rect y="11" width="24" height="2" fill="#0E0E44"/><rect y="18" width="24" height="2" fill="#0E0E44"/></svg>
+    <div class="nav-right">
+      <a href="/faq" class="faq-link">FAQ</a>
+      <a href="/contact" class="btn-primary" style="padding:10px 22px;font-size:14px;border-radius:50px">Start a Conversation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-  </div>
-  <div id="mobile-menu">
-    <ul>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/how-it-works">Our Process</a></li>
-      <li><a href="/who-its-for">Who It's For</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/faq">FAQ</a></li>
-      <li><a href="/contact" class="btn-primary">Start a Conversation</a></li>
-    </ul>
   </div>
 </nav>
 
-<section class="page-hero grain">
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/services">Services</a>
+  <a href="/how-it-works">Our Process</a>
+  <a href="/who-its-for">Who It's For</a>
+  <a href="/about">About</a>
+  <a href="/blog">Blog</a>
+  <a href="/faq">FAQ</a>
+  <a href="/contact" class="btn-primary">Start a Conversation</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
   <div class="container">
-    <span class="eyebrow" style="color:rgba(255,255,255,0.5)">About us</span>
-    <h1 class="editorial-heading">We believe the best content comes from real conversations.</h1>
-    <p>Blueberry Media is a small, focused team based in Berkshire. We work directly with founders and senior leaders who want to build genuine authority on LinkedIn.</p>
+    <div class="hero-inner">
+      <p class="hero-tag fade-up">About us</p>
+      <h1 class="fade-up s1">We believe the best content comes from real conversations.</h1>
+      <p class="fade-up s2">Blueberry Media is a small, focused team based in Berkshire. We work directly with founders and senior leaders who want to build genuine authority on LinkedIn.</p>
+    </div>
   </div>
 </section>
 
-<section class="section" style="background:#fff">
+<!-- STORY -->
+<section id="story">
   <div class="container">
-    <div class="story-grid scroll-reveal">
-      <div class="story-text">
-        <span class="eyebrow">Our story</span>
-        <p>Blueberry Media started from a simple observation: the founders and leaders with the most valuable insight to share were the ones with the least time to share it. They knew LinkedIn mattered. They had plenty to say. But between running a business and everything that comes with it, content was always the thing that got pushed back.</p>
-        <p>We built a process that removes that friction entirely. A short recorded conversation every two weeks is all we need. Everything else, the writing, the scheduling, the reporting, is handled by us. The result is a consistent LinkedIn presence that sounds authentically like the leader, because it comes directly from them.</p>
-        <p>We work with a deliberately small number of clients so every relationship gets proper attention. Josh Huggins leads every account personally. There are no account managers standing between you and the work.</p>
+    <div class="story-grid">
+      <div class="story-body fade-up">
+        <h2>Our story</h2>
+        <p>Most content agencies treat LinkedIn like a broadcast channel. Push posts out with business updates and hope people listen.</p>
+        <p>We built Blueberry Media from a different starting point. Ten years working with leaders across boutique consultancies and enterprise organisations, learning how people form trust, build credibility, and decide who to follow and who to buy from. People have always bought from people. That's more true now than ever.</p>
+        <p>Audiences want to learn about the person behind the business. Your story, your thinking, your perspective. People and stories drive connection. Brands don't.</p>
+        <p>That is the insight Blueberry Media is built on. We take what is already in your head, formed by your experience, your frameworks, your instincts, your opinions, and turn it into content that builds the kind of familiarity and trust that shortens every sales conversation and makes people understand you.</p>
       </div>
-      <div class="story-image">
-        <img src="/images/about-photo.jpg" alt="Josh Huggins, founder of Blueberry Media">
+      <div class="beliefs-card fade-up s1">
+        <h3>What we believe</h3>
+        <div class="belief">
+          <h4>Leaders should be visible</h4>
+          <p>The most successful companies are led by visible, trusted leaders. Your voice is a competitive advantage.</p>
+        </div>
+        <div class="belief">
+          <h4>Authenticity beats performance</h4>
+          <p>Real expertise and genuine perspective will always outperform manufactured content. We help you share yours.</p>
+        </div>
+        <div class="belief">
+          <h4>Consistency compounds</h4>
+          <p>Authority isn't built overnight. Strategic, consistent content creates compounding returns over time.</p>
+        </div>
+        <div class="belief">
+          <h4>Build your unfair advantage</h4>
+          <p>You are making sales harder if nobody knows you exist. Attract warmer conversations from people who already understand what you do.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="background:#f8f8fb">
+<!-- MEET JOSH -->
+<section id="meet-josh">
   <div class="container">
-    <span class="eyebrow scroll-reveal">How we think</span>
-    <h2 class="section-heading scroll-reveal" style="margin-bottom:40px">Three principles behind everything we do.</h2>
-    <div class="principles scroll-reveal">
-      <div class="principle-card">
-        <h3>Authenticity over polish</h3>
-        <p>The most effective LinkedIn content comes from genuine thinking, specific experience, and a real point of view. We never write from a template or produce content that could belong to anyone.</p>
+    <div class="josh-card fade-up">
+      <div class="josh-card-orb"></div>
+      <div class="josh-img">
+        <img src="/images/josh-huggins.png" alt="Josh Huggins, Founder of Blueberry Media">
       </div>
-      <div class="principle-card">
-        <h3>Commercial focus</h3>
-        <p>Visibility for its own sake doesn't interest us. Every piece of content is written with a commercial outcome in mind: warmer conversations, faster trust, and a pipeline that moves.</p>
-      </div>
-      <div class="principle-card">
-        <h3>Fewer clients, better work</h3>
-        <p>We limit the number of clients we work with so we can give each one proper time and attention. You won't be handed off to a junior writer or left waiting for a response.</p>
+      <div class="josh-content">
+        <p class="josh-eyebrow">Founder & Lead Strategist</p>
+        <h2>Josh Huggins</h2>
+        <p>Josh spent a decade in people and organisation consulting, working with leaders across professional services, SaaS, and enterprise before founding Blueberry Media to help those same leaders build the visibility their work deserves.</p>
+        <p>His background in psychology and behaviour change shapes how every piece of content is structured. Not to fill a feed, but to influence how buyers think and decide before they ever reach out.</p>
+        <div class="josh-tags">
+          <span class="josh-tag">10+ years with B2B leaders</span>
+          <span class="josh-tag">Psychology & behaviour change</span>
+          <span class="josh-tag">LinkedIn strategy</span>
+          <span class="josh-tag">Berkshire, UK</span>
+        </div>
+        <a href="/contact" class="btn-white">Work with Josh →</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="background:#fff">
+<!-- CTA -->
+<section id="cta">
   <div class="container">
-    <span class="eyebrow scroll-reveal">How we compare</span>
-    <h2 class="section-heading scroll-reveal" style="margin-bottom:12px">What makes Blueberry Media different.</h2>
-    <p class="body-large scroll-reveal" style="max-width:640px;margin-bottom:40px">There are plenty of LinkedIn content services. Here's how ours differs from what most people have tried before.</p>
-    <div class="scroll-reveal" style="overflow-x:auto">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Aspect</th>
-            <th class="col-header-highlight">Blueberry Media</th>
-            <th>Typical ghostwriter</th>
-            <th>DIY or in-house</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Approach</strong></td>
-            <td class="highlight-col">Recorded conversations extracted into content. Everything comes from you.</td>
-            <td>Brief-based writing, often templated or AI-assisted.</td>
-            <td>Founder writes themselves, inconsistently, when time allows.</td>
-          </tr>
-          <tr>
-            <td><strong>Voice matching</strong></td>
-            <td class="highlight-col">Exact. Content uses your language, your examples, your thinking.</td>
-            <td>Variable. Depends heavily on brief quality.</td>
-            <td>Authentic, but rarely consistent or strategic.</td>
-          </tr>
-          <tr>
-            <td><strong>Commercial focus</strong></td>
-            <td class="highlight-col">Built into every post. We write for buyers, not likes.</td>
-            <td>Often content for engagement rather than pipeline.</td>
-            <td>Hard to maintain without a clear framework.</td>
-          </tr>
-          <tr>
-            <td><strong>Reporting</strong></td>
-            <td class="highlight-col">Monthly report tied to commercial goals, not vanity metrics.</td>
-            <td>Rarely included. Delivery is the service.</td>
-            <td>No structured reporting unless you build it yourself.</td>
-          </tr>
-          <tr>
-            <td><strong>Flexibility</strong></td>
-            <td class="highlight-col">Monthly rolling. Cancel with 30 days notice. No lock-in.</td>
-            <td>Varies. Often project-based or minimum terms.</td>
-            <td>Fully flexible, but requires ongoing time investment.</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="cta-inner fade-up">
+      <h2>Ready to <span class="gradient-text">work together</span>?</h2>
+      <p>Let's have a conversation about your starting point and see if there's alignment. No pressure, just a virtual coffee.</p>
+      <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener noreferrer" class="btn-primary">Start a Conversation →</a>
     </div>
   </div>
 </section>
 
-<section class="cta-section grain">
-  <div class="cta-orb"></div>
-  <div class="container scroll-reveal">
-    <h2 class="section-heading">Want to know if we're the right fit?</h2>
-    <p class="body-large" style="margin-bottom:36px">Book a free 30-minute call with Josh. No pitch, no pressure. Just an honest conversation about where you are and where you want to get to.</p>
-    <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener" class="btn-primary">Book a Free Call &rarr;</a>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="/images/logo.png" alt="Blueberry Media" height="48" style="filter:brightness(0) invert(1);margin-bottom:16px;display:block">
-      <p>We help founders and executives turn their ideas into high-quality content that builds trust, authority, and commercial momentum.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="/images/logo.png" alt="Blueberry Media"></div>
+        <p class="footer-tagline">We help founders and executives turn their ideas into high-quality content that builds trust, authority, and commercial momentum.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/how-it-works">Our Process</a></li>
+          <li><a href="/who-its-for">Who It's For</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <a href="/contact" class="footer-cta-link">
+          Start a Conversation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
     </div>
-    <div class="footer-nav">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/how-it-works">Our Process</a></li>
-        <li><a href="/who-its-for">Who It's For</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </div>
-    <div class="footer-contact">
-      <h4>Get in Touch</h4>
-      <a href="/contact" class="footer-cta">Start a Conversation &rarr;</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 Blueberry Media Digital Ltd. All rights reserved.</span>
-    <div class="footer-bottom-links">
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-      <a href="/berkshire">LinkedIn Agency, Berkshire</a>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Blueberry Media Digital Ltd. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/berkshire">LinkedIn Agency, Berkshire</a>
+      </div>
     </div>
   </div>
 </footer>
 
-<script src="/js/main.js"></script>
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+window.addEventListener('load', () => document.querySelectorAll('#hero .fade-up').forEach(el => el.classList.add('visible')));
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
