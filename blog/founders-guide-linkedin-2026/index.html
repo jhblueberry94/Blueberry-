@@ -13,6 +13,67 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
+<style>
+.post-cta {
+  background: #0E0E44;
+  border-radius: 16px;
+  padding: 40px 48px;
+  margin: 48px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.post-cta::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(105,90,255,0.2) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.post-cta h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+.post-cta p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.75;
+  max-width: 540px;
+  margin: 0 auto 28px;
+  position: relative;
+  z-index: 1;
+}
+.post-cta .btn-primary {
+  background: #fff !important;
+  color: #0E0E44 !important;
+  border-radius: 10px !important;
+  padding: 14px 28px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s !important;
+  position: relative;
+  z-index: 1;
+}
+.post-cta .btn-primary:hover { opacity: 0.9 !important; }
+@media(max-width: 768px) {
+  .post-cta { padding: 28px 24px; }
+  .post-cta h3 { font-size: 18px; }
+  .post-cta .btn-primary { width: 100%; justify-content: center; }
+}
+</style>
 </head>
 <body>
 
