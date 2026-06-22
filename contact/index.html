@@ -6,6 +6,24 @@
 <title>Contact Blueberry Media | Start a Conversation</title>
 <meta name="description" content="Get in touch with Blueberry Media. Book a free 30-minute call or send us a message to find out if our LinkedIn thought leadership service is right for you.">
 <link rel="canonical" href="https://blueberry-media.co.uk/contact">
+<meta name="geo.region" content="GB-BRK">
+<meta name="geo.placename" content="Berkshire">
+<meta property="og:title" content="Contact Blueberry Media | Start a Conversation">
+<meta property="og:description" content="Get in touch with Blueberry Media. Book a free 30-minute call or send us a message to find out if our LinkedIn thought leadership service is right for you.">
+<meta property="og:url" content="https://blueberry-media.co.uk/contact">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://blueberry-media.co.uk/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Blueberry Media | Start a Conversation">
+<meta name="twitter:description" content="Get in touch with Blueberry Media. Book a free 30-minute call or send us a message to find out if our LinkedIn thought leadership service is right for you.">
+<meta name="twitter:image" content="https://blueberry-media.co.uk/images/og-image.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M5HFCWPMKY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-M5HFCWPMKY');
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ContactPage","name":"Contact Blueberry Media","url":"https://blueberry-media.co.uk/contact","mainEntity":{"@type":"Organization","name":"Blueberry Media","email":"josh@blueberry-media.co.uk","url":"https://blueberry-media.co.uk","address":{"@type":"PostalAddress","addressLocality":"Hungerford","addressRegion":"Berkshire","addressCountry":"GB"}}}
 </script>
@@ -106,7 +124,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="/images/logo.png" alt="Blueberry Media" height="48" style="filter:brightness(0) invert(1);margin-bottom:16px;display:block">
-      <p>We help founders and executives turn their ideas into high-quality content that builds trust, authority, and commercial momentum.</p>
+      <p>We help B2B founders build LinkedIn visibility that gets them on buyer shortlists before the first conversation starts.</p>
     </div>
     <div class="footer-nav">
       <h4>Navigation</h4>
@@ -115,6 +133,8 @@
         <li><a href="/how-it-works">Our Process</a></li>
         <li><a href="/who-its-for">Who It's For</a></li>
         <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/berkshire">LinkedIn Agency, Berkshire</a></li>
       </ul>
     </div>
     <div class="footer-contact">
@@ -133,5 +153,41 @@
 </footer>
 
 <script src="/js/main.js"></script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  const payload = {
+    name:    document.getElementById('name').value,
+    company: document.getElementById('company').value,
+    email:   document.getElementById('email').value,
+    message: document.getElementById('message').value
+  };
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    if (res.ok) {
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('contact-success').style.display = 'block';
+    } else {
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      alert('Something went wrong. Please email josh@blueberry-media.co.uk directly.');
+    }
+  } catch(err) {
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+    alert('Something went wrong. Please email josh@blueberry-media.co.uk directly.');
+  }
+});
+</script>
 </body>
 </html>
