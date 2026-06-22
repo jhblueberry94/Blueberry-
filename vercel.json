@@ -36,6 +36,31 @@
       "source": "/contact.html",
       "destination": "/contact",
       "permanent": true
+    },
+    {
+      "source": "/blog/b2b-buying-decisions-before-contact",
+      "destination": "/blog/b2b-buying-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/blog/b2b-founders-guide-linkedin-content-2026",
+      "destination": "/blog/founders-guide-linkedin-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/linkedin-connection-message-examples-b2b-founders",
+      "destination": "/blog/linkedin-connection-messages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/linkedin-outreach-tips-b2b-founders",
+      "destination": "/blog/linkedin-outreach-tips",
+      "permanent": true
+    },
+    {
+      "source": "/blog/linkedin-b2b-content-strategy-founders",
+      "destination": "/blog/founders-guide-linkedin-2026",
+      "permanent": true
     }
   ],
   "headers": [
