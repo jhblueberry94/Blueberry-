@@ -72,15 +72,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 @keyframes drawCircle{to{stroke-dashoffset:0}}
 @keyframes pulseOrb{0%,100%{opacity:0.7;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
 @keyframes breathe{0%,100%{opacity:0.6;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
-@keyframes borderGlow{0%{background-position:0% 50%}100%{background-position:300% 50%}}
 @keyframes storyFadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 .stagger-1{transition-delay:0.1s}.stagger-2{transition-delay:0.2s}.stagger-3{transition-delay:0.3s}.stagger-4{transition-delay:0.4s}.stagger-5{transition-delay:0.5s}
 
 /* ── Badge glow ── */
-.badge-glow{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:50px;font-size:13px;font-weight:500;color:#695AFF;position:relative;background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border:1px solid transparent}
-.badge-glow::before{content:'';position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(90deg,#0E0E44,#695AFF,#FF5CAE,#0E0E44);background-size:300% 100%;animation:borderGlow 3s linear infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+@keyframes arrowPulse{0%,100%{opacity:0.35;transform:translateX(0)}50%{opacity:0.85;transform:translateX(2px)}}
+.badge-glow{display:inline-flex;align-items:center;gap:9px;padding:7px 18px;border-radius:50px;font-size:13px;font-weight:500;color:#695AFF;background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border:0.5px solid rgba(105,90,255,0.35)}
+.badge-glow svg{animation:arrowPulse 2.4s ease-in-out infinite;flex-shrink:0}
 
 /* ── Hero ── */
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
@@ -285,8 +285,8 @@ footer{background:#0E0E44;padding:64px 0 32px}
   <div class="container">
     <div class="hero-inner">
       <div class="badge-glow fade-up">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        Leader visibility for B2B leaders & executives
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        LinkedIn content for B2B leaders
       </div>
       <h1 class="editorial-heading fade-up stagger-1">We tell human stories<br>for B2B leaders.</h1>
       <p class="subhead fade-up stagger-2">Done-for-you LinkedIn thought leadership for B2B founders and leaders, activating your voice and designed to drive pipeline.</p>
