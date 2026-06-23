@@ -76,52 +76,39 @@ nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:100;background:rgba(2
 .callout-box{background:#EEEDFE;border-radius:14px;padding:22px 32px;max-width:640px;margin:0 auto;text-align:center}
 .callout-box p{font-size:15px;font-weight:500;color:#0E0E44;line-height:1.6}
 
-/* Steps section */
+/* Steps section: Design C vertical timeline accordion */
 #steps{padding:56px 0 80px}
-.steps-layout{display:grid;grid-template-columns:280px 1fr;gap:0 56px;align-items:start}
-@media(max-width:900px){.steps-layout{grid-template-columns:1fr;gap:32px}}
-
-/* Left nav */
-.steps-nav{position:sticky;top:100px}
-.step-btn{display:flex;align-items:center;gap:16px;width:100%;padding:16px 20px;background:none;border:none;border-left:3px solid transparent;border-radius:0 10px 10px 0;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all 0.25s;margin-bottom:4px;position:relative}
-.step-btn:hover{background:rgba(105,90,255,0.04);border-left-color:rgba(105,90,255,0.3)}
-.step-btn.active{background:rgba(105,90,255,0.06);border-left-color:#695AFF}
-.step-arrow{margin-left:auto;flex-shrink:0;width:20px;height:20px;border-radius:50%;background:rgba(105,90,255,0.08);display:flex;align-items:center;justify-content:center;transition:background 0.2s,transform 0.2s;opacity:0}
-.step-btn:hover .step-arrow{opacity:1}
-.step-btn.active .step-arrow{opacity:1;background:#695AFF;transform:translateX(2px)}.step-btn.active .step-arrow svg{stroke:#fff}
-@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
-.steps-nav .step-btn:first-child .step-arrow{animation:nudge 1.4s ease-in-out 1.2s 3}
-.step-hint{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:rgba(14,14,68,0.35);margin-bottom:16px;padding-left:4px}
-.step-hint svg{flex-shrink:0;stroke:rgba(14,14,68,0.3)}
-.step-num{font-size:32px;font-weight:700;color:#0E0E44;opacity:0.1;line-height:1;min-width:44px;font-family:'Poppins',sans-serif;transition:opacity 0.2s,color 0.2s}
-.step-btn.active .step-num{opacity:0.3;color:#695AFF}
-.step-text{display:flex;flex-direction:column;gap:2px}
-.step-title{font-size:14px;font-weight:500;color:rgba(14,14,68,0.4);transition:color 0.2s}
-.step-btn.active .step-title{color:#0E0E44;font-weight:600}
-.step-period{font-size:11px;color:rgba(14,14,68,0.3);font-weight:400}
-
-/* Right panel */
-.steps-panels{}
-.step-panel{display:none;background:#fff;border:0.5px solid rgba(14,14,68,0.09);border-radius:16px;padding:36px;animation:panelIn 0.3s ease-out forwards}
-.step-panel.active{display:block}
-@keyframes panelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.panel-top{display:flex;align-items:center;gap:14px;margin-bottom:20px}
-.panel-num-badge{width:36px;height:36px;border-radius:8px;background:#EEEDFE;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#3C3489;flex-shrink:0;font-family:'Poppins',sans-serif;letter-spacing:0.02em}
-.panel-period{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.12em;color:#695AFF}
-.panel-title{font-size:22px;font-weight:600;color:#0E0E44;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.3}
-.panel-desc{font-size:15px;color:rgba(14,14,68,0.65);line-height:1.8;margin-bottom:28px}
-.panel-includes{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#695AFF;margin-bottom:14px}
-.panel-ticks{list-style:none;display:flex;flex-direction:column;gap:10px}
-.panel-ticks li{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(14,14,68,0.7)}
-.panel-ticks li svg{flex-shrink:0;stroke:#695AFF}
-
-/* Mobile steps — show as cards */
-@media(max-width:900px){
-  .steps-nav{position:static;display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
-  .step-btn{padding:10px 16px;border-radius:8px;border-left:none;border-bottom:2px solid transparent;white-space:nowrap;flex-shrink:0}
-  .step-btn.active{border-left:none;border-bottom-color:#695AFF;background:rgba(105,90,255,0.06)}
-  .step-num{font-size:18px;min-width:auto}
-  .step-period{display:none}
+.steps-timeline{max-width:680px;margin:0 auto}
+.tl-item{display:flex;gap:0;position:relative;margin-bottom:0}
+.tl-item:not(:last-child) .tl-spine::after{content:'';position:absolute;left:50%;top:44px;bottom:0;width:2px;background:rgba(105,90,255,0.15);transform:translateX(-50%)}
+.tl-spine{width:56px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;padding-top:18px;position:relative}
+.tl-dot{width:28px;height:28px;border-radius:50%;border:2px solid rgba(105,90,255,0.25);background:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#695AFF;font-family:'Poppins',sans-serif;letter-spacing:0.04em;transition:all 0.25s;flex-shrink:0;position:relative;z-index:1}
+.tl-item.open .tl-dot{background:#695AFF;color:#fff;border-color:#695AFF;box-shadow:0 0 0 4px rgba(105,90,255,0.12)}
+.tl-content{flex:1;padding:14px 0 32px 8px}
+.tl-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:4px 0;-webkit-tap-highlight-color:transparent;user-select:none}
+.tl-header-left{display:flex;flex-direction:column;gap:2px}
+.tl-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:#695AFF}
+.tl-title{font-size:17px;font-weight:600;color:#0E0E44;letter-spacing:-0.01em;line-height:1.3}
+.tl-chevron{width:28px;height:28px;border-radius:50%;background:#F0EFFE;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s,transform 0.3s}
+.tl-chevron svg{stroke:#695AFF;transition:transform 0.3s}
+.tl-item.open .tl-chevron{background:#695AFF}
+.tl-item.open .tl-chevron svg{stroke:#fff;transform:rotate(180deg)}
+@keyframes tl-bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(3px)}60%{transform:translateY(1px)}}
+.tl-item:first-child .tl-chevron{animation:tl-bounce 1.2s ease-in-out 1s 3}
+.tl-item:first-child.open .tl-chevron{animation:none}
+.tl-body{overflow:hidden;max-height:0;transition:max-height 0.38s cubic-bezier(0.4,0,0.2,1)}
+.tl-item.open .tl-body{max-height:600px}
+.tl-body-inner{padding:16px 0 0}
+.tl-period{font-size:11px;font-weight:500;color:rgba(14,14,68,0.4);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.1em}
+.tl-desc{font-size:14px;color:rgba(14,14,68,0.65);line-height:1.8;margin-bottom:18px}
+.tl-includes{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#695AFF;margin-bottom:12px}
+.tl-ticks{list-style:none;display:flex;flex-direction:column;gap:9px;padding:0}
+.tl-ticks li{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(14,14,68,0.7);line-height:1.5}
+.tl-ticks li svg{flex-shrink:0;stroke:#695AFF}
+@media(max-width:768px){
+  .tl-spine{width:40px}
+  .tl-title{font-size:15px}
+  .tl-content{padding-left:4px}
 }
 
 /* FAQ */
@@ -178,7 +165,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
   .callout-box{padding:18px 20px;margin:0}
   .callout-box p{font-size:14px}
 
-  /* Steps — stack vertically on mobile */
+  /* Steps: mobile layout */
   #steps{padding:36px 0 56px}
   .steps-layout{grid-template-columns:1fr;gap:24px}
 
@@ -194,9 +181,8 @@ footer{background:#0E0E44;padding:64px 0 32px}
   .step-arrow{display:none}
   .step-title{font-size:12px;white-space:normal;line-height:1.3}
 
-  /* Step panels */
-  .step-panel{padding:24px}
-  .panel-title{font-size:18px}
+  /* Timeline mobile */
+  .tl-body-inner{panel-title{font-size:18px}
   .panel-desc{font-size:14px}
   .panel-ticks li{font-size:13px}
 
@@ -283,120 +269,124 @@ footer{background:#0E0E44;padding:64px 0 32px}
 <!-- STEPS -->
 <section id="steps">
   <div class="container">
-    <div class="steps-layout">
+    <div class="steps-timeline">
 
-      <!-- Left nav -->
-      <div class="steps-nav">
-        <p class="step-hint">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"/></svg>
-          Select a step to explore
-        </p>
-        <button class="step-btn active" onclick="setStep(0)">
-          <span class="step-num">01</span>
-          <span class="step-text">
-            <span class="step-title">Strategy & ICP Alignment</span>
-            <span class="step-period">Weeks 1 to 2</span>
-          </span>
-          <span class="step-arrow"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
-        </button>
-        <button class="step-btn" onclick="setStep(1)">
-          <span class="step-num">02</span>
-          <span class="step-text">
-            <span class="step-title">The Content Interview</span>
-            <span class="step-period">Every 2 weeks</span>
-          </span>
-          <span class="step-arrow"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
-        </button>
-        <button class="step-btn" onclick="setStep(2)">
-          <span class="step-num">03</span>
-          <span class="step-text">
-            <span class="step-title">Create & Refine</span>
-            <span class="step-period">Within 14 days</span>
-          </span>
-          <span class="step-arrow"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
-        </button>
-        <button class="step-btn" onclick="setStep(3)">
-          <span class="step-num">04</span>
-          <span class="step-text">
-            <span class="step-title">Distribute & Build Visibility</span>
-            <span class="step-period">Ongoing, every month</span>
-          </span>
-          <span class="step-arrow"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
-        </button>
+      <!-- Step 01: open by default -->
+      <div class="tl-item open" id="tl-0">
+        <div class="tl-spine"><div class="tl-dot">01</div></div>
+        <div class="tl-content">
+          <div class="tl-header" onclick="tlToggle(0)" role="button" aria-expanded="true" aria-controls="tl-body-0">
+            <div class="tl-header-left">
+              <span class="tl-label">Weeks 1 to 2</span>
+              <span class="tl-title">Strategy &amp; ICP alignment</span>
+            </div>
+            <div class="tl-chevron">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-body" id="tl-body-0">
+            <div class="tl-body-inner">
+              <p class="tl-desc">The foundation everything else is built on. We define exactly who you are talking to, what you stand for, and how your content should feel, before a single post goes live.</p>
+              <p class="tl-includes">What's included</p>
+              <ul class="tl-ticks">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Business and audience analysis</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Ideal Client Profile mapping</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Narrative and messaging framework</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Content territory definition</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Channel and cadence planning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Right panels -->
-      <div class="steps-panels">
-
-        <div class="step-panel active" id="panel-0">
-          <div class="panel-top">
-            <div class="panel-num-badge">01</div>
-            <span class="panel-period">Weeks 1 to 2</span>
+      <!-- Step 02 -->
+      <div class="tl-item" id="tl-1">
+        <div class="tl-spine"><div class="tl-dot">02</div></div>
+        <div class="tl-content">
+          <div class="tl-header" onclick="tlToggle(1)" role="button" aria-expanded="false" aria-controls="tl-body-1">
+            <div class="tl-header-left">
+              <span class="tl-label">Every 2 weeks, 45 minutes</span>
+              <span class="tl-title">The Content Interview</span>
+            </div>
+            <div class="tl-chevron">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
           </div>
-          <h2 class="panel-title">Strategy & ICP Alignment</h2>
-          <p class="panel-desc">The foundation everything else is built on. We define exactly who you are talking to, what you stand for, and how your content should feel — before a single post goes live.</p>
-          <p class="panel-includes">What's included</p>
-          <ul class="panel-ticks">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Business and audience analysis</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Ideal Client Profile mapping</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Narrative and messaging framework</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Content territory definition</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Channel and cadence planning</li>
-          </ul>
-        </div>
-
-        <div class="step-panel" id="panel-1">
-          <div class="panel-top">
-            <div class="panel-num-badge">02</div>
-            <span class="panel-period">Every 2 weeks, 45 minutes</span>
+          <div class="tl-body" id="tl-body-1">
+            <div class="tl-body-inner">
+              <p class="tl-desc">A structured 45-minute recorded conversation every two weeks. We send questions in advance. You talk naturally. We record, transcribe, and extract everything worth publishing.</p>
+              <p class="tl-includes">What's included</p>
+              <ul class="tl-ticks">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Questions sent 48 hours in advance</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>No scripting, no prep required</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Full recording and transcript</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Content extraction and ideation</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Asset planning for the next two weeks</li>
+              </ul>
+            </div>
           </div>
-          <h2 class="panel-title">The Content Interview</h2>
-          <p class="panel-desc">A structured 45-minute recorded conversation every two weeks. We send questions in advance. You talk naturally. We record, transcribe, and extract everything worth publishing.</p>
-          <p class="panel-includes">What's included</p>
-          <ul class="panel-ticks">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Questions sent 48 hours in advance</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>No scripting, no prep required</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Full recording and transcript</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Content extraction and ideation</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Asset planning for the next two weeks</li>
-          </ul>
         </div>
-
-        <div class="step-panel" id="panel-2">
-          <div class="panel-top">
-            <div class="panel-num-badge">03</div>
-            <span class="panel-period">Within 14 days of first call</span>
-          </div>
-          <h2 class="panel-title">Create & Refine</h2>
-          <p class="panel-desc">We edit, write, and polish everything in your voice, not ours. Posts, video clips, articles, newsletter copy — all produced from a single conversation. You review and approve before anything goes live.</p>
-          <p class="panel-includes">What's included</p>
-          <ul class="panel-ticks">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>LinkedIn posts 3 to 4 per week</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Short-form video clips</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Newsletter or article content</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Your review and approval</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Unlimited refinements to voice</li>
-          </ul>
-        </div>
-
-        <div class="step-panel" id="panel-3">
-          <div class="panel-top">
-            <div class="panel-num-badge">04</div>
-            <span class="panel-period">Ongoing, every month</span>
-          </div>
-          <h2 class="panel-title">Distribute & Build Visibility</h2>
-          <p class="panel-desc">We publish at optimal times, manage connection outreach to your ICP, track performance, and send a monthly report. You stay visible without lifting a finger.</p>
-          <p class="panel-includes">What's included</p>
-          <ul class="panel-ticks">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Scheduled publishing and optimisation</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>ICP connection outreach</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Engagement monitoring</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Monthly performance report</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Strategy refinement based on data</li>
-          </ul>
-        </div>
-
       </div>
+
+      <!-- Step 03 -->
+      <div class="tl-item" id="tl-2">
+        <div class="tl-spine"><div class="tl-dot">03</div></div>
+        <div class="tl-content">
+          <div class="tl-header" onclick="tlToggle(2)" role="button" aria-expanded="false" aria-controls="tl-body-2">
+            <div class="tl-header-left">
+              <span class="tl-label">Within 14 days of first call</span>
+              <span class="tl-title">Create &amp; Refine</span>
+            </div>
+            <div class="tl-chevron">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-body" id="tl-body-2">
+            <div class="tl-body-inner">
+              <p class="tl-desc">We edit, write, and polish everything in your voice, not ours. Posts, video clips, articles, newsletter copy, all produced from a single conversation. You review and approve before anything goes live.</p>
+              <p class="tl-includes">What's included</p>
+              <ul class="tl-ticks">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>LinkedIn posts 3 to 4 per week</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Short-form video clips</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Newsletter or article content</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Your review and approval</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Unlimited refinements to voice</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="tl-item" id="tl-3">
+        <div class="tl-spine"><div class="tl-dot">04</div></div>
+        <div class="tl-content">
+          <div class="tl-header" onclick="tlToggle(3)" role="button" aria-expanded="false" aria-controls="tl-body-3">
+            <div class="tl-header-left">
+              <span class="tl-label">Ongoing, every month</span>
+              <span class="tl-title">Distribute &amp; build visibility</span>
+            </div>
+            <div class="tl-chevron">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-body" id="tl-body-3">
+            <div class="tl-body-inner">
+              <p class="tl-desc">We publish at optimal times, manage connection outreach to your ICP, track performance, and send a monthly report. You stay visible without lifting a finger.</p>
+              <p class="tl-includes">What's included</p>
+              <ul class="tl-ticks">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Scheduled publishing and optimisation</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>ICP connection outreach</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Engagement monitoring</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Monthly performance report</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>Strategy refinement based on data</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -437,7 +427,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
           What if I want to make changes?
           <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p class="faq-a-inner">You approve everything before it goes live. If something doesn't sound right we refine it until it does. Your voice is the whole point. There are no limits on revision rounds — we keep going until you're happy.</p></div>
+        <div class="faq-a"><p class="faq-a-inner">You approve everything before it goes live. If something doesn't sound right we refine it until it does. Your voice is the whole point. There are no limits on revision rounds: we keep going until you're happy.</p></div>
       </div>
 
     </div>
@@ -472,6 +462,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
           <li><a href="/about">About</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="/berkshire">LinkedIn Agency, Berkshire</a></li>
+          <li><a href="/linkedin-by-role/">LinkedIn by Role</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -508,39 +499,31 @@ window.addEventListener('load', () => {
   document.querySelectorAll('#hero .fade-up').forEach(el => el.classList.add('visible'));
 });
 
-function setStep(index) {
-  // Update buttons
-  document.querySelectorAll('.step-btn').forEach((btn, i) => {
-    btn.classList.toggle('active', i === index);
-  });
-
-  // Update panels — force display via both class and inline style
-  document.querySelectorAll('.step-panel').forEach((panel, i) => {
-    if(i === index){
-      panel.classList.add('active');
-      panel.style.display = 'block';
-      panel.style.animation = 'none';
-      void panel.offsetWidth;
-      panel.style.animation = 'panelIn 0.3s ease-out forwards';
-    } else {
-      panel.classList.remove('active');
-      panel.style.display = 'none';
-    }
-  });
-
-  // On mobile, scroll the active button into view
-  const activeBtn = document.querySelectorAll('.step-btn')[index];
-  if(activeBtn && window.innerWidth <= 768){
-    activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+function tlToggle(index) {
+  const item = document.getElementById('tl-' + index);
+  const body = document.getElementById('tl-body-' + index);
+  const header = item.querySelector('.tl-header');
+  const isOpen = item.classList.contains('open');
+  item.classList.toggle('open', !isOpen);
+  header.setAttribute('aria-expanded', String(!isOpen));
+  if (!isOpen) {
+    body.style.maxHeight = body.scrollHeight + 'px';
+  } else {
+    body.style.maxHeight = '0';
   }
 }
 
-// Initialise — make sure all panels except 0 are hidden on load
+// Initialise: set step 01 open, others closed
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.step-panel').forEach((panel, i) => {
-    panel.style.display = i === 0 ? 'block' : 'none';
+  const first = document.getElementById('tl-body-0');
+  if (first) first.style.maxHeight = first.scrollHeight + 'px';
+  [1,2,3].forEach(i => {
+    const b = document.getElementById('tl-body-' + i);
+    if (b) b.style.maxHeight = '0';
   });
 });
+
+
 
 document.querySelectorAll('.faq-item').forEach(item => {
   item.querySelector('.faq-q').addEventListener('click', () => {
