@@ -162,24 +162,7 @@ document.querySelectorAll('.icp-panel').forEach(panel => {
   }
 });
 
-// Newsletter form
-const newsletterForm = document.getElementById('newsletter-form');
-const newsletterSuccess = document.getElementById('newsletter-success');
-if (newsletterForm) {
-  newsletterForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.getElementById('newsletter-email').value;
-    try {
-      await fetch('https://SUPABASE_PROJECT_REF.supabase.co/functions/v1/send-newsletter-signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, notifyEmail: 'josh@blueberry-media.co.uk' })
-      });
-    } catch (err) { console.log('Newsletter signup attempted'); }
-    newsletterForm.style.display = 'none';
-    if (newsletterSuccess) { newsletterSuccess.style.display = 'block'; }
-  });
-}
+
 
 // Contact form
 const contactForm = document.getElementById('contact-form');
@@ -194,7 +177,7 @@ if (contactForm) {
       message: contactForm.elements['message'].value
     };
     try {
-      await fetch('https://SUPABASE_PROJECT_REF.supabase.co/functions/v1/send-contact-email', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -265,3 +248,4 @@ if (newsletterForm) {
     }
   });
 }
+
