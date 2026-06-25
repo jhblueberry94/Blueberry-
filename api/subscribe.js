@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Blueberry Media <hello@blueberry-media.co.uk>',
+        from: 'Blueberry Media Website <noreply@blueberry-media.co.uk>',
         to: ['josh@blueberry-media.co.uk'],
         subject: `New newsletter signup: ${email}`,
         html: `
