@@ -235,3 +235,33 @@ if (filterTabs.length) {
     else if (href === '/' && path === '/') link.classList.add('active');
   });
 })();
+// Newsletter signup
+const newsletterForm = document.getElementById('newsletter-form');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const email = document.getElementById('newsletter-email').value;
+    const btn = newsletterForm.querySelector('button');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        newsletterForm.style.display = 'none';
+        document.getElementById('newsletter-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  });
+}
