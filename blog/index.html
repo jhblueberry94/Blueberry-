@@ -21,11 +21,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 <style>
-/* Reduce card image overlay - was too heavy and purple */
 .image-overlay{
   background: linear-gradient(to top, rgba(14,14,68,0.25) 0%, transparent 55%) !important;
 }
-/* Card tag pill should still be readable without heavy overlay */
 .card-tag{
   text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
@@ -91,7 +89,7 @@
 
 <section class="blog-grid-section">
   <div class="container">
-    <p class="post-count">10 articles</p>
+    <p class="post-count">11 articles</p>
 
     <div class="newsletter-banner">
       <div class="newsletter-orb-purple"></div>
@@ -110,6 +108,25 @@
     </div>
 
     <div class="blog-grid">
+
+      <div class="blog-card" data-category="linkedin-strategy">
+        <a href="/blog/linkedin-thought-leadership-agency">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Team discussing LinkedIn thought leadership strategy in a meeting">
+            <div class="image-overlay"></div>
+            <span class="card-tag">LinkedIn strategy</span>
+          </div>
+          <div class="card-body">
+            <h3>What does a LinkedIn thought leadership agency actually do?</h3>
+            <p>What the good ones actually do, how they differ from alternatives, and how to tell if it's the right move.</p>
+            <div class="card-footer">
+              <span>June 2026</span>
+              <span>7 min read</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
       <div class="blog-card" data-category="b2b-buyer-journey">
         <a href="/blog/b2b-buying-decisions">
           <div class="card-image">
@@ -235,6 +252,7 @@
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="linkedin-strategy">
         <a href="/blog/linkedin-personal-profile-vs-company-page">
           <div class="card-image">
@@ -288,6 +306,7 @@
           </div>
         </a>
       </div>
+
     </div>
   </div>
 </section>
