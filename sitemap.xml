@@ -96,7 +96,7 @@
   <!-- Blog index -->
   <url>
     <loc>https://blueberry-media.co.uk/blog</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -159,6 +159,25 @@
   <url>
     <loc>https://blueberry-media.co.uk/blog/linkedin-content-ideas-b2b-founders</loc>
     <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-thought-leadership-agency</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/done-for-you-linkedin-content</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/fractional-executive-linkedin-thought-leadership</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
