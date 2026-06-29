@@ -96,7 +96,7 @@
   <!-- Blog index -->
   <url>
     <loc>https://blueberry-media.co.uk/blog</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -178,6 +178,12 @@
   <url>
     <loc>https://blueberry-media.co.uk/blog/fractional-executive-linkedin-thought-leadership</loc>
     <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/consultant-linkedin-thought-leadership</loc>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
