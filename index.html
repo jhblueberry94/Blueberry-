@@ -740,7 +740,7 @@ const fwData = [
     ticks:['Creates genuine connection that polished content never can','Humanises your profile in a feed full of AI-generated noise','Builds the trust that makes buyers want to work with you specifically','Turns your network into advocates who refer and share']
   }
 ];
-let fwActive = 0, fwProgress = 0, fwPaused = false, fwResTimer = null;
+let fwActive = 0, fwProgress = 0, fwPaused = false, fwResTimer = null, fwInterval = null;
 const CYCLE = 4000, TICK = 50;
 
 function fwRender(i){
@@ -769,19 +769,31 @@ function fwSetTab(i){
   fwResTimer = setTimeout(()=>{ fwPaused=false; }, 3000);
 }
 function fwPause(){ clearTimeout(fwResTimer); fwPaused=true; }
-function fwResume(){ fwResTimer = setTimeout(()=>{ fwPaused=false; }, 3000); }
+function fwResume(){ clearTimeout(fwResTimer); fwPaused=false; }
 
-setInterval(()=>{
-  if(fwPaused) return;
-  fwProgress += (TICK/CYCLE)*100;
-  const bar = document.getElementById(`fw-bar-${fwActive}`);
-  if(bar) bar.style.width = Math.min(fwProgress,100)+'%';
-  if(fwProgress>=100){
-    fwProgress=0;
-    fwActive=(fwActive+1)%3;
-    fwRender(fwActive);
-  }
-}, TICK);
+function fwStart(){
+  if(fwInterval) return;
+  fwInterval = setInterval(()=>{
+    if(fwPaused) return;
+    fwProgress += (TICK/CYCLE)*100;
+    const bar = document.getElementById(`fw-bar-${fwActive}`);
+    if(bar) bar.style.width = Math.min(fwProgress,100)+'%';
+    if(fwProgress>=100){
+      fwProgress=0;
+      fwActive=(fwActive+1)%3;
+      fwRender(fwActive);
+    }
+  }, TICK);
+}
+
+/* Start the interval only once the panel scrolls into view */
+const fwPanel = document.getElementById('fw-panel');
+if(fwPanel){
+  const fwObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ fwStart(); fwObs.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  fwObs.observe(fwPanel);
+}
 
 /* ── Story panels ── */
 function toggleStory(person){
