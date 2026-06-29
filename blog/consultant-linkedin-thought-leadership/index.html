@@ -218,6 +218,7 @@
     background: radial-gradient(circle, rgba(105,90,255,0.2) 0%, transparent 65%);
     border-radius: 50%;
     pointer-events: none;
+    z-index: 0;
   }
   .post-cta h3 {
     font-size: 22px;
@@ -226,7 +227,7 @@
     letter-spacing: -0.02em;
     margin-bottom: 12px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
   .post-cta p {
     font-size: 15px;
@@ -235,7 +236,7 @@
     max-width: 540px;
     margin: 0 auto 28px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
   .post-cta .btn-primary {
     background: #fff !important;
@@ -250,7 +251,7 @@
     text-decoration: none !important;
     transition: opacity 0.2s !important;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
   .post-cta .btn-primary:hover { opacity: 0.9 !important; }
   @media(max-width: 768px) {
