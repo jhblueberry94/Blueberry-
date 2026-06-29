@@ -136,6 +136,7 @@
 }
 </script>
 
+<link rel="stylesheet" href="/css/styles.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
@@ -158,28 +159,6 @@
   img { max-width: 100%; display: block; }
 
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-  /* Header */
-  header.site-header {
-    border-bottom: 1px solid #ECEBF7;
-    position: sticky; top: 0; background: var(--white); z-index: 100;
-  }
-  .header-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 24px; max-width: 1120px; margin: 0 auto; gap: 24px; flex-wrap: wrap;
-  }
-  .logo img { height: 44px; }
-  nav.main-nav { display: flex; gap: 28px; flex-wrap: wrap; }
-  nav.main-nav a { color: var(--grey); font-weight: 500; font-size: 15px; }
-  .header-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-  .header-actions a.faq-link { color: var(--grey); font-weight: 500; font-size: 15px; }
-  .btn {
-    display: inline-block; background: var(--navy); color: var(--white);
-    padding: 11px 22px; border-radius: 8px; font-weight: 600; font-size: 15px;
-  }
-  .btn:hover { background: var(--purple); text-decoration: none; }
-  .btn-pink { background: var(--pink); }
-  .btn-pink:hover { background: var(--navy); }
 
   /* Article header */
   .post-top { max-width: 760px; margin: 0 auto; padding: 48px 24px 0; }
@@ -270,22 +249,36 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="logo" href="https://blueberry-media.co.uk/"><img src="https://blueberry-media.co.uk/images/logo.png" alt="Blueberry Media"></a>
-    <nav class="main-nav">
-      <a href="https://blueberry-media.co.uk/services">Services</a>
-      <a href="https://blueberry-media.co.uk/how-it-works">Our Process</a>
-      <a href="https://blueberry-media.co.uk/who-its-for">Who It's For</a>
-      <a href="https://blueberry-media.co.uk/about">About</a>
-      <a href="https://blueberry-media.co.uk/blog">Blog</a>
-    </nav>
-    <div class="header-actions">
-      <a class="faq-link" href="https://blueberry-media.co.uk/faq">FAQ</a>
-      <a class="btn" href="https://blueberry-media.co.uk/contact">Start a Conversation</a>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media" height="56"></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/how-it-works">Our Process</a></li>
+      <li><a href="/who-its-for">Who It's For</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="/faq" class="nav-faq">FAQ</a>
+      <a href="/contact" class="btn-primary">Start a Conversation</a>
     </div>
+    <button id="menu-btn" aria-label="Open menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect y="4" width="24" height="2" fill="#0E0E44"/><rect y="11" width="24" height="2" fill="#0E0E44"/><rect y="18" width="24" height="2" fill="#0E0E44"/></svg>
+    </button>
   </div>
-</header>
+  <div id="mobile-menu">
+    <ul>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/how-it-works">Our Process</a></li>
+      <li><a href="/who-its-for">Who It's For</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contact" class="btn-primary">Start a Conversation</a></li>
+    </ul>
+  </div>
+</nav>
 
 <div class="post-top">
   <a class="back-link" href="https://blueberry-media.co.uk/blog">&larr; Back to blog</a>
