@@ -63,16 +63,6 @@
       "permanent": true
     },
     {
-      "source": "/linkedin-marketing-case-study/",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/linkedin-marketing-case-study",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
       "source": "/linkedin-outreach-how-to-build-a-pipeline/",
       "destination": "/blog/linkedin-outreach-tips",
       "permanent": true
