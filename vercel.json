@@ -111,6 +111,56 @@
       "source": "/linkedin-marketing-blog-b2b-content",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/faq-items/",
+      "destination": "/faq",
+      "permanent": true
+    },
+    {
+      "source": "/faq-items",
+      "destination": "/faq",
+      "permanent": true
+    },
+    {
+      "source": "/services-digital-marketing/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services-digital-marketing",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-for-business-growth/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-for-business-growth",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/storytelling-in-digital-marketing/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/storytelling-in-digital-marketing",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/powerful-digital-marketing-blogs/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/powerful-digital-marketing-blogs",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "headers": [
