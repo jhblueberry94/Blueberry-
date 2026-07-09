@@ -36,12 +36,47 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://blueberry-media.co.uk/linkedin-by-role</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/consultants</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/b2b-founders</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/sales-leaders</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/fractional-executives</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/professional-services-leaders</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://blueberry-media.co.uk/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/blog/b2b-buying-decisions</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/b2b-buying-group-linkedin-research</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -61,7 +96,57 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://blueberry-media.co.uk/blog/b2b-buying-group-linkedin-research</loc>
+    <loc>https://blueberry-media.co.uk/blog/thames-valley-founders-invisible-linkedin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-vs-cold-outreach-b2b</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/how-to-get-clients-linkedin-uk-b2b</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-personal-profile-vs-company-page</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-profile-optimisation-b2b-clients</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-content-ideas-b2b-founders</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-thought-leadership-agency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/done-for-you-linkedin-content</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/consultant-linkedin-thought-leadership</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/fractional-executive-linkedin-thought-leadership</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/linkedin-marketing-case-study</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
