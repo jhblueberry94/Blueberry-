@@ -6,7 +6,7 @@
 
 Blueberry Media is founded and led by Josh Huggins, based in Hungerford, Berkshire. We work with a small number of B2B founders, consultants, and senior executives who want to build a consistent, credible LinkedIn presence without the time burden of writing content themselves.
 
-Our process is built around recorded conversations. We extract your thinking, language, and point of view, then shape it into posts that sound exactly like you, because they come directly from you.
+Our process is built around recorded conversations. We extract your thinking, language, and point of view, then shape it into posts that sound exactly like you — because they come directly from you.
 
 ## Services
 
@@ -23,6 +23,9 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 - B2B founders and owner-directors
 - Independent consultants and advisors
 - Senior executives and C-suite leaders
+- Sales leaders (VPs of Sales, Sales Directors, Client Directors)
+- Fractional executives (CFOs, CMOs, COOs, CTOs)
+- Professional services leaders (law, accountancy, consultancy partners)
 - Primarily UK-based, also working with clients internationally
 
 ## Key pages
@@ -36,23 +39,42 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 - [FAQ](https://blueberry-media.co.uk/faq)
 - [Contact](https://blueberry-media.co.uk/contact)
 
+## Who it's for (persona pages)
+
+- [LinkedIn for consultants](https://blueberry-media.co.uk/consultants)
+- [LinkedIn for B2B founders](https://blueberry-media.co.uk/b2b-founders)
+- [LinkedIn for sales leaders](https://blueberry-media.co.uk/sales-leaders)
+- [LinkedIn for fractional executives](https://blueberry-media.co.uk/fractional-executives)
+- [LinkedIn for professional services leaders](https://blueberry-media.co.uk/professional-services-leaders)
+
+## Local pages (Berkshire and the Thames Valley)
+
+- [LinkedIn Agency, Berkshire](https://blueberry-media.co.uk/berkshire)
+- [LinkedIn Agency, Reading](https://blueberry-media.co.uk/reading)
+- [LinkedIn Agency, Bracknell](https://blueberry-media.co.uk/bracknell)
+- [LinkedIn Agency, Newbury](https://blueberry-media.co.uk/newbury)
+- [LinkedIn Agency, Wokingham](https://blueberry-media.co.uk/wokingham)
+
 ## Blog articles
 
+- [B2B buying behaviour on LinkedIn: what buyers actually do before they contact you](https://blueberry-media.co.uk/blog/b2b-buying-behaviour-linkedin)
 - [Why 60% of buying decisions happen before you're ever contacted](https://blueberry-media.co.uk/blog/b2b-buying-decisions)
 - [The B2B founder's guide to LinkedIn content in 2026](https://blueberry-media.co.uk/blog/founders-guide-linkedin-2026)
 - [LinkedIn connection message examples that actually get accepted](https://blueberry-media.co.uk/blog/linkedin-connection-messages)
 - [LinkedIn outreach tips: how to start conversations without sounding like a pitch](https://blueberry-media.co.uk/blog/linkedin-outreach-tips)
+- [Why Thames Valley founders are invisible on LinkedIn (and London isn't)](https://blueberry-media.co.uk/blog/thames-valley-founders-invisible-linkedin)
+- [LinkedIn vs cold outreach: what the data actually says for B2B founders](https://blueberry-media.co.uk/blog/linkedin-vs-cold-outreach-b2b)
+- [How to get clients from LinkedIn: a practical guide for UK B2B founders](https://blueberry-media.co.uk/blog/how-to-get-clients-linkedin-uk-b2b)
+- [LinkedIn personal profile vs company page: what the data says for B2B leaders](https://blueberry-media.co.uk/blog/linkedin-personal-profile-vs-company-page)
+- [How to optimise your LinkedIn profile to win B2B clients (not just recruiters)](https://blueberry-media.co.uk/blog/linkedin-profile-optimisation-b2b-clients)
+- [LinkedIn content ideas for B2B founders: what to post when you have nothing to say](https://blueberry-media.co.uk/blog/linkedin-content-ideas-b2b-founders)
+- [What Does a LinkedIn Thought Leadership Agency Actually Do?](https://blueberry-media.co.uk/blog/linkedin-thought-leadership-agency)
+- [Done-for-You LinkedIn Content: What It Is, What It Costs, and Whether It's Worth It](https://blueberry-media.co.uk/blog/done-for-you-linkedin-content)
+- [Why Fractional Executives Need LinkedIn Thought Leadership](https://blueberry-media.co.uk/blog/fractional-executive-linkedin-thought-leadership)
+- [Why consultants need LinkedIn thought leadership](https://blueberry-media.co.uk/blog/consultant-linkedin-thought-leadership)
 - [How B2B buying groups research vendors on LinkedIn](https://blueberry-media.co.uk/blog/b2b-buying-group-linkedin-research)
 
-## Local pages
-
-Blueberry Media is based in Hungerford, Berkshire, and serves B2B founders and executives across the Thames Valley and the wider UK.
-
-- [LinkedIn Agency, Berkshire](https://blueberry-media.co.uk/berkshire) - Hub page covering the full Thames Valley region
-- [LinkedIn Agency, Reading](https://blueberry-media.co.uk/reading) - Enterprise tech and science park hub
-- [LinkedIn Agency, Bracknell](https://blueberry-media.co.uk/bracknell) - Established enterprise HQ corridor
-- [LinkedIn Agency, Newbury](https://blueberry-media.co.uk/newbury) - Where Blueberry Media is based
-- [LinkedIn Agency, Wokingham](https://blueberry-media.co.uk/wokingham) - Scaling professional services
+Note: this list reflects all 16 posts live on the blog as of July 2026, including the newly published buying-behaviour piece. Verified directly against the site's file structure, not inferred from search indexing.
 
 ## Contact
 
