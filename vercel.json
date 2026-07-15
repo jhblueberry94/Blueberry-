@@ -161,6 +161,36 @@
       "source": "/powerful-digital-marketing-blogs",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/web-design/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/web-design",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blueberry-media-service/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blueberry-media-service",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio-items/:slug*",
+      "destination": "/linkedin-marketing-case-study",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio-items",
+      "destination": "/linkedin-marketing-case-study",
+      "permanent": true
     }
   ],
   "headers": [
