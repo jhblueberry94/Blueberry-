@@ -191,6 +191,26 @@
       "source": "/portfolio-items",
       "destination": "/linkedin-marketing-case-study",
       "permanent": true
+    },
+    {
+      "source": "/founders-narrative-in-marketing-mailchimp/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/founders-narrative-in-marketing-mailchimp",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/5-social-media-tools-to-grow-your-business/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/5-social-media-tools-to-grow-your-business",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "headers": [
