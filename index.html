@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blueberry Media | LinkedIn Thought Leadership for B2B Founders & Leaders</title>
-<meta name="description" content="Blueberry Media builds LinkedIn thought leadership for B2B founders and executives — turning a 45-minute call into content that drives trust and pipeline.">
+<meta name="description" content="Blueberry Media builds LinkedIn thought leadership for B2B founders and executives, turning a 45-minute call into content that drives trust and pipeline.">
 <link rel="canonical" href="https://blueberry-media.co.uk/">
 <meta name="geo.region" content="GB-BRK">
 <meta name="geo.placename" content="Berkshire">
@@ -133,10 +133,68 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .vi-card p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7}
 
 /* ── Why TL works ── */
-#why-tl{padding:80px 0;background:linear-gradient(135deg,rgba(255,92,174,0.06) 0%,rgba(255,92,174,0.03) 50%,rgba(105,90,255,0.05) 100%)}
-#why-tl .inner{max-width:720px;margin:0 auto;text-align:center}
-#why-tl p{font-size:16px;color:rgba(14,14,68,0.7);line-height:1.8;margin-bottom:20px}
-#why-tl p.closer{font-weight:600;color:#0E0E44}
+/* ── Old way / New way comparison ── */
+#compare{padding:96px 0;background:#f8f8fb}
+.cmp-head{max-width:640px;margin:0 auto 48px;text-align:center}
+.cmp-table{max-width:920px;margin:0 auto;background:#fff;border:1px solid rgba(14,14,68,0.08);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(14,14,68,0.04),0 12px 32px -8px rgba(14,14,68,0.14)}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr}
+.cmp-row:not(:last-child) .cmp-cell{border-bottom:0.5px solid rgba(14,14,68,0.08)}
+.cmp-row:not(:last-child) .cmp-cell-new{border-bottom:0.5px solid rgba(255,255,255,0.1)}
+.cmp-cell{padding:20px 28px;display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5}
+.cmp-cell-old{color:rgba(14,14,68,0.55)}
+.cmp-cell-new{background:#0E0E44;color:#fff;font-weight:500}
+.cmp-cell svg{flex-shrink:0;margin-top:2px}
+.cmp-label{padding:18px 28px;font-size:13px;font-weight:600;letter-spacing:0.02em}
+.cmp-label-old{color:rgba(14,14,68,0.45)}
+.cmp-label-new{background:#0E0E44;color:#fff}
+@media(max-width:768px){
+  .cmp-cell,.cmp-label{padding:16px 18px;font-size:14px}
+  .cmp-cell{gap:9px}
+}
+
+/* ── What working together looks like ── */
+#working{padding:96px 0;background:#f8f8fb;position:relative;border-top:0.5px solid rgba(14,14,68,0.08)}
+.wt-grid{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:44px;align-items:start}
+.wt-item{display:flex;gap:14px;margin-bottom:22px}
+.wt-ico{width:38px;height:38px;border-radius:50%;background:rgba(105,90,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wt-item h4{font-size:16px;font-weight:600;color:#0E0E44;margin-bottom:4px}
+.wt-item p{font-size:14px;color:rgba(14,14,68,0.6);line-height:1.55}
+.wt-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:32px}
+.wt-col-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(14,14,68,0.4);margin-bottom:10px}
+.wt-scroll{height:640px;overflow-y:auto;border:0.5px solid rgba(14,14,68,0.1);border-radius:16px;padding:12px;background:#eef0f3;scrollbar-width:thin}
+.wt-wall{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.wt-scroll::-webkit-scrollbar{width:8px}
+.wt-scroll::-webkit-scrollbar-thumb{background:rgba(14,14,68,0.18);border-radius:8px}
+.wt-post{background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:10px;overflow:hidden;margin-bottom:12px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.wt-post:last-child{margin-bottom:0}
+.wt-post-body{padding:12px 14px 0}
+.wt-post-head{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
+.wt-avatar{width:44px;height:44px;border-radius:50%;flex-shrink:0;object-fit:cover}
+.wt-name-row{display:flex;align-items:center;gap:5px}
+.wt-post-name{font-size:14px;font-weight:600;color:rgba(0,0,0,0.9);line-height:1.15}
+.wt-in{display:inline-flex;width:14px;height:14px;background:#0A66C2;border-radius:3px;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700;font-style:normal}
+.wt-conn{font-size:12px;color:rgba(0,0,0,0.6);font-weight:400}
+.wt-post-role{font-size:12px;color:rgba(0,0,0,0.6);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px}
+.wt-cta-link{font-size:13px;color:#0A66C2;font-weight:600;line-height:1.4}
+.wt-meta{font-size:12px;color:rgba(0,0,0,0.6);display:flex;align-items:center;gap:3px;margin-top:1px}
+.wt-post-text{font-size:13px;line-height:1.45;color:rgba(0,0,0,0.9);white-space:pre-line}
+.wt-post-text .more{color:rgba(0,0,0,0.5)}
+.wt-post-media{margin:10px -14px 0;display:block;position:relative}
+.wt-post-media img{width:100%;display:block}
+.wt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,0.65);display:flex;align-items:center;justify-content:center}
+.wt-react{display:flex;align-items:center;gap:4px;padding:8px 14px 6px;font-size:12px;color:rgba(0,0,0,0.55)}
+.wt-react-ico{display:inline-flex;gap:-2px}
+.wt-react-ico span{width:16px;height:16px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:9px;margin-left:-3px;border:1.5px solid #fff}
+.wt-actions-bar{display:flex;border-top:1px solid rgba(0,0,0,0.08)}
+.wt-act{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 4px;font-size:12px;font-weight:600;color:rgba(0,0,0,0.6)}
+.wt-act svg{opacity:0.75}
+@media(max-width:860px){
+  .wt-grid{grid-template-columns:1fr;gap:32px}
+  .wt-scroll{height:auto;overflow:visible;border:none;padding:0;background:none}
+  .wt-wall{grid-template-columns:1fr;gap:12px}
+  .wt-wall .wt-post:nth-child(n+3){display:none}
+  .wt-col-label{display:none}
+}
 
 /* ── Content Framework ── */
 #framework{background:#f8f8fb;padding:96px 0;position:relative}
@@ -343,7 +401,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
         <p class="body-text">You've tried. But without a clear strategy or system, it feels like shouting into the void. You're not sure what's working or why.</p>
       </div>
       <div class="bj-card fade-up stagger-2">
-        <h3>"My network knows me — but my market doesn't"</h3>
+        <h3>"My network knows me, but my market doesn't"</h3>
         <p class="body-text">The people in the room get it. But you're not in enough rooms. And the buyers researching your category have never heard of you.</p>
       </div>
     </div>
@@ -418,16 +476,242 @@ footer{background:#0E0E44;padding:64px 0 32px}
   </div>
 </section>
 
-<!-- WHY THOUGHT LEADERSHIP WORKS -->
-<section id="why-tl">
+<!-- OLD WAY / NEW WAY COMPARISON -->
+<section id="compare">
   <div class="container">
-    <div class="inner">
-      <h2 class="section-heading fade-up">Why thought-leadership content <span class="gradient-text">works</span></h2>
-      <div style="margin-top:32px">
-        <p class="fade-up">In a world of AI-generated content and corporate speak, authentic leadership voices cut through. When a founder or executive shares their genuine perspective without the corporate polish, it creates connection at scale.</p>
-        <p class="fade-up stagger-1">This isn't about becoming an influencer or building visibility for its own sake. It's about using your expertise and position to accelerate business outcomes: faster sales cycles, easier hiring, stronger partnerships, and lasting reputation.</p>
-        <p class="fade-up stagger-2">The leaders who understand this are already building an unfair advantage. They're the trusted voices in their industries, shifting the market and showing your competitors what a great company they're building.</p>
-        <p class="closer fade-up stagger-3">We help you become one of them.</p>
+    <div class="cmp-head">
+      <p class="eyebrow fade-up">The difference</p>
+      <h2 class="section-heading fade-up stagger-1" style="margin-top:12px">The same channel, run <span class="gradient-text">a completely different way.</span></h2>
+    </div>
+    <div class="cmp-table fade-up stagger-2">
+      <div class="cmp-row">
+        <div class="cmp-label cmp-label-old">How most agencies do it</div>
+        <div class="cmp-label cmp-label-new">How we do it</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Content written from a stale brief
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Content extracted from real conversations
+        </div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Irrelevant posts with no consistency
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          A content engine built around your expertise
+        </div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Paid channels dominating brand and lead acquisition
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Owned media and storytelling as the brand differentiator
+        </div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Locked into 6 or 12 months with poor agency terms
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Rolling contracts with real human experience
+        </div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Not knowing if it works, or delayed analytics
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Monthly reporting on quantitative and qualitative data
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WORKING TOGETHER LOOKS LIKE -->
+<section id="working" class="grain">
+  <div class="container">
+    <div class="wt-grid">
+      <div class="fade-up stagger-1">
+        <p class="eyebrow">What working together looks like</p>
+        <h2 class="section-heading" style="margin-top:12px">One conversation. A fortnight of content.</h2>
+        <p class="body-large" style="margin-top:12px;margin-bottom:32px">We ask the questions, you talk for 45 minutes. Everything below comes out of what you said, in your words.</p>
+        <div class="wt-item">
+          <div class="wt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></div>
+          <div><h4>Written posts, 3 to 4 a week</h4><p>Your point of view, with an image attached. No camera needed.</p></div>
+        </div>
+        <div class="wt-item">
+          <div class="wt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+          <div><h4>Short-form video clips</h4><p>Cut from the same call, subtitled and edited.</p></div>
+        </div>
+        <div class="wt-item">
+          <div class="wt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/></svg></div>
+          <div><h4>Long-form articles</h4><p>For the ideas that need more than a post.</p></div>
+        </div>
+        <div class="wt-item">
+          <div class="wt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div><h4>Your profile, rebuilt as a landing page</h4><p>Where a buyer lands after they read a post.</p></div>
+        </div>
+        <div class="wt-item">
+          <div class="wt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <div><h4>Posting, engagement and a monthly report</h4><p>Impressions, profile views, inbound. Nothing lands in your calendar.</p></div>
+        </div>
+        <div class="wt-actions">
+          <a href="/services" class="btn-primary">See the full service →</a>
+        </div>
+      </div>
+
+      <div class="fade-up stagger-2">
+        <div class="wt-col-label"><span>Real posts, from real calls</span><span>scroll ↓</span></div>
+        <div class="wt-scroll">
+          <div class="wt-wall">
+
+          <div class="wt-post">
+            <div class="wt-post-body">
+              <div class="wt-post-head">
+                <img class="wt-avatar" src="/images/norm-pp.jpg" alt="Norm Wilkinson" width="44" height="44">
+                <div style="min-width:0;flex:1">
+                  <div class="wt-name-row"><span class="wt-post-name">Norm Wilkinson</span><span class="wt-in">in</span><span class="wt-conn">· 1st</span></div>
+                  <div class="wt-post-role">Helping early-stage tech founders turn great innovation into rev…</div>
+                  <a class="wt-cta-link">Book an appointment</a>
+                  <div class="wt-meta">3mo · <svg width="12" height="12" viewBox="0 0 24 24" fill="rgba(0,0,0,0.5)"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.9a15.7 15.7 0 00-1.4-3.6A8 8 0 0118.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a7.8 7.8 0 010-4h3.3a16.5 16.5 0 000 4zm.8 2h2.9c.4 1.3.9 2.5 1.4 3.6A8 8 0 015.1 16zm2.9-8H5.1a8 8 0 014.3-3.6C8.9 5.5 8.4 6.7 8 8zM12 20c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.6 14.6 0 010-4h4.6a14.6 14.6 0 010 4zm.3 5.6c.5-1.1 1-2.3 1.4-3.6h2.9a8 8 0 01-4.3 3.6zM16.4 14a16.5 16.5 0 000-4h3.3a7.8 7.8 0 010 4z"/></svg></div>
+                </div>
+              </div>
+              <div class="wt-post-text">During my time at IBM, I moved from a manager to a leader, where I had to unlearn years of built-up habits. And the thing most people struggle to let go of?
+
+It's the urge to take over and deliver. <span class="more">…more</span></div>
+            </div>
+            <div class="wt-react">
+              <span class="wt-react-ico"><span style="background:#0A66C2;color:#fff">👍</span><span style="background:#6DAE4F;color:#fff">💡</span></span> 47
+            </div>
+            <div class="wt-actions-bar">
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.3a2 2 0 002-1.7l1.4-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>Like</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 01-8.5 8.5 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8A8.4 8.4 0 0112.5 3 8.4 8.4 0 0121 11.5z"/></svg>Comment</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>Repost</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send</div>
+            </div>
+          </div>
+
+          <div class="wt-post">
+            <div class="wt-post-body">
+              <div class="wt-post-head">
+                <img class="wt-avatar" src="/images/norm-pp.jpg" alt="Norm Wilkinson" width="44" height="44">
+                <div style="min-width:0;flex:1">
+                  <div class="wt-name-row"><span class="wt-post-name">Norm Wilkinson</span><span class="wt-in">in</span><span class="wt-conn">· 1st</span></div>
+                  <div class="wt-post-role">Helping early-stage tech founders turn great innovation into rev…</div>
+                  <a class="wt-cta-link">Book an appointment</a>
+                  <div class="wt-meta">3mo · <svg width="12" height="12" viewBox="0 0 24 24" fill="rgba(0,0,0,0.5)"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.9a15.7 15.7 0 00-1.4-3.6A8 8 0 0118.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a7.8 7.8 0 010-4h3.3a16.5 16.5 0 000 4zm.8 2h2.9c.4 1.3.9 2.5 1.4 3.6A8 8 0 015.1 16zm2.9-8H5.1a8 8 0 014.3-3.6C8.9 5.5 8.4 6.7 8 8zM12 20c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.6 14.6 0 010-4h4.6a14.6 14.6 0 010 4zm.3 5.6c.5-1.1 1-2.3 1.4-3.6h2.9a8 8 0 01-4.3 3.6zM16.4 14a16.5 16.5 0 000-4h3.3a7.8 7.8 0 010 4z"/></svg></div>
+                </div>
+              </div>
+              <div class="wt-post-text">"AI is going to take my job"
+
+That's a common fear sitting in the back of many people's minds <span class="more">…more</span></div>
+              <a class="wt-post-media"><img src="/images/norm-ai-video.jpg" alt="Norm Wilkinson video: the human cost of AI" loading="lazy"><span class="wt-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></span></a>
+            </div>
+            <div class="wt-react">
+              <span class="wt-react-ico"><span style="background:#0A66C2;color:#fff">👍</span><span style="background:#DF704D;color:#fff">❤</span></span> 112
+            </div>
+            <div class="wt-actions-bar">
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.3a2 2 0 002-1.7l1.4-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>Like</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 01-8.5 8.5 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8A8.4 8.4 0 0112.5 3 8.4 8.4 0 0121 11.5z"/></svg>Comment</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>Repost</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send</div>
+            </div>
+          </div>
+
+          <div class="wt-post">
+            <div class="wt-post-body">
+              <div class="wt-post-head">
+                <img class="wt-avatar" src="/images/mark-pp.jpg" alt="Mark Balaam" width="44" height="44">
+                <div style="min-width:0;flex:1">
+                  <div class="wt-name-row"><span class="wt-post-name">Mark Balaam</span><span class="wt-in">in</span><span class="wt-conn">· 1st</span></div>
+                  <div class="wt-post-role">Founder and Chief Executive Officer at imabi and Sarax Limited</div>
+                  <a class="wt-cta-link">Visit my website</a>
+                  <div class="wt-meta">1yr · <svg width="12" height="12" viewBox="0 0 24 24" fill="rgba(0,0,0,0.5)"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.9a15.7 15.7 0 00-1.4-3.6A8 8 0 0118.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a7.8 7.8 0 010-4h3.3a16.5 16.5 0 000 4zm.8 2h2.9c.4 1.3.9 2.5 1.4 3.6A8 8 0 015.1 16zm2.9-8H5.1a8 8 0 014.3-3.6C8.9 5.5 8.4 6.7 8 8zM12 20c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.6 14.6 0 010-4h4.6a14.6 14.6 0 010 4zm.3 5.6c.5-1.1 1-2.3 1.4-3.6h2.9a8 8 0 01-4.3 3.6zM16.4 14a16.5 16.5 0 000-4h3.3a7.8 7.8 0 010 4z"/></svg></div>
+                </div>
+              </div>
+              <div class="wt-post-text">Award-winning Railway Guardian app 🚂
+
+Our free to use Railway Guardian app is an all-in-one enterprise <span class="more">…more</span></div>
+              <div class="wt-post-media"><img src="/images/mark-railway.jpg" alt="imabi award-winning Railway Guardian app" loading="lazy"></div>
+            </div>
+            <div class="wt-react">
+              <span class="wt-react-ico"><span style="background:#0A66C2;color:#fff">👍</span><span style="background:#6DAE4F;color:#fff">💡</span></span> 38
+            </div>
+            <div class="wt-actions-bar">
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.3a2 2 0 002-1.7l1.4-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>Like</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 01-8.5 8.5 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8A8.4 8.4 0 0112.5 3 8.4 8.4 0 0121 11.5z"/></svg>Comment</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>Repost</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send</div>
+            </div>
+          </div>
+
+          <div class="wt-post">
+            <div class="wt-post-body">
+              <div class="wt-post-head">
+                <img class="wt-avatar" src="/images/norm-pp.jpg" alt="Norm Wilkinson" width="44" height="44">
+                <div style="min-width:0;flex:1">
+                  <div class="wt-name-row"><span class="wt-post-name">Norm Wilkinson</span><span class="wt-in">in</span><span class="wt-conn">· 1st</span></div>
+                  <div class="wt-post-role">Helping early-stage tech founders turn great innovation into rev…</div>
+                  <a class="wt-cta-link">Book an appointment</a>
+                  <div class="wt-meta">3mo · <svg width="12" height="12" viewBox="0 0 24 24" fill="rgba(0,0,0,0.5)"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.9a15.7 15.7 0 00-1.4-3.6A8 8 0 0118.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a7.8 7.8 0 010-4h3.3a16.5 16.5 0 000 4zm.8 2h2.9c.4 1.3.9 2.5 1.4 3.6A8 8 0 015.1 16zm2.9-8H5.1a8 8 0 014.3-3.6C8.9 5.5 8.4 6.7 8 8zM12 20c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.6 14.6 0 010-4h4.6a14.6 14.6 0 010 4zm.3 5.6c.5-1.1 1-2.3 1.4-3.6h2.9a8 8 0 01-4.3 3.6zM16.4 14a16.5 16.5 0 000-4h3.3a7.8 7.8 0 010 4z"/></svg></div>
+                </div>
+              </div>
+              <div class="wt-post-text">There's a point in every leader's career where you shift from an operator, to a leader and it's not always an easy transition. <span class="more">…more</span></div>
+              <a class="wt-post-media"><img src="/images/norm-ibm-video.jpg" alt="Norm Wilkinson video: 20 years at IBM" loading="lazy"><span class="wt-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></span></a>
+            </div>
+            <div class="wt-react">
+              <span class="wt-react-ico"><span style="background:#0A66C2;color:#fff">👍</span><span style="background:#6DAE4F;color:#fff">💡</span></span> 63
+            </div>
+            <div class="wt-actions-bar">
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.3a2 2 0 002-1.7l1.4-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>Like</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 01-8.5 8.5 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8A8.4 8.4 0 0112.5 3 8.4 8.4 0 0121 11.5z"/></svg>Comment</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>Repost</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send</div>
+            </div>
+          </div>
+
+          <div class="wt-post">
+            <div class="wt-post-body">
+              <div class="wt-post-head">
+                <img class="wt-avatar" src="/images/mark-pp.jpg" alt="Mark Balaam" width="44" height="44">
+                <div style="min-width:0;flex:1">
+                  <div class="wt-name-row"><span class="wt-post-name">Mark Balaam</span><span class="wt-in">in</span><span class="wt-conn">· 1st</span></div>
+                  <div class="wt-post-role">Founder and Chief Executive Officer at imabi and Sarax Limited</div>
+                  <a class="wt-cta-link">Visit my website</a>
+                  <div class="wt-meta">2yr · <svg width="12" height="12" viewBox="0 0 24 24" fill="rgba(0,0,0,0.5)"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.9a15.7 15.7 0 00-1.4-3.6A8 8 0 0118.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a7.8 7.8 0 010-4h3.3a16.5 16.5 0 000 4zm.8 2h2.9c.4 1.3.9 2.5 1.4 3.6A8 8 0 015.1 16zm2.9-8H5.1a8 8 0 014.3-3.6C8.9 5.5 8.4 6.7 8 8zM12 20c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.6 14.6 0 010-4h4.6a14.6 14.6 0 010 4zm.3 5.6c.5-1.1 1-2.3 1.4-3.6h2.9a8 8 0 01-4.3 3.6zM16.4 14a16.5 16.5 0 000-4h3.3a7.8 7.8 0 010 4z"/></svg></div>
+                </div>
+              </div>
+              <div class="wt-post-text">We're looking to protect our users' well-being through our award-winning ecosystem! <span class="more">…more</span></div>
+              <div class="wt-post-media"><img src="/images/mark-ecosystem.jpg" alt="imabi safeguarding ecosystem apps" loading="lazy"></div>
+            </div>
+            <div class="wt-react">
+              <span class="wt-react-ico"><span style="background:#0A66C2;color:#fff">👍</span><span style="background:#DF704D;color:#fff">❤</span></span> 29
+            </div>
+            <div class="wt-actions-bar">
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.3a2 2 0 002-1.7l1.4-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>Like</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 01-8.5 8.5 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8A8.4 8.4 0 0112.5 3 8.4 8.4 0 0121 11.5z"/></svg>Comment</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>Repost</div>
+              <div class="wt-act"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send</div>
+            </div>
+          </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -470,7 +754,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
 
       <!-- Norm -->
       <div class="t-card" id="card-norm">
-        <img src="/images/testimonial-norm.avif" alt="Norm Wilkinson — CEO, Consultant, Ex-IBM Leader">
+        <img src="/images/testimonial-norm.avif" alt="Norm Wilkinson, CEO, Consultant, Ex-IBM Leader">
         <div class="t-overlay"></div>
         <div class="t-badge">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
@@ -510,7 +794,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
 
       <!-- Mark -->
       <div class="t-card" id="card-mark">
-        <img src="/images/testimonial-mark.jpg" alt="Mark Balaam — Founder CEO, Imabi">
+        <img src="/images/testimonial-mark.jpg" alt="Mark Balaam, Founder CEO, Imabi">
         <div class="t-overlay"></div>
         <div class="t-badge">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
