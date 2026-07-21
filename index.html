@@ -258,12 +258,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .story-quote{font-style:italic;font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;border-left:2px solid rgba(255,255,255,0.2);padding-left:16px}
 
 /* ── Show up where your buyers are (features marquee) ── */
-#show-up-banner{padding:64px 0 56px;background:#f8f8fb;border-top:0.5px solid rgba(14,14,68,0.08);border-bottom:0.5px solid rgba(14,14,68,0.08);overflow:hidden}
-.sub-marquee{margin-top:36px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
-.sub-track{display:flex;align-items:center;gap:0;white-space:nowrap;width:max-content;animation:subScroll 55s linear infinite}
-.sub-item{display:inline-flex;align-items:center;gap:9px;font-size:16px;font-weight:400;color:#0E0E44;padding:0 26px}
-.sub-item svg{flex-shrink:0;opacity:0.85}
-.sub-dot{color:#695AFF;font-size:14px;opacity:0.6}
+#show-up-banner{padding:56px 0 48px;background:#f8f8fb;border-top:0.5px solid rgba(14,14,68,0.08);border-bottom:0.5px solid rgba(14,14,68,0.08);overflow:hidden}
+.sb-head{display:flex;align-items:baseline;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.sb-head h2{font-size:19px;font-weight:600;color:#0E0E44;letter-spacing:-0.01em}
+.sb-head a{font-size:13px;font-weight:600;color:#695AFF;text-decoration:none;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.sb-head a:hover{text-decoration:underline}
+.sb-head a svg{transition:transform 0.2s}
+.sb-head a:hover svg{transform:translateX(2px)}
+.sub-marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.sub-marquee-wrap:hover .sub-track{animation-play-state:paused}
+.sub-track{display:flex;align-items:center;gap:44px;white-space:nowrap;width:max-content;animation:subScroll 55s linear infinite}
+.sub-item{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:400;color:rgba(14,14,68,0.7)}
+.sub-item svg{flex-shrink:0}
 @keyframes subScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.sub-track{animation:none}}
 
@@ -507,23 +513,28 @@ footer{background:#0E0E44;padding:64px 0 32px}
 
 <!-- SHOW UP WHERE YOUR BUYERS ARE -->
 <section id="show-up-banner">
-  <div class="container" style="text-align:center">
-    <h2 class="section-heading fade-up">Show up where your <span class="gradient-text">buyers are.</span></h2>
+  <div class="container">
+    <div class="sb-head fade-up">
+      <h2>Show up where your buyers are</h2>
+      <a href="/services">See the full service <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
   </div>
-  <div class="sub-marquee fade-up stagger-1">
-    <div class="sub-track">
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>Written LinkedIn posts</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>Bitesize video clips</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/></svg>Long-form articles</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>LinkedIn newsletter</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>Email marketing</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.4 2.4 3.6 5.5 3.6 9s-1.2 6.6-3.6 9c-2.4-2.4-3.6-5.5-3.6-9s1.2-6.6 3.6-9z"/></svg>Website articles</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>Written LinkedIn posts</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>Bitesize video clips</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/></svg>Long-form articles</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>LinkedIn newsletter</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>Email marketing</span><span class="sub-dot">·</span>
-      <span class="sub-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.4 2.4 3.6 5.5 3.6 9s-1.2 6.6-3.6 9c-2.4-2.4-3.6-5.5-3.6-9s1.2-6.6 3.6-9z"/></svg>Website articles</span><span class="sub-dot">·</span>
+  <div class="sub-marquee-wrap">
+    <div class="sub-marquee fade-up stagger-1">
+      <div class="sub-track">
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v12H8l-4 4V4z"/></svg>LinkedIn content engine</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M15 10l5-3v10l-5-3M3 6h10v12H3z"/></svg>Bitesize video posts</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Thought-leader articles</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>LinkedIn newsletter</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>Email marketing</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18a15 15 0 010-18"/></svg>Website articles</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v12H8l-4 4V4z"/></svg>LinkedIn content engine</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M15 10l5-3v10l-5-3M3 6h10v12H3z"/></svg>Bitesize video posts</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Thought-leader articles</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>LinkedIn newsletter</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>Email marketing</span>
+        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18a15 15 0 010-18"/></svg>Website articles</span>
+      </div>
     </div>
   </div>
 </section>
