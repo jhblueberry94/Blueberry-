@@ -93,7 +93,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .featured-in{margin-top:48px}
 .featured-in p{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;color:rgba(14,14,68,0.35);margin-bottom:16px}
 .logo-row{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
-.logo-row img{height:30px;width:auto;object-fit:contain;filter:brightness(0);opacity:0.4;transition:opacity 0.2s}
+.logo-row img{height:42px;width:auto;object-fit:contain;filter:brightness(0);opacity:0.4;transition:opacity 0.2s}
 .logo-row img:hover{opacity:0.65}
 .proof-points{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:28px;flex-wrap:wrap}
 .proof-point{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#0E0E44}
@@ -210,6 +210,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .fw-ticks li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(14,14,68,0.75);margin-bottom:14px;line-height:1.6}
 .fw-tick-icon{flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .fw-how{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px}
+
+/* ── Trusted by experienced leaders ── */
+#trusted{padding:96px 0;background:#fff}
+.trusted-grid{display:grid;grid-template-columns:1fr 0.8fr 1fr;gap:20px;margin-top:48px;align-items:stretch}
+@media(max-width:860px){.trusted-grid{grid-template-columns:1fr}}
+.portrait-card{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;border:2px solid transparent;transition:border-color 0.3s;display:block;background:#0E0E44}
+.portrait-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.portrait-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,14,68,0.92) 0%,rgba(14,14,68,0.35) 55%,transparent 100%)}
+.portrait-badge{position:absolute;top:14px;left:14px;right:14px;display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border:0.5px solid rgba(255,255,255,0.2);border-radius:20px;padding:7px 12px;font-size:11px;font-weight:500;color:#fff;line-height:1.3}
+.portrait-hover-quote{position:absolute;left:18px;right:18px;bottom:74px;max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.4s ease}
+.portrait-stars{color:#FF5CAE;font-size:12px;letter-spacing:2px;margin-bottom:6px}
+.portrait-hover-quote p{color:rgba(255,255,255,0.92);font-size:13px;line-height:1.55}
+.portrait-bottom{position:absolute;left:18px;right:18px;bottom:18px}
+.portrait-bottom h3{color:#fff;font-size:15px;font-weight:600}
+.portrait-bottom p{color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px}
+@media(hover:hover){.portrait-card:hover{border-color:#695AFF}.portrait-card:hover .portrait-hover-quote{max-height:160px;opacity:1}}
+.trusted-cta{background:#EEEDFE;border-radius:14px;padding:32px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px}
+.trusted-cta h3{font-size:18px;font-weight:600;color:#0E0E44}
+.trusted-cta p{font-size:14px;color:rgba(14,14,68,0.6);line-height:1.6}
+
+/* ── Show up where your buyers are (features marquee) ── */
+#show-up-banner{padding:64px 0 56px;background:#f8f8fb;border-top:0.5px solid rgba(14,14,68,0.08);border-bottom:0.5px solid rgba(14,14,68,0.08);overflow:hidden}
+.sub-marquee{margin-top:36px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+.sub-track{display:flex;align-items:center;gap:20px;white-space:nowrap;width:max-content;animation:subScroll 28s linear infinite}
+.sub-item{font-size:16px;font-weight:500;color:#0E0E44}
+.sub-dot{color:#695AFF;font-size:16px}
+@keyframes subScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.sub-track{animation:none}}
 
 /* ── Proof carousel (from services page) ── */
 #proof{padding:72px 0;background:#0E0E44;position:relative;overflow:hidden}
@@ -455,104 +483,25 @@ footer{background:#0E0E44;padding:64px 0 32px}
   </div>
 </section>
 
-<!-- VISIBILITY IMPACT -->
-<section id="visibility" class="grain">
-  <div class="vi-orb vi-orb-1"></div>
-  <div class="vi-orb vi-orb-2"></div>
-  <div class="container vi-content">
-    <h2 class="section-heading fade-up" style="color:#fff;max-width:680px">Real people build authentic relationships. Anything else just falls into AI noise.</h2>
-    <p class="body-large fade-up stagger-1" style="color:rgba(255,255,255,0.65);max-width:680px;margin-top:16px">The market is drowning in AI content. The leaders who show up authentically, with a point of view and a story, are the ones building real connections. Showing up as human has never been more important and yet so rare.</p>
-    <div class="vi-cards">
-      <div class="vi-card fade-up">
-        <div class="vi-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-        </div>
-        <h3>You're not part of the conversation</h3>
-        <p>Your buyers are researching, comparing, and forming shortlists before they speak to anyone. If your visibility is low, you're making growing your pipeline much harder than it should be.</p>
-      </div>
-      <div class="vi-card fade-up stagger-1">
-        <div class="vi-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <h3>Trust is more important than ever.</h3>
-        <p>Feeds are full of AI-generated posts that sound like everyone else. Decision makers are tuned out and fatigued. The leaders who cut through are posting real insight, being themselves, with a differentiated point of view.</p>
-      </div>
-      <div class="vi-card fade-up stagger-2">
-        <div class="vi-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
-        <h3>Minimal inbound and weak demand</h3>
-        <p>Buyers and partners are looking for real connection. They will research you, look at your LinkedIn and see if you're aligned to what they need. No visibility means cold outreach and being left in the dark.</p>
-      </div>
-    </div>
-    <div style="text-align:center">
-      <a href="/how-it-works" class="btn-primary">See How It Works →</a>
-    </div>
+<!-- SHOW UP WHERE YOUR BUYERS ARE -->
+<section id="show-up-banner">
+  <div class="container" style="text-align:center">
+    <h2 class="section-heading fade-up">Show up where your <span class="gradient-text">buyers are.</span></h2>
   </div>
-</section>
-
-<!-- OLD WAY / NEW WAY COMPARISON -->
-<section id="compare">
-  <div class="container">
-    <div class="cmp-head">
-      <p class="eyebrow fade-up">The difference</p>
-      <h2 class="section-heading fade-up stagger-1" style="margin-top:12px">The same channel, run <span class="gradient-text">a completely different way.</span></h2>
-    </div>
-    <div class="cmp-table fade-up stagger-2">
-      <div class="cmp-row">
-        <div class="cmp-label cmp-label-old">How most agencies do it</div>
-        <div class="cmp-label cmp-label-new">How we do it</div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-cell cmp-cell-old">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          Content written from a stale brief
-        </div>
-        <div class="cmp-cell cmp-cell-new">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Content extracted from real conversations
-        </div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-cell cmp-cell-old">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          Irrelevant posts with no consistency
-        </div>
-        <div class="cmp-cell cmp-cell-new">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          A content engine built around your expertise
-        </div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-cell cmp-cell-old">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          Paid channels dominating brand and lead acquisition
-        </div>
-        <div class="cmp-cell cmp-cell-new">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Owned media and storytelling as the brand differentiator
-        </div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-cell cmp-cell-old">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          Locked into 6 or 12 months with poor agency terms
-        </div>
-        <div class="cmp-cell cmp-cell-new">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Rolling contracts with real human experience
-        </div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-cell cmp-cell-old">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          Not knowing if it works, or delayed analytics
-        </div>
-        <div class="cmp-cell cmp-cell-new">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Monthly reporting on quantitative and qualitative data
-        </div>
-      </div>
+  <div class="sub-marquee fade-up stagger-1">
+    <div class="sub-track">
+      <span class="sub-item">Written LinkedIn posts</span><span class="sub-dot">·</span>
+      <span class="sub-item">Bitesize video clips</span><span class="sub-dot">·</span>
+      <span class="sub-item">Long-form articles</span><span class="sub-dot">·</span>
+      <span class="sub-item">LinkedIn newsletter</span><span class="sub-dot">·</span>
+      <span class="sub-item">Email marketing</span><span class="sub-dot">·</span>
+      <span class="sub-item">Website articles</span><span class="sub-dot">·</span>
+      <span class="sub-item">Written LinkedIn posts</span><span class="sub-dot">·</span>
+      <span class="sub-item">Bitesize video clips</span><span class="sub-dot">·</span>
+      <span class="sub-item">Long-form articles</span><span class="sub-dot">·</span>
+      <span class="sub-item">LinkedIn newsletter</span><span class="sub-dot">·</span>
+      <span class="sub-item">Email marketing</span><span class="sub-dot">·</span>
+      <span class="sub-item">Website articles</span><span class="sub-dot">·</span>
     </div>
   </div>
 </section>
@@ -758,6 +707,108 @@ That's a common fear sitting in the back of many people's minds <span class="mor
   </div>
 </section>
 
+<!-- OLD WAY / NEW WAY COMPARISON -->
+<section id="compare">
+  <div class="container">
+    <div class="cmp-head">
+      <p class="eyebrow fade-up">The difference</p>
+      <h2 class="section-heading fade-up stagger-1" style="margin-top:12px">The same channel, run <span class="gradient-text">a completely different way.</span></h2>
+    </div>
+    <div class="cmp-table fade-up stagger-2">
+      <div class="cmp-row">
+        <div class="cmp-label cmp-label-old">How most agencies do it</div>
+        <div class="cmp-label cmp-label-new">How we do it</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Content written from a stale brief
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Content extracted from real conversations
+        </div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Irrelevant posts with no consistency
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          A content engine built around your expertise
+        </div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Paid channels dominating brand and lead acquisition
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Owned media and storytelling as the brand differentiator
+        </div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Locked into 6 or 12 months with poor agency terms
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Rolling contracts with real human experience
+        </div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-cell cmp-cell-old">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(14,14,68,0.35)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Not knowing if it works, or delayed analytics
+        </div>
+        <div class="cmp-cell cmp-cell-new">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Monthly reporting on quantitative and qualitative data
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIBILITY IMPACT -->
+<section id="visibility" class="grain">
+  <div class="vi-orb vi-orb-1"></div>
+  <div class="vi-orb vi-orb-2"></div>
+  <div class="container vi-content">
+    <h2 class="section-heading fade-up" style="color:#fff;max-width:680px">Real people build authentic relationships. Anything else just falls into AI noise.</h2>
+    <p class="body-large fade-up stagger-1" style="color:rgba(255,255,255,0.65);max-width:680px;margin-top:16px">The market is drowning in AI content. The leaders who show up authentically, with a point of view and a story, are the ones building real connections. Showing up as human has never been more important and yet so rare.</p>
+    <div class="vi-cards">
+      <div class="vi-card fade-up">
+        <div class="vi-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        </div>
+        <h3>You're not part of the conversation</h3>
+        <p>Your buyers are researching, comparing, and forming shortlists before they speak to anyone. If your visibility is low, you're making growing your pipeline much harder than it should be.</p>
+      </div>
+      <div class="vi-card fade-up stagger-1">
+        <div class="vi-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Trust is more important than ever.</h3>
+        <p>Feeds are full of AI-generated posts that sound like everyone else. Decision makers are tuned out and fatigued. The leaders who cut through are posting real insight, being themselves, with a differentiated point of view.</p>
+      </div>
+      <div class="vi-card fade-up stagger-2">
+        <div class="vi-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#695AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Minimal inbound and weak demand</h3>
+        <p>Buyers and partners are looking for real connection. They will research you, look at your LinkedIn and see if you're aligned to what they need. No visibility means cold outreach and being left in the dark.</p>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <a href="/how-it-works" class="btn-primary">See How It Works →</a>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -787,6 +838,56 @@ That's a common fear sitting in the back of many people's minds <span class="mor
           <div class="faq-a"><p class="faq-a-inner">Visibility builds from the first post. Meaningful commercial momentum typically follows at 60 to 90 days. One client saw a 3,600% increase in visibility within 30 days. We track and report monthly so you always know what's working.</p></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED BY EXPERIENCED LEADERS -->
+<section id="trusted">
+  <div class="container">
+    <p class="eyebrow fade-up" style="text-align:center">Social proof</p>
+    <h2 class="section-heading fade-up stagger-1" style="margin-top:12px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto">Trusted by <span class="gradient-text">experienced leaders.</span></h2>
+    <p class="body-large fade-up stagger-2" style="text-align:center;max-width:520px;margin:12px auto 0">Hover to hear what they have to say.</p>
+    <div class="trusted-grid fade-up stagger-3">
+      <article class="portrait-card" tabindex="0" aria-label="Norm Wilkinson client story">
+        <img src="/images/norm-pp.jpg" alt="Norm Wilkinson, CEO and Consultant, Ex-IBM Leader" class="portrait-img">
+        <div class="portrait-overlay" aria-hidden="true"></div>
+        <div class="portrait-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          3,600% increase in visibility in 30 days
+        </div>
+        <div class="portrait-hover-quote" aria-hidden="true">
+          <div class="portrait-stars">★★★★★</div>
+          <p>"Considering what we've achieved in such a short amount of time, from a 40-minute call, is quite remarkable."</p>
+        </div>
+        <div class="portrait-bottom">
+          <h3>Norm Wilkinson</h3>
+          <p>CEO, Consultant. Ex-IBM Leader</p>
+        </div>
+      </article>
+
+      <div class="trusted-cta">
+        <h3>Ready to build your own story?</h3>
+        <p>Let's review your current strategy and where you want to be. No commitment.</p>
+        <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding:12px 24px;font-size:14px;border-radius:50px">Book a Call →</a>
+      </div>
+
+      <article class="portrait-card" tabindex="0" aria-label="Mark Balaam client story">
+        <img src="/images/mark-pp.jpg" alt="Mark Balaam, Founder CEO, Imabi" class="portrait-img">
+        <div class="portrait-overlay" aria-hidden="true"></div>
+        <div class="portrait-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          Direct deals and partnerships within months
+        </div>
+        <div class="portrait-hover-quote" aria-hidden="true">
+          <div class="portrait-stars">★★★★★</div>
+          <p>"It's been a real pleasure working with the team. The process has exceeded expectations."</p>
+        </div>
+        <div class="portrait-bottom">
+          <h3>Mark Balaam</h3>
+          <p>Founder CEO, Imabi</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
