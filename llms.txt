@@ -55,6 +55,11 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 - [LinkedIn Agency, Bracknell](https://blueberry-media.co.uk/bracknell)
 - [LinkedIn Agency, Newbury](https://blueberry-media.co.uk/newbury)
 - [LinkedIn Agency, Wokingham](https://blueberry-media.co.uk/wokingham)
+- [LinkedIn Agency, Windsor](https://blueberry-media.co.uk/windsor)
+- [LinkedIn Agency, Slough](https://blueberry-media.co.uk/slough)
+- [LinkedIn Agency, Maidenhead](https://blueberry-media.co.uk/maidenhead)
+- [LinkedIn Agency, Ascot](https://blueberry-media.co.uk/ascot)
+- [LinkedIn Agency, Thatcham](https://blueberry-media.co.uk/thatcham)
 
 ## Blog articles
 
@@ -79,7 +84,7 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 - [Why Fractional Executives Need LinkedIn Thought Leadership](https://blueberry-media.co.uk/blog/fractional-executive-linkedin-thought-leadership)
 - [Why consultants need LinkedIn thought leadership](https://blueberry-media.co.uk/blog/consultant-linkedin-thought-leadership)
 
-Note: this list reflects all 20 posts live on the blog as of July 2026. Verified directly against the site's blog index file structure, not inferred from search indexing.
+Note: this list reflects all 20 blog posts and 10 local pages live on the site as of 22 July 2026. Rebuilt in full from a verified complete URL list, not appended to the previous version.
 
 ## Contact
 
