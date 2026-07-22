@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <!-- Core pages -->
   <url>
     <loc>https://blueberry-media.co.uk/</loc>
@@ -37,7 +36,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <!-- LinkedIn by role (persona pages) -->
   <url>
     <loc>https://blueberry-media.co.uk/linkedin-by-role</loc>
@@ -69,21 +67,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <!-- Case study -->
   <url>
     <loc>https://blueberry-media.co.uk/linkedin-marketing-case-study</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <!-- Blog hub -->
   <url>
     <loc>https://blueberry-media.co.uk/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Blog posts -->
   <url>
     <loc>https://blueberry-media.co.uk/blog/b2b-buying-behaviour-linkedin</loc>
@@ -188,37 +183,65 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <!-- Local pages (Berkshire) -->
   <url>
     <loc>https://blueberry-media.co.uk/berkshire</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-22</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/reading</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/bracknell</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/newbury</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/wokingham</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
-
+  <url>
+    <loc>https://blueberry-media.co.uk/windsor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/slough</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/maidenhead</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/ascot</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/thatcham</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-22</lastmod>
+  </url>
 </urlset>
