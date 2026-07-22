@@ -69,16 +69,7 @@
   @media(max-width:768px){.post-cta{padding:28px 24px}.post-cta h3{font-size:18px}.post-cta .btn-primary{width:100%;justify-content:center}}
 
 
-  .related-section { margin: 48px 0; }
-  .related-section h2 { font-size: 24px; color: #0E0E44; margin-bottom: 18px; }
-  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .related-card { border: 1px solid #e5e5f0; border-radius: 12px; padding: 22px; text-decoration: none; display: block; transition: box-shadow 0.2s; }
-  .related-card:hover { box-shadow: 0 8px 24px rgba(14,14,68,0.08); }
-  .related-card .rc-cat { font-size: 12px; font-weight: 600; color: #695AFF; }
-  .related-card .rc-title { font-size: 18px; color: #0E0E44; font-weight: 600; margin: 8px 0; line-height: 1.3; }
-  .related-card .rc-stand { font-size: 14px; color: #555; line-height: 1.6; }
-  .related-card .rc-meta { font-size: 12px; color: #999; margin-top: 12px; }
-  @media(max-width:600px){ .article-wrap h1 { font-size: 30px; } .related-grid { grid-template-columns: 1fr; } }
+  @media(max-width:600px){ .article-wrap h1 { font-size: 30px; } }
 
   /* Footer, copied from the homepage template */
   footer { background:#0E0E44;padding:64px 0 32px }
@@ -297,20 +288,18 @@
   </div>
 </div>
 
-<div class="article-wrap related-section">
-  <h2>Related articles</h2>
-  <div class="related-grid">
-    <a class="related-card" href="/blog/personal-branding-for-founders">
-      <span class="rc-cat">Personal brand</span>
-      <div class="rc-title">Personal branding for founders: how to build one on LinkedIn</div>
-      <div class="rc-stand">What personal branding for founders actually means, why it decides B2B shortlists, and how to build one without writing it all yourself.</div>
-      <div class="rc-meta">July 2026 &middot; 8 min read</div>
+<div class="article-wrap" style="margin-top:64px;border-top:2px solid rgba(14,14,68,0.08);padding-top:48px">
+  <h3 style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(14,14,68,0.4);margin-bottom:28px">Related articles</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <a href="/blog/personal-branding-for-founders" style="text-decoration:none;display:block;border:1px solid rgba(14,14,68,0.1);border-radius:12px;padding:24px;transition:border-color 0.2s" onmouseover="this.style.borderColor='#695AFF'" onmouseout="this.style.borderColor='rgba(14,14,68,0.1)'">
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#695AFF;display:block;margin-bottom:8px">Personal brand</span>
+      <p style="font-size:15px;font-weight:600;color:#0E0E44;line-height:1.4;margin:0 0 8px">Personal branding for founders: how to build one on LinkedIn</p>
+      <p style="font-size:13px;color:rgba(14,14,68,0.5);margin:0">What personal branding for founders actually means, why it decides B2B shortlists, and how to build one without writing it all yourself.</p>
     </a>
-    <a class="related-card" href="/blog/linkedin-thought-leadership-agency">
-      <span class="rc-cat">LinkedIn strategy</span>
-      <div class="rc-title">What does a LinkedIn thought leadership agency actually do?</div>
-      <div class="rc-stand">The work behind the label, what to expect month to month, and how to judge whether it is working.</div>
-      <div class="rc-meta">June 2026 &middot; 7 min read</div>
+    <a href="/blog/linkedin-thought-leadership-agency" style="text-decoration:none;display:block;border:1px solid rgba(14,14,68,0.1);border-radius:12px;padding:24px;transition:border-color 0.2s" onmouseover="this.style.borderColor='#695AFF'" onmouseout="this.style.borderColor='rgba(14,14,68,0.1)'">
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#695AFF;display:block;margin-bottom:8px">LinkedIn strategy</span>
+      <p style="font-size:15px;font-weight:600;color:#0E0E44;line-height:1.4;margin:0 0 8px">What does a LinkedIn thought leadership agency actually do?</p>
+      <p style="font-size:13px;color:rgba(14,14,68,0.5);margin:0">The work behind the label, what to expect month to month, and how to judge whether it is working.</p>
     </a>
   </div>
 </div>
