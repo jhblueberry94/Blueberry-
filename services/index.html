@@ -94,6 +94,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .foundation-stat-num{font-size:32px;font-weight:700;color:#695AFF;letter-spacing:-0.03em}
 .foundation-stat-label{font-size:13px;color:rgba(14,14,68,0.5)}
 
+.voicenote-badge{position:absolute;top:-16px;right:28px;display:flex;align-items:center;gap:9px;background:#fff;border:1.5px solid rgba(105,90,255,0.3);color:#0E0E44;padding:8px 16px 8px 8px;border-radius:26px;box-shadow:0 8px 20px rgba(14,14,68,0.10)}
+.voicenote-play{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#0E0E44,#695AFF);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.voicenote-play svg{margin-left:2px}
+.voicenote-bars{display:flex;align-items:center;gap:2.5px;height:14px}
+.voicenote-bars span{display:block;width:2.5px;border-radius:2px;background:#695AFF;animation:voicenote-eq 1.1s ease-in-out infinite}
+.voicenote-bars span:nth-child(1){height:40%;animation-delay:0s}
+.voicenote-bars span:nth-child(2){height:85%;animation-delay:0.1s}
+.voicenote-bars span:nth-child(3){height:55%;animation-delay:0.2s}
+.voicenote-bars span:nth-child(4){height:100%;animation-delay:0.3s}
+.voicenote-bars span:nth-child(5){height:60%;animation-delay:0.4s}
+.voicenote-bars span:nth-child(6){height:75%;animation-delay:0.5s}
+@keyframes voicenote-eq{0%,100%{transform:scaleY(0.35)}50%{transform:scaleY(1)}}
+.voicenote-label{font-size:11.5px;font-weight:600;color:#0E0E44;white-space:nowrap}
+@media(max-width:680px){.voicenote-badge{position:static;display:inline-flex;margin-bottom:16px}}
+
 .addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:900px){.addon-grid{grid-template-columns:1fr}}
 .addon-card{background:#fff;border:1px solid rgba(14,14,68,0.1);border-radius:16px;padding:26px;position:relative}
@@ -330,6 +345,11 @@ footer{background:#0E0E44;padding:64px 0 32px;border-top:0.5px solid rgba(255,25
 
     <div class="foundation-card fade-up">
       <span class="foundation-badge">Foundation</span>
+      <div class="voicenote-badge">
+        <span class="voicenote-play"><svg width="8" height="8" viewBox="0 0 24 24" fill="#fff"><polygon points="6,4 20,12 6,20"/></svg></span>
+        <span class="voicenote-bars"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+        <span class="voicenote-label">In your voice</span>
+      </div>
       <div class="foundation-top">
         <h3>LinkedIn content, written in your voice</h3>
       </div>
