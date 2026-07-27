@@ -1,6 +1,6 @@
 # Blueberry Media
 
-> Blueberry Media is a UK-based LinkedIn thought leadership agency for B2B founders and executives. We turn 45-minute recorded conversations into weeks of LinkedIn content that builds authority, trust, and commercial pipeline.
+> Blueberry Media is a UK-based LinkedIn content agency and thought leadership agency for B2B founders and executives. We turn 45-minute recorded conversations into weeks of LinkedIn content that builds authority, trust, and commercial pipeline.
 
 ## About
 
@@ -10,7 +10,7 @@ Our process is built around recorded conversations. We extract your thinking, la
 
 ## Services
 
-- Done-for-you LinkedIn content: bi-weekly content calls, 3 to 4 posts per week, profile optimisation, monthly reporting
+- Done-for-you LinkedIn content and LinkedIn ghostwriting: bi-weekly content calls, 3 to 4 posts per week, profile optimisation, monthly reporting
 - LinkedIn personal branding for founders, consultants, and executives
 - Newsletter writing and publishing
 - LinkedIn outreach management
@@ -21,12 +21,15 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 
 ## Who we work with
 
-- B2B founders and owner-directors
+- B2B founders and owner-directors, including SaaS founders
 - Independent consultants and advisors
 - Senior executives and C-suite leaders
 - Sales leaders (VPs of Sales, Sales Directors, Client Directors)
 - Fractional executives (CFOs, CMOs, COOs, CTOs)
 - Professional services leaders (law, accountancy, consultancy partners)
+- Private equity partners
+- Agency owners and founders
+- CMOs, Heads of Growth, and Chief Revenue Officers
 - Primarily UK-based, also working with clients internationally
 
 ## Key pages
@@ -42,11 +45,18 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 
 ## Who it's for (persona pages)
 
-- [LinkedIn for consultants](https://blueberry-media.co.uk/consultants)
-- [LinkedIn for B2B founders](https://blueberry-media.co.uk/b2b-founders)
-- [LinkedIn for sales leaders](https://blueberry-media.co.uk/sales-leaders)
-- [LinkedIn for fractional executives](https://blueberry-media.co.uk/fractional-executives)
-- [LinkedIn for professional services leaders](https://blueberry-media.co.uk/professional-services-leaders)
+- [LinkedIn by Role hub](https://blueberry-media.co.uk/linkedin-by-role)
+- [LinkedIn personal branding for management consultants](https://blueberry-media.co.uk/consultants)
+- [LinkedIn content agency for B2B founders](https://blueberry-media.co.uk/b2b-founders)
+- [LinkedIn content agency for SaaS founders](https://blueberry-media.co.uk/saas-founders)
+- [LinkedIn content agency for B2B sales leaders](https://blueberry-media.co.uk/sales-leaders)
+- [LinkedIn personal branding for fractional executives](https://blueberry-media.co.uk/fractional-executives)
+- [LinkedIn content agency for professional services leaders](https://blueberry-media.co.uk/professional-services-leaders)
+- [Executive personal branding for private equity partners](https://blueberry-media.co.uk/private-equity-partners)
+- [LinkedIn personal branding for agency owners](https://blueberry-media.co.uk/agency-owners)
+- [LinkedIn content agency for CMOs](https://blueberry-media.co.uk/cmo)
+- [LinkedIn content agency for Heads of Growth](https://blueberry-media.co.uk/head-of-growth)
+- [LinkedIn content agency for Chief Revenue Officers](https://blueberry-media.co.uk/cro)
 
 ## Local pages (Berkshire and the Thames Valley)
 
@@ -84,7 +94,7 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 - [Why Fractional Executives Need LinkedIn Thought Leadership](https://blueberry-media.co.uk/blog/fractional-executive-linkedin-thought-leadership)
 - [Why consultants need LinkedIn thought leadership](https://blueberry-media.co.uk/blog/consultant-linkedin-thought-leadership)
 
-Note: this list reflects all 20 blog posts and 10 local pages live on the site as of 27 July 2026. Rebuilt in full from a verified complete URL list, not appended to the previous version.
+Note: this list reflects all 20 blog posts, 12 persona pages (hub plus 11 roles), and 10 local pages live on the site as of 27 July 2026. Rebuilt in full from a verified complete URL list, not appended to the previous version.
 
 ## Contact
 
