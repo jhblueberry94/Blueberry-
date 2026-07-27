@@ -211,6 +211,11 @@
       "source": "/5-social-media-tools-to-grow-your-business",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/blog/linkedin-personal-brand-vs-company-page-guide",
+      "destination": "/blog/linkedin-personal-profile-vs-company-page",
+      "permanent": true
     }
   ],
   "headers": [
