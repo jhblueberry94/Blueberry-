@@ -107,6 +107,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .bj-card h3{font-size:17px;font-weight:600;color:#0E0E44;margin-bottom:12px;line-height:1.4}
 .circle-wrap{position:relative;display:inline-block}
 
+/* ── Rolling headline ── */
+.bj-intro{text-align:center;margin-left:auto;margin-right:auto}
+.roll-heading{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:nowrap;white-space:nowrap;font-size:clamp(22px,3.2vw,40px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;line-height:1.2;margin:28px auto 56px}
+.roll-track{position:relative;height:2.9em;overflow:hidden;flex:0 1 auto;
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 34%, black 66%, transparent 100%);
+  mask-image:linear-gradient(to bottom, transparent 0%, black 34%, black 66%, transparent 100%)}
+.roll-item{position:absolute;left:0;top:50%;white-space:nowrap;transition:transform 0.6s cubic-bezier(.4,0,.2,1),opacity 0.6s ease;background:linear-gradient(135deg,#695AFF,#FF5CAE);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.roll-item.is-current{opacity:1}
+.roll-item.is-adjacent{opacity:0.32}
+.roll-item.is-hidden{opacity:0}
+@media(max-width:640px){.roll-heading{font-size:clamp(18px,5.2vw,28px);white-space:normal;margin-bottom:40px}}
+@media(max-width:420px){.roll-heading{gap:6px}}
+
 
 /* ── StatStrip ── */
 .bj-stats{margin-top:56px;padding-top:40px;border-top:0.5px solid rgba(14,14,68,0.1)}
@@ -466,8 +479,14 @@ footer{background:#0E0E44;padding:64px 0 32px}
 <!-- BUYING JOURNEY -->
 <section id="buying-journey" class="buying-journey">
   <div class="container">
-    <p class="eyebrow fade-up">You've probably noticed this</p>
-    <h2 class="section-heading fade-up stagger-1" style="margin-top:16px;max-width:640px">You're doing the work. But the right people aren't <span class="gradient-text">seeing it.</span></h2>
+    <div class="bj-intro">
+      <p class="eyebrow fade-up">You've probably noticed this</p>
+      <h2 class="roll-heading fade-up stagger-1">
+        <span>You're an expert but</span>
+        <span class="roll-track" id="rollTrack" aria-live="off"></span>
+      </h2>
+      <p class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">You're an expert but your LinkedIn disagrees, your pipeline's going quiet, and nobody knows you.</p>
+    </div>
     <div class="bj-cards">
       <div class="bj-card fade-up">
         <h3>"I know I should be more visible"</h3>
@@ -1104,6 +1123,72 @@ const circleObs = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 const bj = document.querySelector('.buying-journey');
 if(bj) circleObs.observe(bj);
+
+/* ── Rolling headline carousel ── */
+(function(){
+  const heading = document.querySelector('.roll-heading');
+  const anchor = heading ? heading.querySelector('span:first-child') : null;
+  const track = document.getElementById('rollTrack');
+  if(!track || !anchor) return;
+  const phrases = ['your LinkedIn disagrees', 'your pipeline\'s going quiet', 'nobody knows you'];
+  const n = phrases.length;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const extended = [phrases[n-1], phrases[0], phrases[1], phrases[2], phrases[0]];
+  const list = extended.map(text => {
+    const span = document.createElement('span');
+    span.className = 'roll-item';
+    span.textContent = text;
+    track.appendChild(span);
+    return span;
+  });
+
+  function fit(){
+    heading.style.fontSize = '';
+    const computed = parseFloat(getComputedStyle(heading).fontSize);
+    let widest = 0;
+    list.forEach(el => { widest = Math.max(widest, el.getBoundingClientRect().width); });
+    track.style.width = Math.ceil(widest) + 'px';
+
+    const container = heading.closest('.container') || heading.parentElement;
+    const available = container.clientWidth;
+    const gap = 12;
+    const total = anchor.getBoundingClientRect().width + gap + widest;
+    if(total > available && window.innerWidth > 640){
+      const scale = Math.max(available / total, 0.55);
+      heading.style.fontSize = (computed * scale) + 'px';
+      let widest2 = 0;
+      list.forEach(el => { widest2 = Math.max(widest2, el.getBoundingClientRect().width); });
+      track.style.width = Math.ceil(widest2) + 'px';
+    }
+  }
+
+  let idx = 1;
+  function place(withTransition){
+    list.forEach((el, i) => {
+      const dist = i - idx;
+      let cls = 'roll-item is-hidden';
+      if(dist === 0){ cls = 'roll-item is-current'; }
+      else if(Math.abs(dist) === 1){ cls = 'roll-item is-adjacent'; }
+      el.style.transition = withTransition ? '' : 'none';
+      el.className = cls;
+      el.style.transform = 'translateY(calc(-50% + ' + (dist * 1.15) + 'em))';
+    });
+  }
+
+  fit();
+  place(false);
+  window.addEventListener('resize', () => { fit(); });
+
+  if(reduceMotion) return;
+  setInterval(() => {
+    idx++;
+    place(true);
+    if(idx === list.length - 1){
+      setTimeout(() => { idx = 1; place(false); void track.offsetWidth; }, 650);
+    }
+  }, 2600);
+})();
 
 /* ── Content Framework tabs ── */
 const fwData = [
