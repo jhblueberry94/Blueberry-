@@ -485,7 +485,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
         <span>You're an expert but</span>
         <span class="roll-track" id="rollTrack" aria-live="off"></span>
       </h2>
-      <p class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">You're an expert but your LinkedIn disagrees, your pipeline's going quiet, and nobody knows you.</p>
+      <p class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">You're an expert but your LinkedIn disagrees, your pipeline's gone quiet, and nobody knows you.</p>
     </div>
     <div class="bj-cards">
       <div class="bj-card fade-up">
@@ -1130,7 +1130,7 @@ if(bj) circleObs.observe(bj);
   const anchor = heading ? heading.querySelector('span:first-child') : null;
   const track = document.getElementById('rollTrack');
   if(!track || !anchor) return;
-  const phrases = ['your LinkedIn disagrees', 'your pipeline\'s going quiet', 'nobody knows you'];
+  const phrases = ['your LinkedIn disagrees', 'your pipeline\'s gone quiet', 'nobody knows you'];
   const n = phrases.length;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
