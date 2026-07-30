@@ -301,9 +301,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .sub-marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .sub-marquee-wrap:hover .sub-track{animation-play-state:paused}
 .sub-track{display:flex;align-items:center;gap:44px;white-space:nowrap;width:max-content;animation:subScroll 55s linear infinite}
-.sub-item{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:400;color:rgba(14,14,68,0.7)}
+.sub-set{display:flex;align-items:center;gap:44px;flex-shrink:0}
+.sub-item{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:400;color:rgba(14,14,68,0.7);flex-shrink:0}
 .sub-item svg{flex-shrink:0}
 @keyframes subScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes subScrollPx{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--marquee-distance, 50%)))}}
 @media(prefers-reduced-motion:reduce){.sub-track{animation:none}}
 
 /* ── Proof carousel (from services page) ── */
@@ -560,23 +562,71 @@ footer{background:#0E0E44;padding:64px 0 32px}
   </div>
   <div class="sub-marquee-wrap">
     <div class="sub-marquee fade-up stagger-1">
-      <div class="sub-track">
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v12H8l-4 4V4z"/></svg>LinkedIn content engine</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M15 10l5-3v10l-5-3M3 6h10v12H3z"/></svg>Bitesize video posts</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Thought-leader articles</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>LinkedIn newsletter</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>Email marketing</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18a15 15 0 010-18"/></svg>Website articles</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v12H8l-4 4V4z"/></svg>LinkedIn content engine</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M15 10l5-3v10l-5-3M3 6h10v12H3z"/></svg>Bitesize video posts</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Thought-leader articles</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>LinkedIn newsletter</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>Email marketing</span>
-        <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18a15 15 0 010-18"/></svg>Website articles</span>
+      <div class="sub-track" id="subTrack">
+        <div class="sub-set">
+          <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v12H8l-4 4V4z"/></svg>LinkedIn content engine</span>
+          <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg>LinkedIn Business Page</span>
+          <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M15 10l5-3v10l-5-3M3 6h10v12H3z"/></svg>Bitesize video posts</span>
+          <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Thought-leader articles</span>
+          <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>LinkedIn newsletter</span>
+          <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>Email marketing</span>
+          <span class="sub-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(105,90,255,0.65)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18a15 15 0 010-18"/></svg>Website articles</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  var track = document.getElementById('subTrack');
+  if(!track) return;
+  var original = track.querySelector('.sub-set');
+  if(!original) return;
+
+  var PX_PER_SEC = 85; // scroll speed, tune to taste
+
+  function build(){
+    var wrapEl = track.closest('.sub-marquee-wrap') || track;
+    var targetWidth = wrapEl.offsetWidth;
+
+    track.style.animation = 'none';
+    track.innerHTML = '';
+    track.appendChild(original.cloneNode(true));
+
+    // keep adding copies of the item set until this "half" comfortably
+    // covers the full width of the screen, so there's never a gap
+    var guard = 0;
+    while(track.scrollWidth < targetWidth && guard < 40){
+      track.appendChild(original.cloneNode(true));
+      guard++;
+    }
+
+    var halfWidth = track.scrollWidth;
+
+    // duplicate the whole half again so the loop is seamless
+    var currentSets = Array.prototype.slice.call(track.children);
+    currentSets.forEach(function(node){
+      track.appendChild(node.cloneNode(true));
+    });
+
+    track.style.setProperty('--marquee-distance', halfWidth + 'px');
+    var duration = Math.max(halfWidth / PX_PER_SEC, 8);
+
+    // force reflow so the animation restarts cleanly
+    void track.offsetWidth;
+    track.style.animation = 'subScrollPx ' + duration + 's linear infinite';
+  }
+
+  build();
+
+  var resizeTimer;
+  window.addEventListener('resize', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(build, 200);
+  });
+})();
+</script>
 
 <!-- WHAT WORKING TOGETHER LOOKS LIKE -->
 <section id="working" class="grain">
