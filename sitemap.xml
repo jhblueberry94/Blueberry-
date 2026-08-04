@@ -250,6 +250,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/personal-branding-for-sales-leaders</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-08-04</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-inmail-vs-connection-requests</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-08-04</lastmod>
+  </url>
   <!-- Local pages (Berkshire) -->
   <url>
     <loc>https://blueberry-media.co.uk/berkshire</loc>
