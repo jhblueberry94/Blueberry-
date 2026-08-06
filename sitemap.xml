@@ -323,4 +323,40 @@
     <priority>0.6</priority>
     <lastmod>2026-07-22</lastmod>
   </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/crowthorne</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/hungerford</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/sandhurst</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/theale</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/twyford</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/winnersh</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
 </urlset>
