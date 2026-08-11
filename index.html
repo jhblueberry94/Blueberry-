@@ -123,7 +123,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .roll-item.is-current{opacity:1}
 .roll-item.is-adjacent{opacity:0.32}
 .roll-item.is-hidden{opacity:0}
-@media(max-width:640px){.roll-heading{font-size:clamp(18px,5.2vw,28px);white-space:normal;margin-bottom:40px}}
+@media(max-width:640px){.roll-heading{font-size:clamp(18px,5.2vw,28px);white-space:normal;flex-wrap:wrap;margin-bottom:40px}}
 @media(max-width:420px){.roll-heading{gap:6px}}
 
 
@@ -1426,8 +1426,12 @@ if(bj) circleObs.observe(bj);
     const container = heading.closest('.container') || heading.parentElement;
     const available = container.clientWidth;
     const gap = 12;
-    const total = anchor.getBoundingClientRect().width + gap + widest;
-    if(total > available && window.innerWidth > 640){
+    // Below 640px the heading wraps onto two lines (see media query), so the
+    // rolling track sits on its own row and only needs to fit by itself.
+    // Above that it sits inline after the anchor text on a single row.
+    const wrapped = window.innerWidth <= 640;
+    const total = wrapped ? widest : (anchor.getBoundingClientRect().width + gap + widest);
+    if(total > available){
       const scale = Math.max(available / total, 0.55);
       heading.style.fontSize = (computed * scale) + 'px';
       let widest2 = 0;
@@ -1449,9 +1453,22 @@ if(bj) circleObs.observe(bj);
     });
   }
 
+  let resizeTimer;
+  function fitAndPlace(){ fit(); place(false); }
+
   fit();
   place(false);
-  window.addEventListener('resize', () => { fit(); });
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(fitAndPlace, 120);
+  });
+  // Google Fonts loads with display:swap, so on first visit the browser
+  // renders with a fallback font before Poppins arrives. If fit() ran
+  // against the fallback font's metrics, the locked-in track width is
+  // wrong once Poppins swaps in. Re-measure once fonts are actually ready.
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(fitAndPlace);
+  }
 
   if(reduceMotion) return;
   setInterval(() => {
