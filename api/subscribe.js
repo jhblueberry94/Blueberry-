@@ -1,43 +1,59 @@
+// /api/subscribe.js
+// Vercel serverless function: receives an email from the popup form and
+// creates a subscriber in beehiiv via their v2 API. The API key lives only
+// in the Vercel environment variable BEEHIIV_API_KEY, never in client code.
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email } = req.body;
+  const { email, source } = req.body || {};
 
-  if (!email || !email.includes('@')) {
-    return res.status(400).json({ error: 'Valid email required' });
+  if (!email || typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({ error: 'A valid email address is required' });
+  }
+
+  const apiKey = process.env.BEEHIIV_API_KEY;
+  const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
+
+  if (!apiKey || !publicationId) {
+    // Fails safely and logs server-side only, no internals leaked to the client
+    console.error('Missing BEEHIIV_API_KEY or BEEHIIV_PUBLICATION_ID env vars');
+    return res.status(500).json({ error: 'Subscription service is not configured' });
   }
 
   try {
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'Blueberry Media Website <noreply@blueberry-media.co.uk>',
-        to: ['josh@blueberry-media.co.uk'],
-        subject: `New newsletter signup: ${email}`,
-        html: `
-          <p>Someone just signed up for the weekly insights newsletter.</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Time:</strong> ${new Date().toUTCString()}</p>
-          <p><em>Add them to MailerLite when you get a chance.</em></p>
-        `,
-      }),
-    });
+    const beehiivRes = await fetch(
+      `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          email: email,
+          reactivate_existing: true,
+          send_welcome_email: true,
+          utm_source: 'blueberry-website',
+          utm_medium: 'popup',
+          utm_campaign: source || 'popup-nav-bar',
+        }),
+      }
+    );
 
-    if (!response.ok) {
-      const error = await response.json();
-      console.error('Resend error:', error);
-      return res.status(500).json({ error: 'Failed to send notification' });
+    const data = await beehiivRes.json();
+
+    if (!beehiivRes.ok) {
+      console.error('beehiiv API error', beehiivRes.status, data);
+      return res.status(502).json({ error: 'Could not complete subscription' });
     }
 
-    return res.status(200).json({ success: true });
+    return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error('Subscribe error:', err);
-    return res.status(500).json({ error: 'Server error' });
+    console.error('Subscribe handler error', err);
+    return res.status(500).json({ error: 'Unexpected server error' });
   }
 }
