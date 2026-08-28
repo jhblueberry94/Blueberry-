@@ -99,6 +99,30 @@ footer{background:#0E0E44;padding:64px 0 32px}
 .footer-links{display:flex;gap:20px}
 .footer-links a{font-size:13px;color:rgba(255,255,255,0.35);transition:color 0.2s}
 .footer-links a:hover{color:rgba(255,255,255,0.7)}
+
+.nav-services{position:relative}
+.nav-services-trigger{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s;padding-bottom:16px;margin-bottom:-16px}
+.nav-services-trigger svg{width:12px;height:12px;transition:transform .18s ease}
+.nav-services.active .nav-services-trigger,
+.nav-services:hover .nav-services-trigger{color:#695AFF}
+.nav-services:hover .nav-services-trigger svg{transform:rotate(180deg)}
+.services-dropdown{
+  position:absolute;top:100%;left:50%;
+  transform:translateX(-50%) translateY(-6px);
+  width:340px;background:#fff;border:1px solid rgba(14,14,68,0.08);
+  border-radius:14px;box-shadow:0 16px 40px rgba(14,14,68,0.12);
+  padding:8px;opacity:0;visibility:hidden;
+  transition:opacity .16s ease,transform .16s ease,visibility .16s;
+  z-index:150;
+}
+.nav-services:hover .services-dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.services-dropdown a{display:flex;align-items:center;gap:14px;padding:12px;border-radius:9px}
+.services-dropdown a:hover{background:rgba(105,90,255,0.06)}
+.sd-icon{flex-shrink:0;width:36px;height:36px;border-radius:9px;background:rgba(105,90,255,0.1);display:flex;align-items:center;justify-content:center}
+.sd-icon svg{width:18px;height:18px;stroke:#695AFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sd-text h4{font-size:13.5px;font-weight:600;color:#0E0E44;margin-bottom:2px}
+.sd-text p{font-size:12px;color:rgba(14,14,68,0.55);line-height:1.4}
+@media(max-width:900px){.services-dropdown{display:none}}
 </style>
 </head>
 <body>
@@ -107,7 +131,22 @@ footer{background:#0E0E44;padding:64px 0 32px}
   <div class="nav-inner">
     <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media"></a>
     <div class="nav-links">
-      <a href="/services">Services</a>
+      <div class="nav-services">
+      <a href="/services" class="nav-services-trigger">
+        Services
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </a>
+      <div class="services-dropdown">
+        <a href="/services/linkedin-personal-branding-agency">
+          <div class="sd-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
+          <div class="sd-text"><h4>LinkedIn personal branding</h4><p>Content and thought leadership, in your voice.</p></div>
+        </a>
+        <a href="/services/linkedin-outreach-and-growth">
+          <div class="sd-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"></circle><circle cx="18" cy="6" r="2.4"></circle><circle cx="12" cy="18" r="2.4"></circle><path d="M8 7.5 11 16M16 7.5 13 16"></path></svg></div>
+          <div class="sd-text"><h4>LinkedIn outreach and growth</h4><p>Turn visibility into qualified conversations.</p></div>
+        </a>
+      </div>
+    </div>
       <a href="/how-it-works">Our Process</a>
       <a href="/who-its-for">Who It's For</a>
       <a href="/about">About</a>
