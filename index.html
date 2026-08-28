@@ -369,50 +369,6 @@ footer{background:#0E0E44;padding:64px 0 32px}
 .footer-links{display:flex;gap:20px}
 .footer-links a{font-size:13px;color:rgba(255,255,255,0.35);transition:color 0.2s}
 .footer-links a:hover{color:rgba(255,255,255,0.7)}
-
-.nav-services{position:relative;padding-bottom:20px;margin-bottom:-20px}
-.nav-services-trigger{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s}
-.nav-services-trigger svg{width:12px;height:12px;transition:transform .2s ease}
-.nav-services.active .nav-services-trigger,
-.nav-services:hover .nav-services-trigger{color:#695AFF}
-.nav-services:hover .nav-services-trigger svg{transform:rotate(180deg)}
-
-.services-dropdown{
-  position:absolute;top:100%;left:50%;
-  transform:translateX(-50%) translateY(-8px);
-  width:600px;background:#fff;border:1px solid rgba(14,14,68,0.08);
-  border-radius:16px;box-shadow:0 20px 60px rgba(14,14,68,0.14);
-  opacity:0;visibility:hidden;
-  transition:opacity .18s ease,transform .18s ease,visibility .18s;
-  z-index:150;overflow:hidden;display:grid;grid-template-columns:230px 1fr;min-height:220px;
-}
-.nav-services:hover .services-dropdown,
-.services-dropdown:hover{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-
-.service-nav{padding:14px 0;display:flex;flex-direction:column;border-right:1px solid rgba(14,14,68,0.08)}
-.service-nav button{all:unset;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 20px;border-left:1.5px solid transparent;transition:border-color .15s ease}
-.service-nav button:hover,.service-nav button.active{border-left:1.5px solid #695AFF}
-.service-nav .icon-box{flex-shrink:0;width:32px;height:32px;border-radius:8px;background:rgba(105,90,255,0.1);display:flex;align-items:center;justify-content:center}
-.service-nav .icon-box svg{width:17px;height:17px;stroke:#695AFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-
-.label-wrap{position:relative;display:block;font-size:14px;color:#0E0E44;line-height:1.3}
-.label-ghost{visibility:hidden;font-weight:600;display:block;white-space:nowrap}
-.label-visible{position:absolute;top:0;left:0;font-weight:500;white-space:nowrap;transition:font-weight .1s}
-.service-nav button:hover .label-visible,.service-nav button.active .label-visible{font-weight:600}
-
-.preview{position:relative;padding:26px 28px}
-.preview-panel{display:none;flex-direction:column;height:100%}
-.preview-panel.active{display:flex}
-.preview-icon{width:40px;height:40px;border-radius:10px;background:rgba(105,90,255,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.preview-icon svg{width:20px;height:20px;stroke:#695AFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.preview-panel h3{font-size:17px;color:#0E0E44;margin-bottom:8px}
-.preview-panel .desc{font-size:13px;color:rgba(14,14,68,0.6);line-height:1.6;margin-bottom:18px}
-.outcomes{display:flex;gap:24px;margin-bottom:18px}
-.outcome .num{font-size:20px;font-weight:700;color:#0E0E44;line-height:1.2}
-.outcome .lbl{font-size:11px;color:rgba(14,14,68,0.6);line-height:1.4;margin-top:2px;max-width:110px}
-.preview-panel .cta{margin-top:auto;align-self:flex-start;font-size:13px;font-weight:600;color:#695AFF;text-decoration:none}
-
-@media(max-width:900px){.services-dropdown{display:none}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5HFCWPMKY"></script>
 <script>
@@ -429,49 +385,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
   <div class="nav-inner">
     <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media"></a>
     <div class="nav-links">
-      <div class="nav-services">
-        <a href="/services" class="nav-services-trigger">
-          Services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </a>
-
-        <div class="services-dropdown">
-          <div class="service-nav">
-            <button class="active" data-target="sd-p1" onmouseenter="ddShow('sd-p1', this)">
-              <div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-              <span class="label-wrap"><span class="label-ghost">LinkedIn personal branding</span><span class="label-visible">LinkedIn personal branding</span></span>
-            </button>
-            <button data-target="sd-p2" onmouseenter="ddShow('sd-p2', this)">
-              <div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"></circle><circle cx="18" cy="6" r="2.4"></circle><circle cx="12" cy="18" r="2.4"></circle><path d="M8 7.5 11 16M16 7.5 13 16"></path></svg></div>
-              <span class="label-wrap"><span class="label-ghost">LinkedIn outreach and growth</span><span class="label-visible">LinkedIn outreach and growth</span></span>
-            </button>
-          </div>
-
-          <div class="preview">
-            <div class="preview-panel active" id="sd-p1">
-              <div class="preview-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-              <h3>LinkedIn personal branding</h3>
-              <p class="desc">A bi-weekly 45-minute call, turned into written posts, short-form video and long-form articles, all in your voice.</p>
-              <div class="outcomes">
-                <div class="outcome"><div class="num">3,600%</div><div class="lbl">visibility increase in 30 days</div></div>
-                <div class="outcome"><div class="num">10+</div><div class="lbl">content assets per call</div></div>
-              </div>
-              <a class="cta" href="/services/linkedin-personal-branding-agency">Explore this service &rarr;</a>
-            </div>
-
-            <div class="preview-panel" id="sd-p2">
-              <div class="preview-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"></circle><circle cx="18" cy="6" r="2.4"></circle><circle cx="12" cy="18" r="2.4"></circle><path d="M8 7.5 11 16M16 7.5 13 16"></path></svg></div>
-              <h3>LinkedIn outreach and growth</h3>
-              <p class="desc">Targeted connection strategy that turns content visibility into warm, qualified conversations with your ICP.</p>
-              <div class="outcomes">
-                <div class="outcome"><div class="num">173%</div><div class="lbl">network growth in 12 months</div></div>
-                <div class="outcome"><div class="num">90+</div><div class="lbl">ICP connections a month</div></div>
-              </div>
-              <a class="cta" href="/services/linkedin-outreach-and-growth">Explore this service &rarr;</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="/services">Services</a>
       <a href="/how-it-works">Our Process</a>
       <a href="/who-its-for">Who It's For</a>
       <a href="/about">About</a>
@@ -1707,7 +1621,18 @@ document.querySelectorAll('.faq-item').forEach(item=>{
 .lm3b-micro{font-size:10.5px;color:rgba(14,14,68,0.38);margin-top:6px;text-align:center}
 .lm3b-close{background:none;border:none;color:rgba(14,14,68,0.3);cursor:pointer;padding:4px;flex-shrink:0;display:flex;transition:color 0.2s}
 .lm3b-close:hover{color:#0E0E44}
-@media(max-width:760px){.lm3b-bar{flex-wrap:wrap;left:16px;right:16px;bottom:16px;padding:20px}.lm3b-avatar{display:none}.lm3b-form{flex-direction:column;width:100%}.lm3b-input{width:100%}.lm3b-close{position:absolute;top:14px;right:14px}}
+@media(max-width:760px){
+.lm3b-bar{flex-wrap:wrap;left:12px;right:12px;bottom:12px;padding:16px 18px;gap:10px;border-radius:16px}
+.lm3b-avatar{display:none}
+.lm3b-text{width:100%;padding-right:24px}
+.lm3b-headline{font-size:13.5px}
+.lm3b-actions{width:100%}
+.lm3b-form{width:100%;gap:8px}
+.lm3b-input{width:auto;flex:1;min-width:0;padding:10px 12px;font-size:13px}
+.lm3b-btn{padding:10px 16px;font-size:13px}
+.lm3b-micro{text-align:left;margin-top:6px}
+.lm3b-close{position:absolute;top:16px;right:16px}
+}
 </style>
 <div class="lm3b-bar" id="lm3bBar">
   <div class="lm3b-avatar"><img src="data:image/jpeg;base64,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" alt="Josh Huggins"></div>
@@ -1715,7 +1640,7 @@ document.querySelectorAll('.faq-item').forEach(item=>{
     <div class="lm3b-eyebrow">Josh's Notes &middot; Every Tuesday</div>
     <div class="lm3b-headline">What it's actually like building an agency and growing on LinkedIn. <span>What's working, what's not and real mistakes along the way.</span></div>
   </div>
-  <div>
+  <div class="lm3b-actions">
     <form class="lm3b-form" id="lm3bForm">
       <input class="lm3b-input" type="email" placeholder="you@company.com" required>
       <button class="lm3b-btn" type="submit">Subscribe free</button>
@@ -1773,13 +1698,5 @@ document.querySelectorAll('.faq-item').forEach(item=>{
 })();
 </script>
 
-<script>
-function ddShow(id, btn){
-  document.querySelectorAll('.preview-panel').forEach(function(p){p.classList.remove('active');});
-  document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.service-nav button').forEach(function(b){b.classList.remove('active');});
-  btn.classList.add('active');
-}
-</script>
 </body>
 </html>
