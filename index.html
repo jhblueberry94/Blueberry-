@@ -779,7 +779,7 @@ Our free to use Railway Guardian app is an all-in-one enterprise <span class="mo
               <div class="wt-post-text">AI isn't the output. It's the research assistant. The output is still you, saying something only you could say. <span class="more">…more</span></div>
             </div>
             <div class="wt-video ratio-landscape">
-              <video src="/videos/josh-ai-isnt-the-output.mp4" poster="/images/josh-ai-isnt-the-output-poster.jpg" muted loop playsinline autoplay preload="auto"></video>
+              <video class="lazy-video" data-src="/videos/josh-ai-isnt-the-output.mp4" poster="/images/josh-ai-isnt-the-output-poster.jpg" muted loop playsinline preload="none"></video>
               <div class="wt-pause-btn"></div>
               <div class="wt-mute-btn"></div>
               <div class="wt-pausebadge"><svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
@@ -832,7 +832,7 @@ Our free to use Railway Guardian app is an all-in-one enterprise <span class="mo
               <div class="wt-post-text">AI didn't kill thought leadership. It just made the fake stuff obvious. <span class="more">…more</span></div>
             </div>
             <div class="wt-video ratio-landscape">
-              <video src="/videos/josh-ai-thought-leadership.mp4" poster="/images/josh-ai-thought-leadership-poster.jpg" muted loop playsinline autoplay preload="auto"></video>
+              <video class="lazy-video" data-src="/videos/josh-ai-thought-leadership.mp4" poster="/images/josh-ai-thought-leadership-poster.jpg" muted loop playsinline preload="none"></video>
               <div class="wt-pause-btn"></div>
               <div class="wt-mute-btn"></div>
               <div class="wt-pausebadge"><svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
@@ -865,7 +865,7 @@ Our free to use Railway Guardian app is an all-in-one enterprise <span class="mo
               <div class="wt-post-text">"Start sales and marketing before you build anything" has been my motto for 15 years. With AI, it's never been more true. <span class="more">…more</span></div>
             </div>
             <div class="wt-video ratio-landscape">
-              <video src="/videos/toni-testing-ideas-before-building.mp4" poster="/images/toni-testing-ideas-before-building-poster.jpg" muted loop playsinline autoplay preload="auto"></video>
+              <video class="lazy-video" data-src="/videos/toni-testing-ideas-before-building.mp4" poster="/images/toni-testing-ideas-before-building-poster.jpg" muted loop playsinline preload="none"></video>
               <div class="wt-pause-btn"></div>
               <div class="wt-mute-btn"></div>
               <div class="wt-pausebadge"><svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
@@ -897,7 +897,7 @@ Our free to use Railway Guardian app is an all-in-one enterprise <span class="mo
 That's a common fear sitting in the back of many people's minds <span class="more">…more</span></div>
             </div>
             <div class="wt-video ratio-square">
-              <video src="/videos/norm-human-cost-of-ai.mp4" poster="/images/norm-human-cost-of-ai-poster.jpg" muted loop playsinline autoplay preload="auto"></video>
+              <video class="lazy-video" data-src="/videos/norm-human-cost-of-ai.mp4" poster="/images/norm-human-cost-of-ai-poster.jpg" muted loop playsinline preload="none"></video>
               <div class="wt-pause-btn"></div>
               <div class="wt-mute-btn"></div>
               <div class="wt-pausebadge"><svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
@@ -926,7 +926,7 @@ That's a common fear sitting in the back of many people's minds <span class="mor
               <div class="wt-post-text">The entrepreneur's LinkedIn strategy most founders get backwards, and what to do instead. <span class="more">…more</span></div>
             </div>
             <div class="wt-video ratio-landscape">
-              <video src="/videos/josh-entrepreneur-linkedin-strategy.mp4" poster="/images/josh-entrepreneur-linkedin-strategy-poster.jpg" muted loop playsinline autoplay preload="auto"></video>
+              <video class="lazy-video" data-src="/videos/josh-entrepreneur-linkedin-strategy.mp4" poster="/images/josh-entrepreneur-linkedin-strategy-poster.jpg" muted loop playsinline preload="none"></video>
               <div class="wt-pause-btn"></div>
               <div class="wt-mute-btn"></div>
               <div class="wt-pausebadge"><svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
@@ -956,7 +956,7 @@ That's a common fear sitting in the back of many people's minds <span class="mor
               <div class="wt-post-text">There's a point in every leader's career where you shift from an operator, to a leader and it's not always an easy transition. <span class="more">…more</span></div>
             </div>
             <div class="wt-video ratio-square">
-              <video src="/videos/norm-20-years-ibm.mp4" poster="/images/norm-20-years-ibm-poster.jpg" muted loop playsinline autoplay preload="auto"></video>
+              <video class="lazy-video" data-src="/videos/norm-20-years-ibm.mp4" poster="/images/norm-20-years-ibm-poster.jpg" muted loop playsinline preload="none"></video>
               <div class="wt-pause-btn"></div>
               <div class="wt-mute-btn"></div>
               <div class="wt-pausebadge"><svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
@@ -1735,6 +1735,45 @@ document.querySelectorAll('.faq-item').forEach(item=>{
       bar.querySelector('.lm3b-micro').textContent = "Something went wrong, try again.";
     });
   });
+})();
+</script>
+
+<script>
+(function(){
+  /* Lazy-load + lazy-play the wt-video clips. Was preload="auto" + autoplay on
+     all 6 videos (~47MB total), which forced every visitor to download all of
+     them on page load regardless of scroll depth. This defers each video's
+     download until it's about to enter the viewport, using a generous
+     rootMargin so it's fetched just ahead of time and plays without a visible
+     pop-in. Poster images still show immediately either way. */
+  var videos = document.querySelectorAll('video.lazy-video');
+  if(!videos.length) return;
+
+  if(!('IntersectionObserver' in window)){
+    /* Fallback for old browsers: behave as before */
+    videos.forEach(function(v){
+      v.src = v.dataset.src;
+      v.play();
+    });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function(entries, obs){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var v = entry.target;
+        if(v.dataset.src){
+          v.src = v.dataset.src;
+          v.removeAttribute('data-src');
+          v.load();
+          v.play().catch(function(){ /* autoplay blocked, poster stays visible */ });
+        }
+        obs.unobserve(v);
+      }
+    });
+  }, { rootMargin: '800px 0px', threshold: 0.01 });
+
+  videos.forEach(function(v){ observer.observe(v); });
 })();
 </script>
 
