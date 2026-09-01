@@ -3,7 +3,27 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, company, email, message } = req.body;
+  const { name, company, email, message, website, ts } = req.body;
+
+  // Honeypot: real visitors never populate this field, since it's hidden
+  // off-screen and never shown to a human. Non-empty = bot filling every
+  // field it finds in the DOM. Reply 200 so the bot thinks it worked and
+  // doesn't retry or escalate.
+  if (website) {
+    return res.status(200).json({ success: true });
+  }
+
+  // Timing token: the current frontend always sends the page-load timestamp.
+  // Missing ts means the request didn't come from the real form (a script
+  // hitting this endpoint directly). Reject rather than silently accept,
+  // since accepting would let scripts skip the check by omitting the field.
+  if (!ts || typeof ts !== 'number') {
+    return res.status(400).json({ error: 'Invalid submission' });
+  }
+  const elapsed = Date.now() - ts;
+  if (elapsed < 2000) {
+    return res.status(200).json({ success: true }); // fail silently, same as honeypot
+  }
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Missing required fields' });
