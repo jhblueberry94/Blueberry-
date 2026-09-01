@@ -157,6 +157,7 @@
             <label for="message">What would you like to talk about?</label>
             <textarea id="message" name="message" placeholder="Tell us a little about where you are and what you're hoping to achieve..." required></textarea>
           </div>
+          <input type="text" name="website" id="contactHoneypot" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true">
           <button type="submit" class="btn-primary full-width">Send Message &rarr;</button>
         </form>
         <div id="contact-success" style="display:none;text-align:center;padding:32px 0">
@@ -210,9 +211,21 @@
 
 <script src="/js/main.js"></script>
 <script>
+var contactLoadedAt = Date.now();
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = this.querySelector('button[type="submit"]');
+  const honeypot = document.getElementById('contactHoneypot');
+
+  if (honeypot.value) {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('contact-success').style.display = 'block';
+    return;
+  }
+  if (Date.now() - contactLoadedAt < 2000) {
+    return;
+  }
+
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
@@ -220,7 +233,9 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     name:    document.getElementById('name').value,
     company: document.getElementById('company').value,
     email:   document.getElementById('email').value,
-    message: document.getElementById('message').value
+    message: document.getElementById('message').value,
+    website: honeypot.value,
+    ts: contactLoadedAt
   };
 
   try {
