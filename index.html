@@ -1683,6 +1683,7 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   <div class="lm3b-actions">
     <form class="lm3b-form" id="lm3bForm">
       <input class="lm3b-input" type="email" placeholder="you@company.com" required>
+      <input type="text" name="website" id="lm3bHoneypot" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true">
       <button class="lm3b-btn" type="submit">Subscribe free</button>
     </form>
     <div class="lm3b-micro">Every Tuesday, no spam.</div>
@@ -1698,6 +1699,8 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   var form = document.getElementById('lm3bForm');
   var input = form.querySelector('.lm3b-input');
   var btn = form.querySelector('.lm3b-btn');
+  var honeypot = form.querySelector('#lm3bHoneypot');
+  var loadedAt = Date.now();
   var dismissed = false;
   setTimeout(function(){
     if(!dismissed) bar.classList.add('visible');
@@ -1710,12 +1713,19 @@ document.querySelectorAll('.faq-item').forEach(item=>{
     e.preventDefault();
     var email = input.value.trim();
     if(!email) return;
+    if(honeypot.value){
+      bar.querySelector('.lm3b-headline').innerHTML = "You're in, thanks for subscribing.";
+      bar.querySelector('.lm3b-micro').textContent = "First note lands Tuesday.";
+      form.style.display = 'none';
+      return;
+    }
+    if(Date.now() - loadedAt < 2000) return;
     btn.disabled = true;
     btn.textContent = 'Subscribing...';
     fetch('/api/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, source: 'popup-nav-bar' })
+      body: JSON.stringify({ email: email, source: 'popup-nav-bar', website: honeypot.value, ts: loadedAt })
     })
     .then(function(res){ return res.json().then(function(data){ return { ok: res.ok, data: data }; }); })
     .then(function(result){
