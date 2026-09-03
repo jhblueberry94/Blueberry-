@@ -27,6 +27,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 <style>
+/* ── Nav (embedded here to match homepage exactly — /css/styles.css does not carry these rules for this page) ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:0.5px solid rgba(14,14,68,0.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1120px;margin:0 auto;padding:0 48px}
+.nav-logo img{height:48px;width:auto}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#695AFF}
+.nav-right{display:flex;align-items:center;gap:24px}
+.nav-right .faq-link{font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s}
+.nav-right .faq-link:hover{color:#695AFF}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.mobile-menu{display:none;position:fixed;inset:0;top:72px;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);z-index:99;padding:32px 24px;flex-direction:column;gap:8px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:18px;font-weight:500;color:#0E0E44;padding:12px 0;border-bottom:0.5px solid rgba(14,14,68,0.08)}
+.mobile-menu .btn-primary{margin-top:16px;justify-content:center}
+@media(max-width:900px){.nav-links,.nav-right .faq-link,.nav-right .btn-primary{display:none}.hamburger{display:block}}
+
+/* ── Services dropdown ── */
+.nav-services{position:relative}
+.nav-services-trigger{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s;padding-bottom:16px;margin-bottom:-16px}
+.nav-services-trigger svg{width:12px;height:12px;transition:transform .18s ease}
+.nav-services.active .nav-services-trigger,
+.nav-services:hover .nav-services-trigger{color:#695AFF}
+.nav-services:hover .nav-services-trigger svg{transform:rotate(180deg)}
+.services-dropdown{
+  position:absolute;top:100%;left:50%;
+  transform:translateX(-50%) translateY(-6px);
+  width:340px;background:#fff;border:1px solid rgba(14,14,68,0.08);
+  border-radius:14px;box-shadow:0 16px 40px rgba(14,14,68,0.12);
+  padding:8px;opacity:0;visibility:hidden;
+  transition:opacity .16s ease,transform .16s ease,visibility .16s;
+  z-index:150;
+}
+.nav-services:hover .services-dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.services-dropdown a{display:flex;align-items:center;gap:14px;padding:12px;border-radius:9px}
+.services-dropdown a:hover{background:rgba(105,90,255,0.06)}
+.sd-icon{flex-shrink:0;width:36px;height:36px;border-radius:9px;background:rgba(105,90,255,0.1);display:flex;align-items:center;justify-content:center}
+.sd-icon svg{width:18px;height:18px;stroke:#695AFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sd-text h4{font-size:13.5px;font-weight:600;color:#0E0E44;margin-bottom:2px}
+.sd-text p{font-size:12px;color:rgba(14,14,68,0.55);line-height:1.4}
+@media(max-width:900px){.services-dropdown{display:none}}
+
 .image-overlay{
   background: linear-gradient(to top, rgba(14,14,68,0.25) 0%, transparent 55%) !important;
 }
@@ -53,33 +95,6 @@ footer{background:#0E0E44;padding:64px 0 32px}
 .footer-links a{font-size:13px;color:rgba(255,255,255,0.35);transition:color 0.2s}
 .footer-links a:hover{color:rgba(255,255,255,0.7)}
 
-/* Services dropdown — scoped to this page only, doesn't touch /css/styles.css.
-   Built for this page's ul/li nav structure rather than the div-based
-   canonical template, since the two aren't interchangeable. */
-.nav-services{position:relative}
-.nav-services-trigger{display:flex;align-items:center;gap:6px;padding-bottom:16px;margin-bottom:-16px}
-.nav-services-trigger svg{width:12px;height:12px;transition:transform .18s ease}
-.nav-services:hover .nav-services-trigger{color:#695AFF}
-.nav-services:hover .nav-services-trigger svg{transform:rotate(180deg)}
-.services-dropdown{
-  position:absolute;top:100%;left:50%;
-  transform:translateX(-50%) translateY(-6px);
-  width:340px;background:#fff;border:1px solid rgba(14,14,68,0.08);
-  border-radius:14px;box-shadow:0 16px 40px rgba(14,14,68,0.12);
-  padding:8px;margin:0;list-style:none;
-  opacity:0;visibility:hidden;
-  transition:opacity .16s ease,transform .16s ease,visibility .16s;
-  z-index:150;
-}
-.nav-services:hover .services-dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.services-dropdown li{padding:0}
-.services-dropdown a{display:flex;align-items:center;gap:14px;padding:12px;border-radius:9px}
-.services-dropdown a:hover{background:rgba(105,90,255,0.06)}
-.sd-icon{flex-shrink:0;width:36px;height:36px;border-radius:9px;background:rgba(105,90,255,0.1);display:flex;align-items:center;justify-content:center}
-.sd-icon svg{width:18px;height:18px;stroke:#695AFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.sd-text h4{font-size:13.5px;font-weight:600;color:#0E0E44;margin-bottom:2px}
-.sd-text p{font-size:12px;color:rgba(14,14,68,0.55);line-height:1.4}
-@media(max-width:900px){.services-dropdown{display:none}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5HFCWPMKY"></script>
 <script>
@@ -353,51 +368,50 @@ footer{background:#0E0E44;padding:64px 0 32px}
 </head>
 <body>
 
-<nav id="nav">
+<nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media" height="56"></a>
-    <ul class="nav-links">
-      <li class="nav-services">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Blueberry Media"></a>
+    <div class="nav-links">
+      <div class="nav-services">
         <a href="/services" class="nav-services-trigger">
           Services
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </a>
-        <ul class="services-dropdown">
-          <li><a href="/services/linkedin-personal-branding-agency">
+        <div class="services-dropdown">
+          <a href="/services/linkedin-personal-branding-agency">
             <div class="sd-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
             <div class="sd-text"><h4>LinkedIn personal branding</h4><p>Content and thought leadership, in your voice.</p></div>
-          </a></li>
-          <li><a href="/services/linkedin-outreach-and-growth">
+          </a>
+          <a href="/services/linkedin-outreach-and-growth">
             <div class="sd-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"></circle><circle cx="18" cy="6" r="2.4"></circle><circle cx="12" cy="18" r="2.4"></circle><path d="M8 7.5 11 16M16 7.5 13 16"></path></svg></div>
             <div class="sd-text"><h4>LinkedIn outreach and growth</h4><p>Turn visibility into qualified conversations.</p></div>
-          </a></li>
-        </ul>
-      </li>
-      <li><a href="/how-it-works">Our Process</a></li>
-      <li><a href="/who-its-for">Who It's For</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/blog">Blog</a></li>
-    </ul>
-    <div class="nav-right">
-      <a href="/faq" class="nav-faq">FAQ</a>
-      <a href="/contact" class="btn-primary">Start a Conversation</a>
+          </a>
+        </div>
+      </div>
+      <a href="/how-it-works">Our Process</a>
+      <a href="/who-its-for">Who It's For</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
     </div>
-    <button id="menu-btn" aria-label="Open menu" aria-expanded="false">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect y="4" width="24" height="2" fill="#0E0E44"/><rect y="11" width="24" height="2" fill="#0E0E44"/><rect y="18" width="24" height="2" fill="#0E0E44"/></svg>
+    <div class="nav-right">
+      <a href="/faq" class="faq-link">FAQ</a>
+      <a href="/contact" class="btn-primary" style="padding:10px 22px;font-size:14px;border-radius:50px">Start a Conversation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E0E44" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
-  <div id="mobile-menu">
-    <ul>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/how-it-works">Our Process</a></li>
-      <li><a href="/who-its-for">Who It's For</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/faq">FAQ</a></li>
-      <li><a href="/contact" class="btn-primary">Start a Conversation</a></li>
-    </ul>
-  </div>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/services">Services</a>
+  <a href="/how-it-works">Our Process</a>
+  <a href="/who-its-for">Who It's For</a>
+  <a href="/about">About</a>
+  <a href="/blog">Blog</a>
+  <a href="/faq">FAQ</a>
+  <a href="/contact" class="btn-primary">Start a Conversation</a>
+</div>
 
 <div class="blog-hero">
   <div class="container">
