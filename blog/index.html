@@ -29,12 +29,12 @@
 <style>
 /* ── Nav (embedded here to match homepage exactly — /css/styles.css does not carry these rules for this page) ── */
 nav{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:0.5px solid rgba(14,14,68,0.08)}
-nav .nav-inner{display:flex !important;align-items:center !important;justify-content:space-between !important;height:72px !important;max-width:1120px !important;margin:0 auto !important;padding:0 48px !important;box-sizing:border-box !important}
+nav .nav-inner{display:flex !important;align-items:center !important;justify-content:space-between !important;height:72px !important;max-width:1120px !important;margin:0 auto !important;padding:0 48px !important;box-sizing:border-box !important;gap:0 !important}
 nav .nav-logo img{height:48px !important;width:auto !important}
-nav .nav-links{display:flex !important;align-items:center !important;gap:36px !important;margin:0 !important;padding:0 !important;list-style:none !important}
+nav .nav-links{display:flex !important;flex:none !important;align-items:center !important;justify-content:flex-start !important;gap:36px !important;margin:0 !important;padding:0 !important;list-style:none !important}
 nav .nav-links a{font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s}
 nav .nav-links a:hover,nav .nav-links a.active{color:#695AFF}
-nav .nav-right{display:flex !important;align-items:center !important;gap:24px !important;margin:0 !important;padding:0 !important}
+nav .nav-right{display:flex !important;flex:none !important;align-items:center !important;gap:24px !important;margin:0 !important;padding:0 !important}
 nav .nav-right .faq-link{font-size:14px;font-weight:500;color:rgba(14,14,68,0.6);transition:color 0.2s}
 nav .nav-right .faq-link:hover{color:#695AFF}
 nav .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
