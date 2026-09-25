@@ -346,6 +346,18 @@
     <priority>0.7</priority>
     <lastmod>2026-09-21</lastmod>
   </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-video-vs-text-posts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/blog/linkedin-follow-vs-connect</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-09-25</lastmod>
+  </url>
   <!-- National hub (LinkedIn agency by city) -->
   <url>
     <loc>https://blueberry-media.co.uk/linkedin-agency</loc>
