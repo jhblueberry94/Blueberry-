@@ -363,29 +363,43 @@
     <loc>https://blueberry-media.co.uk/linkedin-agency</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/london</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/manchester</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/bristol</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/edinburgh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/cambridge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://blueberry-media.co.uk/leeds</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <!-- Local pages (Berkshire) -->
   <url>
