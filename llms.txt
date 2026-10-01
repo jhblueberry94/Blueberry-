@@ -1,6 +1,6 @@
 # Blueberry Media
 
-> Blueberry Media is a UK-based LinkedIn content agency and thought leadership agency for B2B founders and executives. We turn 45-minute recorded conversations into weeks of LinkedIn content that builds authority, trust, and commercial pipeline.
+> Blueberry Media is a UK-based LinkedIn personal branding agency for B2B founders and executives. We turn 45-minute recorded conversations into weeks of LinkedIn content that builds authority, trust, and commercial pipeline.
 
 ## About
 
@@ -17,7 +17,7 @@ Our process is built around recorded conversations. We extract your thinking, la
 - Video clip scripts and production support
 - Thought leadership strategy and content pillars
 
-Packages start from £600 per month. All packages are monthly rolling with no long-term contracts.
+Packages start from £600 per month. Every engagement starts with an initial 90-day sprint, then moves to monthly rolling with 30 days notice. No setup fees and no exit penalties.
 
 ## Who we work with
 
@@ -36,6 +36,8 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 
 - [Home](https://blueberry-media.co.uk/)
 - [Services](https://blueberry-media.co.uk/services)
+- [LinkedIn personal branding agency (service)](https://blueberry-media.co.uk/services/linkedin-personal-branding-agency)
+- [LinkedIn outreach and growth (service)](https://blueberry-media.co.uk/services/linkedin-outreach-and-growth)
 - [How it works](https://blueberry-media.co.uk/how-it-works)
 - [Who it's for](https://blueberry-media.co.uk/who-its-for)
 - [About](https://blueberry-media.co.uk/about)
@@ -51,6 +53,8 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 - [LinkedIn Agency, Manchester](https://blueberry-media.co.uk/manchester)
 - [LinkedIn Agency, Bristol](https://blueberry-media.co.uk/bristol)
 - [LinkedIn Agency, Edinburgh](https://blueberry-media.co.uk/edinburgh)
+- [LinkedIn Agency, Cambridge](https://blueberry-media.co.uk/cambridge)
+- [LinkedIn Agency, Leeds](https://blueberry-media.co.uk/leeds)
 
 ## Who it's for (persona pages)
 
@@ -129,7 +133,7 @@ Packages start from £600 per month. All packages are monthly rolling with no lo
 - [LinkedIn video vs text posts: what B2B founders should post](https://blueberry-media.co.uk/blog/linkedin-video-vs-text-posts) (new, September 2026)
 - [LinkedIn follow vs connect: which to use as a B2B leader](https://blueberry-media.co.uk/blog/linkedin-follow-vs-connect) (new, September 2026)
 
-Note: this list reflects all 40 blog posts (38 prior plus the video-vs-text and follow-vs-connect posts, September 2026), 12 persona pages (hub plus 11 roles), 5 national pages (LinkedIn Agency hub plus London, Manchester, Bristol and Edinburgh), and 16 local pages (Berkshire hub plus 15 towns) live on the site as of 25 September 2026. Rebuilt in full from a verified complete URL list, not appended to the previous version.
+Note: this list reflects all 40 blog posts (38 prior plus the video-vs-text and follow-vs-connect posts, September 2026), 12 persona pages (hub plus 11 roles), 7 national pages (LinkedIn Agency hub plus London, Manchester, Bristol, Edinburgh, Cambridge and Leeds), and 16 local pages (Berkshire hub plus 15 towns) live on the site as of 1 October 2026. Updated 1 October 2026 to add the Cambridge and Leeds national pages, restore the two service pages in Key pages, align the contract wording and describe the business as a LinkedIn personal branding agency; all other entries are unchanged from the 25 September 2026 version.
 
 ## Contact
 
