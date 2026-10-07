@@ -93,7 +93,6 @@ nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:100;background:rgba(2
 .contact-routes i{font-style:normal;color:#a79dff;font-size:18px}
 .contact-card{background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(14,14,68,0.2),0 0 0 1px rgba(14,14,68,0.06);padding:36px;scroll-margin-top:96px}
 .contact-card.is-sent{display:flex;flex-direction:column;justify-content:center}
-.contact-card h2{font-size:22px;font-weight:600;color:#0E0E44;margin-bottom:22px;letter-spacing:-0.01em}
 @media(max-width:600px){.contact-card{padding:26px 20px}}
 .form-field{margin-bottom:16px}
 .form-field label{display:block;font-size:13px;font-weight:500;color:rgba(14,14,68,0.7);margin-bottom:6px}
@@ -234,8 +233,7 @@ footer{background:#0E0E44;padding:64px 0 32px}
 
       <div class="contact-card" id="contact-card">
         <div id="contact-live">
-          <h2>Send a message</h2>
-          <form id="contact-form">
+          <form id="contact-form" aria-label="Send a message">
             <div class="form-field">
               <label for="name">Your name</label>
               <input type="text" id="name" name="name" autocomplete="name" placeholder="First and last name" required>
