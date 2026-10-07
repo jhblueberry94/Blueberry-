@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blueberry-media.co.uk/about","url":"https://blueberry-media.co.uk/about","name":"About | Blueberry Media | LinkedIn Personal Branding Agency","description":"Meet the team behind Blueberry Media. A decade helping B2B founders build LinkedIn personal branding and thought leadership that drives trust and pipeline.","isPartOf":{"@id":"https://blueberry-media.co.uk/#website"}},{"@type":"BreadcrumbList","@id":"https://blueberry-media.co.uk/about#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blueberry-media.co.uk/"},{"@type":"ListItem","position":2,"name":"About"}]}]}</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -55,51 +55,105 @@ nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:100;background:rgba(2
 @media(max-width:900px){.nav-links,.faq-link,.nav-right .btn-primary{display:none}.hamburger{display:block}}
 
 /* Hero */
-#hero{background:#0E0E44;padding:140px 0 80px;position:relative;overflow:hidden}
+#hero{background:#0E0E44;padding:150px 0 132px;position:relative;overflow:hidden}
 .hero-orb{position:absolute;border-radius:50%;pointer-events:none}
 .hero-orb-1{width:600px;height:600px;top:-100px;right:-100px;background:radial-gradient(circle,rgba(105,90,255,0.28) 0%,transparent 65%)}
 .hero-orb-2{width:400px;height:400px;bottom:-80px;left:-80px;background:radial-gradient(circle,rgba(255,92,174,0.15) 0%,transparent 65%)}
-.hero-inner{position:relative;z-index:1;max-width:720px}
-.hero-tag{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.5);margin-bottom:16px}
-.hero-inner h1{font-size:clamp(32px,3.8vw,48px);font-weight:600;color:#fff;letter-spacing:-0.03em;line-height:1.15;margin-bottom:20px}
-.hero-inner p{font-size:17px;color:rgba(255,255,255,0.65);line-height:1.75;max-width:580px}
+.hero-inner{position:relative;z-index:1}
+.hero-tag{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.7);margin-bottom:16px}
+.hero-inner h1{font-size:clamp(32px,3.8vw,50px);font-weight:600;color:#fff;letter-spacing:-0.03em;line-height:1.15;margin-bottom:20px;max-width:760px}
+.hero-inner .hero-sub{font-size:17px;color:rgba(255,255,255,0.75);line-height:1.75;max-width:600px;margin-bottom:32px}
+.hero-cta{margin-bottom:48px}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0E0E44;padding:14px 26px;border-radius:10px;font-weight:600;font-size:15px;font-family:'Poppins',sans-serif;text-decoration:none;transition:opacity 0.2s}
+.btn-white:hover{opacity:0.9}
+.hero-featured-label{font-size:12px;color:rgba(255,255,255,0.65);margin-bottom:14px}
+.hero-logos{display:flex;align-items:center;flex-wrap:wrap;gap:18px 32px}
+.hero-logos img{height:38px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.7}
+
+/* Stats strip */
+#stats{margin-top:-72px;position:relative;z-index:2}
+.stats-card{background:#fff;border:1px solid rgba(14,14,68,0.1);border-radius:18px;box-shadow:0 20px 50px -20px rgba(14,14,68,0.3);display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{padding:34px 28px;border-right:1px solid rgba(14,14,68,0.08)}
+.stat:last-child{border-right:none}
+.stat-num{font-size:54px;font-weight:300;color:#695AFF;letter-spacing:-0.04em;line-height:1;font-variant-numeric:tabular-nums}
+.stat-label{margin-top:14px;font-size:14px;line-height:1.5;color:rgba(14,14,68,0.8)}
+@media(max-width:768px){.stats-card{grid-template-columns:1fr}.stat{border-right:none;border-bottom:1px solid rgba(14,14,68,0.08);padding:26px 24px}.stat:last-child{border-bottom:none}.stat-num{font-size:46px}}
+
+/* Shared section type */
+.eyebrow{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:#695AFF;margin-bottom:12px}
+.section-h2{font-size:clamp(24px,3vw,34px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;line-height:1.2}
+.text-link{color:#695AFF;font-size:15px;font-weight:600;display:inline-block;padding:12px 0}
+.text-link:hover{text-decoration:underline}
 
 /* Story */
-#story{padding:72px 0 80px}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+#story{padding:88px 0}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:900px){.story-grid{grid-template-columns:1fr;gap:40px}}
-.story-body p{font-size:15px;color:rgba(14,14,68,0.65);line-height:1.8;margin-bottom:18px}
-.story-body p:last-child{margin-bottom:0}
-.story-body h2{font-size:clamp(24px,3vw,34px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;margin-bottom:24px}
-.beliefs-card{background:#f8f8fb;border:0.5px solid rgba(14,14,68,0.09);border-radius:16px;padding:36px}
-.beliefs-card h3{font-size:20px;font-weight:600;color:#0E0E44;margin-bottom:28px;letter-spacing:-0.02em}
-.belief{padding-bottom:20px;margin-bottom:20px;border-bottom:0.5px solid rgba(14,14,68,0.08)}
-.belief:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.belief h4{font-size:14px;font-weight:600;color:#0E0E44;margin-bottom:6px}
-.belief p{font-size:13px;color:rgba(14,14,68,0.55);line-height:1.7}
+.story-body .section-h2{margin-bottom:22px}
+.story-body p{font-size:15px;color:rgba(14,14,68,0.75);line-height:1.8;margin-bottom:16px}
+.story-body p.eyebrow{font-size:11px;color:#695AFF;line-height:normal;margin-bottom:12px}
+.beliefs{display:flex;flex-direction:column;gap:14px}
+.beliefs h3{font-size:20px;font-weight:600;color:#0E0E44;letter-spacing:-0.02em;margin-bottom:6px}
+.belief{background:#f6f6fb;border-radius:14px;padding:22px 24px}
+.belief h4{font-size:15px;font-weight:600;color:#0E0E44;margin-bottom:6px}
+.belief p{font-size:14px;color:rgba(14,14,68,0.75);line-height:1.65;margin-bottom:10px}
+.belief p.belief-proof{font-size:13px;font-weight:500;color:#4B3FD6;margin-bottom:0}
 
-/* Josh card */
-#meet-josh{padding:0 0 80px}
-.josh-card{background:#0E0E44;border-radius:20px;padding:48px;display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start;position:relative;overflow:hidden}
-@media(max-width:768px){.josh-card{grid-template-columns:1fr;gap:28px;padding:32px}}
+/* Team */
+#team{padding:0 0 88px}
+#team .section-h2{max-width:640px;margin-bottom:12px}
+.team-intro{max-width:620px;font-size:15px;line-height:1.75;color:rgba(14,14,68,0.75);margin-bottom:36px}
+.team-grid{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:stretch}
+@media(max-width:900px){.team-grid{grid-template-columns:1fr}}
+.josh-card{background:#0E0E44;border-radius:20px;padding:32px;display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:start;position:relative;overflow:hidden}
+@media(max-width:600px){.josh-card{grid-template-columns:1fr;padding:28px}}
 .josh-card-orb{position:absolute;width:400px;height:400px;top:-80px;right:-80px;background:radial-gradient(circle,rgba(105,90,255,0.2) 0%,transparent 65%);border-radius:50%;pointer-events:none}
-.josh-img{position:relative;z-index:1;border-radius:14px;overflow:hidden;aspect-ratio:3/4}
+.josh-img{position:relative;z-index:1;border-radius:14px;overflow:hidden;aspect-ratio:3/4;max-width:200px}
 .josh-img img{width:100%;height:100%;object-fit:cover;object-position:top}
 .josh-content{position:relative;z-index:1}
-.josh-eyebrow{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.4);margin-bottom:12px}
-.josh-content h2{font-size:clamp(22px,2.5vw,32px);font-weight:600;color:#fff;letter-spacing:-0.03em;line-height:1.25;margin-bottom:16px}
-.josh-content p{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:14px}
-.josh-content p:last-of-type{margin-bottom:28px}
-.josh-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.josh-tag{background:rgba(255,255,255,0.08);border:0.5px solid rgba(255,255,255,0.15);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.7)}
-.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0E0E44;padding:12px 24px;border-radius:10px;font-weight:500;font-size:14px;font-family:'Poppins',sans-serif;text-decoration:none;transition:opacity 0.2s}
-.btn-white:hover{opacity:0.9}
+.josh-eyebrow{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.65);margin-bottom:8px}
+.josh-content h3{font-size:24px;font-weight:600;color:#fff;letter-spacing:-0.02em;margin-bottom:12px}
+.josh-content p.josh-bio{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:18px}
+.josh-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.josh-tag{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:500;color:#fff}
+.josh-linkedin{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#fff;text-decoration:underline;text-underline-offset:4px;padding:12px 0}
+.roles{display:flex;flex-direction:column;gap:14px}
+.role{border:1px solid rgba(14,14,68,0.12);border-radius:14px;padding:20px 22px;flex:1}
+.role h4{font-size:15px;font-weight:600;color:#0E0E44;margin-bottom:4px}
+.role p{font-size:13px;line-height:1.6;color:rgba(14,14,68,0.75)}
+
+/* Causes */
+#causes{background:#f6f6fb;padding:88px 0}
+.causes-grid{display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start}
+@media(max-width:900px){.causes-grid{grid-template-columns:1fr;gap:32px}}
+.causes-intro .section-h2{margin-bottom:16px}
+.causes-intro p.causes-text{font-size:15px;line-height:1.8;color:rgba(14,14,68,0.75);margin-bottom:14px}
+.cause-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:600px){.cause-cards{grid-template-columns:1fr}}
+.cause{background:#fff;border:1px solid rgba(14,14,68,0.1);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.cause-logo{height:72px;display:flex;align-items:center}
+.cause-logo img{max-height:72px;max-width:160px;width:auto;object-fit:contain}
+.cause-logo img.wide{max-width:200px}
+.cause h3{font-size:17px;font-weight:600;color:#0E0E44}
+.cause p{font-size:14px;line-height:1.65;color:rgba(14,14,68,0.75)}
+.cause a{margin-top:auto;padding-top:12px;color:#4B3FD6;font-size:14px;font-weight:600}
+.cause a:hover{text-decoration:underline}
+
+/* Quote */
+#quote{background:#0E0E44;padding:72px 0;text-align:center}
+#quote blockquote{max-width:680px;margin:0 auto 22px;font-size:clamp(18px,2vw,22px);line-height:1.6;color:#fff}
+#quote .quote-attr{font-size:14px;color:rgba(255,255,255,0.7)}
 
 /* CTA */
-#cta{padding:96px 0;background:linear-gradient(135deg,rgba(105,90,255,0.07) 0%,rgba(105,90,255,0.04) 50%,rgba(255,92,174,0.06) 100%);border-top:0.5px solid rgba(105,90,255,0.12);border-bottom:0.5px solid rgba(105,90,255,0.08)}
+#cta{padding:88px 0;background:#fff}
 .cta-inner{max-width:620px;margin:0 auto;text-align:center}
-.cta-inner h2{font-size:clamp(24px,3vw,36px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;line-height:1.25;margin-bottom:16px}
-.cta-inner p{font-size:16px;color:rgba(14,14,68,0.6);line-height:1.75;margin-bottom:32px}
+.cta-inner h2{font-size:clamp(24px,3vw,36px);font-weight:600;color:#0E0E44;letter-spacing:-0.03em;line-height:1.25;margin-bottom:14px}
+.cta-inner p{font-size:16px;color:rgba(14,14,68,0.75);line-height:1.75;margin-bottom:28px}
+.cta-links{margin-top:20px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;font-size:14px;font-weight:500;color:#4B3FD6}
+.cta-links a{padding:12px 0}
+.cta-links a:hover{text-decoration:underline}
+
+@media(prefers-reduced-motion:reduce){.fade-up{opacity:1;transform:none;transition:none}}
 
 /* Footer */
 footer{background:#0E0E44;padding:64px 0 32px}
@@ -121,10 +175,13 @@ footer{background:#0E0E44;padding:64px 0 32px}
 .footer-links a:hover{color:rgba(255,255,255,0.7)}
 
 @media(max-width:768px){
-  #hero{padding:110px 0 56px}
-  .hero-inner h1{font-size:28px;color:#fff}
-  #story{padding:0 0 56px}
-  #meet-josh{padding:0 0 56px}
+  #hero{padding:116px 0 112px}
+  .hero-inner h1{font-size:28px}
+  .hero-logos img{height:30px}
+  #story{padding:56px 0}
+  #team{padding:0 0 56px}
+  #causes{padding:56px 0}
+  #quote{padding:56px 0}
   #cta{padding:64px 0}
   .cta-inner .btn-primary{width:100%;justify-content:center}
   .footer-bottom{flex-direction:column;align-items:flex-start}
@@ -217,7 +274,39 @@ footer{background:#0E0E44;padding:64px 0 32px}
     <div class="hero-inner">
       <p class="hero-tag fade-up">About us</p>
       <h1 class="fade-up s1">We believe the best content comes from real conversations.</h1>
-      <p class="fade-up s2">Blueberry Media is a small, focused team based in Berkshire. We work directly with founders and senior leaders who want to build LinkedIn personal branding and genuine authority.</p>
+      <p class="hero-sub fade-up s2">Blueberry Media is a small, focused team based in Berkshire. We work directly with founders and senior leaders who want to build LinkedIn personal branding and genuine authority.</p>
+      <div class="hero-cta fade-up s3">
+        <a href="/contact" class="btn-white">Start a conversation →</a>
+      </div>
+      <div class="fade-up s3">
+        <p class="hero-featured-label">Our clients have been featured in</p>
+        <div class="hero-logos">
+          <img src="/images/logo-itv.png" alt="ITV">
+          <img src="/images/logo-telegraph.png" alt="The Telegraph">
+          <img src="/images/logo-london-daily-news.webp" alt="London Daily News">
+          <img src="/images/logo-bbc-radio4.png" alt="BBC Radio 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-card">
+      <div class="stat">
+        <div class="stat-num"><span data-count="10">10</span>+</div>
+        <div class="stat-label">Years in consulting at EY Lane4 and Accenture</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span data-count="300">300</span>+</div>
+        <div class="stat-label">Hours spent extracting views with leaders</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span data-count="3">3</span>+</div>
+        <div class="stat-label">Countries with active clients today. We work with leaders anywhere.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -227,61 +316,125 @@ footer{background:#0E0E44;padding:64px 0 32px}
   <div class="container">
     <div class="story-grid">
       <div class="story-body fade-up">
-        <h2>Our story</h2>
-        <p>Most content agencies treat LinkedIn like a broadcast channel. Push posts out with business updates and hope people listen.</p>
-        <p>We built Blueberry Media from a different starting point. Ten years working with leaders across boutique consultancies and enterprise organisations, learning how people form trust, build credibility, and decide who to follow and who to buy from. People have always bought from people. That's more true now than ever.</p>
-        <p>Audiences want to learn about the person behind the business. Your story, your thinking, your perspective. People and stories drive connection. Brands don't.</p>
-        <p>That is the insight Blueberry Media is built on. We take what is already in your head, formed by your experience, your frameworks, your instincts, your opinions, and turn it into content that builds the kind of familiarity and trust that shortens every sales conversation and makes people understand you.</p>
+        <p class="eyebrow">Our story</p>
+        <h2 class="section-h2">Where Blueberry Media came from</h2>
+        <p>Our founder, Josh Huggins, spent ten years in people and organisation consulting at EY Lane4 and Accenture. He worked with leaders at Barclays, BMW, easyJet, Nationwide and Balfour Beatty, helping them earn trust, change behaviour and run communication and engagement programmes that reached thousands of people. His psychology degree underpinned all of it, because the work came down to leadership behaviour and building trust.</p>
+        <p>In 2021, after redundancy, Josh started freelancing for a handful of CEOs. They had great businesses, but no communication strategy and no marketing, and very few buyers knew who they were. Drawing parallels from leadership, people build trust internally in the same way they build trust in the market; by credible, reliable and showing more of themself.</p>
+        <p>That is what Blueberry Media does today. We help founders and senior leaders build a personal brand and share their thinking on LinkedIn, making them human and credible across their industry.</p>
+        <a href="/how-it-works" class="text-link">See how the process works →</a>
       </div>
-      <div class="beliefs-card fade-up s1">
+      <div class="beliefs fade-up s1">
         <h3>What we believe</h3>
         <div class="belief">
           <h4>Leaders should be visible</h4>
-          <p>The most successful companies are led by visible, trusted leaders. Your voice is a competitive advantage.</p>
+          <p>Buyers look up the person before they speak to the company.</p>
+          <p class="belief-proof">One CEO client was invited to pitch a major high-street retailer.</p>
         </div>
         <div class="belief">
-          <h4>Authenticity beats performance</h4>
-          <p>Real expertise and genuine perspective will always outperform manufactured content. We help you share yours.</p>
+          <h4>Your own words work best</h4>
+          <p>Every post starts as something you said on a call.</p>
+          <p class="belief-proof">"From a 40-minute call, is quite remarkable." CEO, ex-IBM leader</p>
         </div>
         <div class="belief">
-          <h4>Consistency compounds</h4>
-          <p>Authority isn't built overnight. Strategic, consistent content creates compounding returns over time.</p>
-        </div>
-        <div class="belief">
-          <h4>Build your unfair advantage</h4>
-          <p>You are making sales harder if nobody knows you exist. Attract warmer conversations from people who already understand what you do.</p>
+          <h4>Showing up every week pays off</h4>
+          <p>Three to four posts a week, with a report every month.</p>
+          <p class="belief-proof">One client's network grew 173% in under 12 months.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MEET JOSH -->
-<section id="meet-josh">
+<!-- TEAM -->
+<section id="team">
   <div class="container">
-    <div class="josh-card fade-up">
-      <div class="josh-card-orb"></div>
-      <div class="josh-img">
-        <img src="/images/josh-huggins.png" alt="Josh Huggins, Founder of Blueberry Media">
-      </div>
-      <div class="josh-content">
-        <p class="josh-eyebrow">Founder & Lead Strategist</p>
-        <h2>Josh Huggins</h2>
-        <p>Josh spent a decade in people and organisation consulting, working with leaders across professional services, SaaS, and enterprise before founding Blueberry Media to help those same leaders build the visibility their work deserves.</p>
-        <p>His background in psychology and behaviour change shapes how every piece of content is structured. Not to fill a feed, but to influence how buyers think and decide before they ever reach out.</p>
-        <div class="josh-tags">
-          <span class="josh-tag">10+ years with B2B leaders</span>
-          <span class="josh-tag">Psychology & behaviour change</span>
-          <span class="josh-tag">LinkedIn strategy</span>
-          <span class="josh-tag">Berkshire, UK</span>
+    <p class="eyebrow fade-up">Who you'll work with</p>
+    <h2 class="section-h2 fade-up">A small team, with big ambitions.</h2>
+    <p class="team-intro fade-up">We run your strategy, interviews, writing and editing. AI helps us with the research, but our copywriters take the lead on your posts.</p>
+    <div class="team-grid fade-up">
+      <div class="josh-card">
+        <div class="josh-card-orb"></div>
+        <div class="josh-img">
+          <img src="/images/josh-huggins.png" alt="Josh Huggins, Founder of Blueberry Media" loading="lazy">
         </div>
-        <a href="/contact" class="btn-white">Work with Josh →</a>
-        <a href="https://www.linkedin.com/in/joshua-huggins-socialmedia/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;margin-top:8px">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          Connect on LinkedIn
-        </a>
+        <div class="josh-content">
+          <p class="josh-eyebrow">Founder, strategy and interviews</p>
+          <h3>Josh Huggins</h3>
+          <p class="josh-bio">Josh leads your strategy and runs every interview. His psychology degree and behaviour change work ensure each call has a safe environment, feels natural and produces real insight.</p>
+          <div class="josh-tags">
+            <span class="josh-tag">EY Lane4</span>
+            <span class="josh-tag">Accenture</span>
+            <span class="josh-tag">BSc Psychology</span>
+          </div>
+          <a href="https://www.linkedin.com/in/joshua-huggins-socialmedia/" target="_blank" rel="noopener" class="josh-linkedin">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="roles">
+        <div class="role">
+          <h4>Writers</h4>
+          <p>Turn your transcript into posts with hooks and CTAs before turning them into articles.</p>
+        </div>
+        <div class="role">
+          <h4>Video editors</h4>
+          <p>Colour grade, subtitle and brand your short clips from the same call.</p>
+        </div>
+        <div class="role">
+          <h4>Designers</h4>
+          <p>Create your LinkedIn banners, infographics or carousels.</p>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CAUSES -->
+<section id="causes">
+  <div class="container">
+    <div class="causes-grid">
+      <div class="causes-intro fade-up">
+        <p class="eyebrow">Beyond the work</p>
+        <h2 class="section-h2">Good organisations we stand behind</h2>
+        <p class="causes-text">We are a people business, and we like supporting good organisations doing great things.</p>
+        <p class="causes-text">These four do brilliant work on some hard problems. If you can give them some encouragement, please do.</p>
+      </div>
+      <div class="cause-cards fade-up s1">
+        <div class="cause">
+          <div class="cause-logo"><img src="/images/causes/felix-project.png" alt="The Felix Project logo" width="72" height="72" loading="lazy"></div>
+          <h3>The Felix Project</h3>
+          <p>Collects good food that would have gone to waste and delivers it to charities and schools across London, so fewer people go hungry.</p>
+          <a href="https://thefelixproject.org" target="_blank" rel="noopener">Visit thefelixproject.org ↗</a>
+        </div>
+        <div class="cause">
+          <div class="cause-logo"><img src="/images/causes/macmillan.png" alt="Macmillan Cancer Support logo" width="113" height="72" loading="lazy"></div>
+          <h3>Macmillan Cancer Support</h3>
+          <p>Nurses, advice and practical help for people living with cancer, and for the families around them.</p>
+          <a href="https://www.macmillan.org.uk" target="_blank" rel="noopener">Visit macmillan.org.uk ↗</a>
+        </div>
+        <div class="cause">
+          <div class="cause-logo"><img src="/images/causes/dogs-trust.webp" alt="Dogs Trust logo" width="72" height="72" loading="lazy"></div>
+          <h3>Dogs Trust</h3>
+          <p>The UK's largest dog welfare charity. They care for and rehome thousands of dogs every year, and never put a healthy dog down.</p>
+          <a href="https://www.dogstrust.org.uk" target="_blank" rel="noopener">Visit dogstrust.org.uk ↗</a>
+        </div>
+        <div class="cause">
+          <div class="cause-logo"><img class="wide" src="/images/causes/focused-for-business.webp" alt="Focused for Business logo" width="200" height="38" loading="lazy"></div>
+          <h3>Focused for Business</h3>
+          <p>Helps entrepreneurs start and grow their businesses. Josh gives his time here as a start-up mentor.</p>
+          <!-- TODO: add the Focused for Business website link here, same pattern as the other three cards -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section id="quote">
+  <div class="container fade-up">
+    <blockquote>"I had spoken to lots of different agencies and what you offer and how you deliver it is so innovative and exactly what we needed."</blockquote>
+    <p class="quote-attr">Co-founder, transformation consultancy</p>
   </div>
 </section>
 
@@ -289,9 +442,14 @@ footer{background:#0E0E44;padding:64px 0 32px}
 <section id="cta">
   <div class="container">
     <div class="cta-inner fade-up">
-      <h2>Ready to <span class="gradient-text">work together</span>?</h2>
-      <p>Let's have a conversation about your starting point and see if there's alignment. No pressure, just a virtual coffee.</p>
-      <a href="https://www.cal.eu/josh-huggins-mkwhu8/30min" target="_blank" rel="noopener noreferrer" class="btn-primary">Start a Conversation →</a>
+      <h2>Ready to work together?</h2>
+      <p>Tell us where you are starting from and we will see if there is a fit. No pressure, just a virtual coffee.</p>
+      <a href="/contact" class="btn-primary">Start a conversation →</a>
+      <div class="cta-links">
+        <a href="/how-it-works">Our process</a>
+        <a href="/linkedin-marketing-case-study">Case study</a>
+        <a href="/services">Services</a>
+      </div>
     </div>
   </div>
 </section>
@@ -347,6 +505,28 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+/* Stats count-up on scroll */
+(function(){
+  var strip=document.getElementById('stats');
+  if(!strip||!('IntersectionObserver' in window))return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var nums=[].slice.call(strip.querySelectorAll('[data-count]'));
+  nums.forEach(function(n){n.textContent='0';});
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      io.disconnect();
+      var start=performance.now();
+      (function step(now){
+        var p=Math.min((now-start)/1600,1),t=1-Math.pow(1-p,3);
+        nums.forEach(function(n){n.textContent=Math.round(n.getAttribute('data-count')*t);});
+        if(p<1)requestAnimationFrame(step);
+      })(start);
+    });
+  },{threshold:0.5});
+  io.observe(strip);
+})();
 </script>
 </body>
 </html>
