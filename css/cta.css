@@ -1,0 +1,98 @@
+/* Start a Conversation button: cursor glow + drawing arrow.
+   Targets every primary button that links to /contact. No markup changes needed.
+   The pill does not move on hover; only the glow and arrow animate. */
+
+a.btn-primary[href="/contact"] {
+  --mx: 50%;
+  --my: 50%;
+  --cta-glow: rgba(255, 255, 255, 0.28);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  gap: 10px;
+  transition: box-shadow 0.35s ease, filter 0.15s ease;
+}
+
+/* Glow that follows the cursor (position set by /js/cta.js) */
+a.btn-primary[href="/contact"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(150px circle at var(--mx) var(--my), var(--cta-glow), transparent 62%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Arrow: chevron at rest, shaft draws in and tip steps forward on hover */
+a.btn-primary[href="/contact"]::after {
+  content: "";
+  flex: none;
+  width: 14px;
+  height: 12px;
+  background-color: currentColor;
+  -webkit-mask:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M3.6 1.8L7.8 6L3.6 10.2' fill='none' stroke='%23000' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat 0 0 / 14px 12px,
+    linear-gradient(#000, #000) no-repeat 1.2px 5.05px / 0 1.9px;
+  mask:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M3.6 1.8L7.8 6L3.6 10.2' fill='none' stroke='%23000' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat 0 0 / 14px 12px,
+    linear-gradient(#000, #000) no-repeat 1.2px 5.05px / 0 1.9px;
+  -webkit-mask-position: 0 0, 1.2px 5.05px;
+  mask-position: 0 0, 1.2px 5.05px;
+  -webkit-mask-size: 14px 12px, 0 1.9px;
+  mask-size: 14px 12px, 0 1.9px;
+  transition: -webkit-mask-position 0.3s cubic-bezier(.23, 1, .32, 1), -webkit-mask-size 0.3s cubic-bezier(.23, 1, .32, 1),
+              mask-position 0.3s cubic-bezier(.23, 1, .32, 1), mask-size 0.3s cubic-bezier(.23, 1, .32, 1);
+}
+
+/* Hover only on devices with a mouse, so taps on phones never flash a hover state */
+@media (hover: hover) and (pointer: fine) {
+  a.btn-primary[href="/contact"]:hover {
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow: 0 0 40px -10px rgba(105, 90, 255, 0.55);
+  }
+  a.btn-primary[href="/contact"]:hover::before { opacity: 1; }
+  a.btn-primary[href="/contact"]:hover::after {
+    -webkit-mask-position: 3.6px 0, 1.2px 5.05px;
+    mask-position: 3.6px 0, 1.2px 5.05px;
+    -webkit-mask-size: 14px 12px, 9px 1.9px;
+    mask-size: 14px 12px, 9px 1.9px;
+  }
+}
+
+/* Touch devices: no hover, so show the full arrow at rest */
+@media (hover: none) {
+  a.btn-primary[href="/contact"]::after {
+    -webkit-mask-position: 3.6px 0, 1.2px 5.05px;
+    mask-position: 3.6px 0, 1.2px 5.05px;
+    -webkit-mask-size: 14px 12px, 9px 1.9px;
+    mask-size: 14px 12px, 9px 1.9px;
+  }
+}
+
+/* Press: darkens slightly, no scale */
+a.btn-primary[href="/contact"]:active { filter: brightness(0.9); }
+
+a.btn-primary[href="/contact"]:focus-visible {
+  outline: 3px solid #695AFF;
+  outline-offset: 3px;
+}
+
+/* White button variants on dark sections: tint the glow purple so it shows */
+.post-cta a.btn-primary[href="/contact"] { --cta-glow: rgba(105, 90, 255, 0.18); }
+
+/* Nav button: 44px minimum touch target (overrides the 10px inline padding) */
+.nav-right a.btn-primary[href="/contact"] {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.btn-primary[href="/contact"]::after,
+  a.btn-primary[href="/contact"]::before { transition: none; }
+}
