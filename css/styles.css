@@ -392,3 +392,27 @@ footer { background: #0E0E44; color: #fff; padding: 64px 0 0; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
+
+/* Mobile fixes (Oct 2026): phone layout only, desktop unchanged */
+@media (max-width: 900px) {
+  .nav-right { margin-left: auto; }
+  #menu-btn { padding: 10px; margin-right: -10px; }
+  /* The nav's blur trapped the full-screen menu inside the 72px bar on pages
+     where the menu sits inside the nav. Move the blur to a layer behind it. */
+  #nav { backdrop-filter: none; -webkit-backdrop-filter: none; background: transparent; }
+  #nav::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  #nav .nav-inner { position: relative; z-index: 100; }
+  #mobile-menu .btn-primary { color: #fff; }
+  #mobile-menu li.mm-sub { margin-top: -18px; }
+  #mobile-menu li.mm-sub a { display: block; padding: 6px 0; font-size: 16px; color: rgba(14,14,68,0.6); }
+  table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+@media (max-width: 600px) {
+  .section, .faq-section, .cta-section, .buying-journey, .visibility-impact, .testimonials, .content-framework, .why-tl { padding-top: 56px; padding-bottom: 56px; }
+  .page-hero { padding-top: 64px; padding-bottom: 64px; }
+  footer img { max-width: 100%; height: auto; }
+}
+@media (max-width: 520px) {
+  .nav-inner { gap: 16px; }
+  .nav-right .btn-primary { display: none; }
+}
