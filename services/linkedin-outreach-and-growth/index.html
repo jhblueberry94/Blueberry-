@@ -462,6 +462,9 @@ footer{background:#0E0E44;padding:64px 0 32px;border-top:0.5px solid rgba(255,25
 @media(max-width:768px){.nav-inner{padding:0 24px}}
 @media(max-width:560px){.def-banner{grid-template-columns:minmax(0,1fr)!important;padding:28px 20px}.def-flow{flex-wrap:wrap;row-gap:12px;padding:24px 12px}}
 @media(max-width:480px){.pv-distribute-stage{gap:8px}.pv-dist-side{width:25%}.pv-dist-main{width:42%}}
+
+/* Mobile menu (Oct 2026): centred, matches the rest of the site */
+@media(max-width:900px){#mobile-menu.mobile-menu{top:0;padding:24px;align-items:center;justify-content:center;gap:24px;text-align:center;overflow-y:auto}#mobile-menu.mobile-menu a{font-size:20px;padding:0;border-bottom:none}#mobile-menu.mobile-menu a.mm-sub{padding:6px 0;font-size:16px;color:rgba(14,14,68,0.6);margin-top:-18px}#mobile-menu.mobile-menu a.btn-primary{color:#fff;font-size:16px;margin-top:0;padding:14px 28px;white-space:nowrap;border-radius:50px}.hamburger{padding:10px;margin-right:-10px}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5HFCWPMKY"></script>
 <script>
@@ -513,6 +516,8 @@ footer{background:#0E0E44;padding:64px 0 32px;border-top:0.5px solid rgba(255,25
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="/services">Services</a>
+  <a href="/services/linkedin-personal-branding-agency" class="mm-sub">LinkedIn personal branding</a>
+  <a href="/services/linkedin-outreach-and-growth" class="mm-sub">LinkedIn outreach and growth</a>
   <a href="/how-it-works">Our Process</a>
   <a href="/who-its-for">Who It's For</a>
   <a href="/about">About</a>
