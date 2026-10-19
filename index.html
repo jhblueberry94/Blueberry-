@@ -400,6 +400,19 @@ footer{background:#0E0E44;padding:64px 0 32px}
 
 /* Mobile menu (Oct 2026): centred, matches the rest of the site */
 @media(max-width:900px){#mobile-menu.mobile-menu{top:0;padding:24px;align-items:center;justify-content:center;gap:24px;text-align:center;overflow-y:auto}#mobile-menu.mobile-menu a{font-size:20px;padding:0;border-bottom:none}#mobile-menu.mobile-menu a.mm-sub{padding:6px 0;font-size:16px;color:rgba(14,14,68,0.6);margin-top:-18px}#mobile-menu.mobile-menu a.btn-primary{color:#fff;font-size:16px;margin-top:0;padding:14px 28px;white-space:nowrap;border-radius:50px}.hamburger{padding:10px;margin-right:-10px}}
+
+/* Testimonials on phones (Oct 2026): cards render on iPhone, one CTA, story opens under its card */
+.hint-touch{display:none}
+.t-view-btn svg{transition:transform 0.25s ease}
+.t-view-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+@media(max-width:900px),(hover:none){.hint-hover{display:none}.hint-touch{display:inline}.t-hover-quote{max-height:180px;opacity:1;margin-bottom:16px}}
+@media(max-width:900px){
+  .t-card{aspect-ratio:auto;height:min(125vw,540px)}
+  .t-cta-card{display:none}
+  .t-view-btn{padding:10px 16px;font-size:12px}
+  .testi-grid .story-panel{margin-top:0;padding:24px 20px}
+  .testi-grid .story-img{display:none}
+}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5HFCWPMKY"></script>
 <script>
@@ -1251,7 +1264,7 @@ document.querySelectorAll('.wt-video').forEach(media => {
   <div class="container">
     <div style="max-width:640px;margin-bottom:48px">
       <h2 class="section-heading fade-up">Trusted by <span class="gradient-text">experienced leaders</span></h2>
-      <p class="body-large fade-up stagger-1" style="margin-top:12px">Hover to hear what they have to say</p>
+      <p class="body-large fade-up stagger-1" style="margin-top:12px"><span class="hint-hover">Hover to hear what they have to say</span><span class="hint-touch">Tap View story to read the full results</span></p>
     </div>
     <div class="testi-grid">
 
@@ -1280,7 +1293,7 @@ document.querySelectorAll('.wt-video').forEach(media => {
               <p class="t-name">Norm Wilkinson</p>
               <p class="t-role">CEO, Consultant. Ex-IBM Leader</p>
             </div>
-            <button class="t-view-btn" onclick="toggleStory('norm')">
+            <button class="t-view-btn" onclick="toggleStory('norm')" aria-expanded="false" aria-controls="story-norm">
               View story
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
@@ -1320,7 +1333,7 @@ document.querySelectorAll('.wt-video').forEach(media => {
               <p class="t-name">Mark Balaam</p>
               <p class="t-role">Founder CEO, Imabi</p>
             </div>
-            <button class="t-view-btn" onclick="toggleStory('mark')">
+            <button class="t-view-btn" onclick="toggleStory('mark')" aria-expanded="false" aria-controls="story-mark">
               View story
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
@@ -1619,25 +1632,27 @@ if(fwPanel){
 
 /* ── Testimonial story panels ── */
 function toggleStory(person){
-  const normCard = document.getElementById('card-norm');
-  const markCard = document.getElementById('card-mark');
-  const normPanel = document.getElementById('story-norm');
-  const markPanel = document.getElementById('story-mark');
-  if(person==='norm'){
-    const open = normCard.classList.contains('active');
-    normCard.classList.toggle('active',!open);
-    markCard.classList.remove('active');
-    normPanel.style.display = open ? 'none' : 'block';
-    markPanel.style.display = 'none';
-    if(!open){ normPanel.style.animation='none'; void normPanel.offsetWidth; normPanel.style.animation='storyFadeUp 0.3s ease-out forwards'; }
-  } else {
-    const open = markCard.classList.contains('active');
-    markCard.classList.toggle('active',!open);
-    normCard.classList.remove('active');
-    markPanel.style.display = open ? 'none' : 'block';
-    normPanel.style.display = 'none';
-    if(!open){ markPanel.style.animation='none'; void markPanel.offsetWidth; markPanel.style.animation='storyFadeUp 0.3s ease-out forwards'; }
-  }
+  const people = ['norm','mark'];
+  const mobile = window.matchMedia('(max-width:900px)').matches;
+  people.forEach(p => {
+    const card = document.getElementById('card-'+p);
+    const panel = document.getElementById('story-'+p);
+    const btn = card.querySelector('.t-view-btn');
+    const opening = p === person && !card.classList.contains('active');
+    card.classList.toggle('active', opening);
+    btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+    btn.firstChild.nodeValue = opening ? ' Hide story ' : ' View story ';
+    if (opening) {
+      // On phones, open the story directly under its own card
+      if (mobile && card.nextElementSibling !== panel) card.after(panel);
+      panel.style.display = 'block';
+      panel.style.animation = 'none'; void panel.offsetWidth; panel.style.animation = 'storyFadeUp 0.3s ease-out forwards';
+      // keep the card's Hide story button in view, with the story starting just below it
+      if (mobile) window.scrollTo({top: panel.getBoundingClientRect().top + window.scrollY - 180, behavior:'smooth'});
+    } else {
+      panel.style.display = 'none';
+    }
+  });
 }
 
 /* ── FAQ accordion ── */
