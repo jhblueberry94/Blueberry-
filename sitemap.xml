@@ -55,7 +55,7 @@
     <priority>0.8</priority>
     <lastmod>2026-10-19</lastmod>
   </url>
-  <!-- Sector pages -->
+  <!-- Sector pages (role hub) -->
   <url>
     <loc>https://blueberry-media.co.uk/fintech-founders</loc>
     <changefreq>monthly</changefreq>
@@ -68,35 +68,36 @@
     <priority>0.7</priority>
     <lastmod>2026-10-19</lastmod>
   </url>
+  <!-- Role pages -->
   <url>
     <loc>https://blueberry-media.co.uk/consultants</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/b2b-founders</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/sales-leaders</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/fractional-executives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/professional-services-leaders</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/private-equity-partners</loc>
@@ -280,18 +281,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-08-04</lastmod>
-  </url>
-  <url>
-    <loc>https://blueberry-media.co.uk/blog/lever-brands-alternatives-uk</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://blueberry-media.co.uk/blog/linkedin-personal-branding-agency-vs-in-house</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://blueberry-media.co.uk/blog/linkedin-inmail-vs-connection-requests</loc>
