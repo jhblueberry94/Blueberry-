@@ -3,7 +3,7 @@
 (function () {
   if (!window.matchMedia || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
   document.addEventListener('pointermove', function (e) {
-    var btn = e.target && e.target.closest ? e.target.closest('a.btn-primary[href="/contact"]') : null;
+    var btn = e.target && e.target.closest ? e.target.closest('a.btn-primary[href="/contact"], a.btn-primary.cta-draw') : null;
     if (!btn) return;
     var r = btn.getBoundingClientRect();
     btn.style.setProperty('--mx', Math.round(e.clientX - r.left) + 'px');
