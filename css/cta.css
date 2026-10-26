@@ -1,8 +1,8 @@
 /* Start a Conversation button: cursor glow + drawing arrow.
-   Targets every primary button that links to /contact. No markup changes needed.
+   Targets every primary button that links to /contact, plus any primary button with the cta-draw class. No markup changes needed.
    The pill does not move on hover; only the glow and arrow animate. */
 
-a.btn-primary[href="/contact"] {
+a.btn-primary[href="/contact"], a.btn-primary.cta-draw {
   --mx: 50%;
   --my: 50%;
   --cta-glow: rgba(255, 255, 255, 0.28);
@@ -14,7 +14,7 @@ a.btn-primary[href="/contact"] {
 }
 
 /* Glow that follows the cursor (position set by /js/cta.js) */
-a.btn-primary[href="/contact"]::before {
+a.btn-primary[href="/contact"]::before, a.btn-primary.cta-draw::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -27,7 +27,7 @@ a.btn-primary[href="/contact"]::before {
 }
 
 /* Arrow: chevron at rest, shaft draws in and tip steps forward on hover */
-a.btn-primary[href="/contact"]::after {
+a.btn-primary[href="/contact"]::after, a.btn-primary.cta-draw::after {
   content: "";
   flex: none;
   width: 14px;
@@ -49,13 +49,13 @@ a.btn-primary[href="/contact"]::after {
 
 /* Hover only on devices with a mouse, so taps on phones never flash a hover state */
 @media (hover: hover) and (pointer: fine) {
-  a.btn-primary[href="/contact"]:hover {
+  a.btn-primary[href="/contact"]:hover, a.btn-primary.cta-draw:hover {
     opacity: 1 !important;
     transform: none !important;
     box-shadow: 0 0 40px -10px rgba(105, 90, 255, 0.55);
   }
-  a.btn-primary[href="/contact"]:hover::before { opacity: 1; }
-  a.btn-primary[href="/contact"]:hover::after {
+  a.btn-primary[href="/contact"]:hover::before, a.btn-primary.cta-draw:hover::before { opacity: 1; }
+  a.btn-primary[href="/contact"]:hover::after, a.btn-primary.cta-draw:hover::after {
     -webkit-mask-position: 3.6px 0, 1.2px 5.05px;
     mask-position: 3.6px 0, 1.2px 5.05px;
     -webkit-mask-size: 14px 12px, 9px 1.9px;
@@ -65,7 +65,7 @@ a.btn-primary[href="/contact"]::after {
 
 /* Touch devices: no hover, so show the full arrow at rest */
 @media (hover: none) {
-  a.btn-primary[href="/contact"]::after {
+  a.btn-primary[href="/contact"]::after, a.btn-primary.cta-draw::after {
     -webkit-mask-position: 3.6px 0, 1.2px 5.05px;
     mask-position: 3.6px 0, 1.2px 5.05px;
     -webkit-mask-size: 14px 12px, 9px 1.9px;
@@ -74,9 +74,9 @@ a.btn-primary[href="/contact"]::after {
 }
 
 /* Press: darkens slightly, no scale */
-a.btn-primary[href="/contact"]:active { filter: brightness(0.9); }
+a.btn-primary[href="/contact"]:active, a.btn-primary.cta-draw:active { filter: brightness(0.9); }
 
-a.btn-primary[href="/contact"]:focus-visible {
+a.btn-primary[href="/contact"]:focus-visible, a.btn-primary.cta-draw:focus-visible {
   outline: 3px solid #695AFF;
   outline-offset: 3px;
 }
@@ -93,6 +93,6 @@ a.btn-primary[href="/contact"]:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  a.btn-primary[href="/contact"]::after,
-  a.btn-primary[href="/contact"]::before { transition: none; }
+  a.btn-primary[href="/contact"]::after, a.btn-primary.cta-draw::after,
+  a.btn-primary[href="/contact"]::before, a.btn-primary.cta-draw::before { transition: none; }
 }
