@@ -1,15 +1,19 @@
 // Cookie consent for blueberry-media.co.uk (option C, corner card).
 // Added to each page with one line, directly above the Google Analytics snippet:
-// <script src="/js/consent.js?v=1"></script>
+// <script src="/js/consent.js?v=2"></script>
+// Bump the ?v= number on every page whenever this file changes, because /js/
+// files are cached by browsers for a year.
 // It loads before the analytics snippet so Google's consent defaults are set
 // first. Analytics cookies stay off until a visitor clicks Accept. The Google
 // Analytics snippet itself stays in each page because Search Console uses it to
 // verify ownership of the site.
-// The choice is kept for 6 months. Raise VERSION when a new tool is added so
+// Tools that only load after Accept: Google Analytics 4 (consent mode) and
+// Microsoft Clarity. The choice is kept for 6 months. Raise VERSION when a new tool is added so
 // everyone is asked again. Any element with data-cookie-settings reopens the card.
 (function () {
   var KEY = 'bm_consent';
-  var VERSION = 1;
+  var VERSION = 2;
+  var CLARITY_ID = 'z7ffj3mnr1';
   var MAX_AGE = 182 * 864e5;
   var RELEASE_DELAY = 1500;
 
@@ -37,6 +41,24 @@
     ad_personalization: 'denied'
   });
   gtag('set', 'ads_data_redaction', true);
+
+  // Microsoft Clarity: loaded only after Accept, with ads storage always denied.
+  var clarityLoaded = false;
+  function loadClarity() {
+    if (clarityLoaded) return;
+    clarityLoaded = true;
+    window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
+    window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' });
+    var t = document.createElement('script');
+    t.async = true;
+    t.src = 'https://www.clarity.ms/tag/' + CLARITY_ID;
+    (document.head || doc).appendChild(t);
+  }
+  function stopClarity() {
+    if (!clarityLoaded || !window.clarity) return;
+    window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
+    window.clarity('consent', false);
+  }
 
   var css = '' +
     '.bmc-card{position:fixed;left:24px;bottom:24px;z-index:950;width:348px;box-sizing:border-box;padding:22px 22px 20px;border-radius:18px;background:#fff;border:0.5px solid rgba(14,14,68,0.1);box-shadow:0 24px 60px rgba(14,14,68,0.2);font-family:"Poppins",sans-serif;color:#0E0E44;display:flex;flex-direction:column;gap:12px;-webkit-font-smoothing:antialiased;opacity:0;transform:translateY(16px);transition:opacity .35s ease,transform .35s ease}' +
@@ -83,7 +105,7 @@
     var domains = ['', host, '.' + host, location.hostname, '.' + location.hostname];
     document.cookie.split(';').forEach(function (c) {
       var name = c.split('=')[0].trim();
-      if (name !== '_ga' && name.indexOf('_ga_') !== 0) return;
+      if (name !== '_ga' && name.indexOf('_ga_') !== 0 && name !== '_clck' && name !== '_clsk') return;
       domains.forEach(function (d) {
         document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : '');
       });
@@ -94,7 +116,8 @@
     write(value);
     choice = value;
     gtag('consent', 'update', { analytics_storage: value === 'accepted' ? 'granted' : 'denied' });
-    if (value === 'rejected') clearGaCookies();
+    if (value === 'accepted') loadClarity();
+    if (value === 'rejected') { stopClarity(); clearGaCookies(); }
     close();
     if (doc.classList.contains('bmc-hold')) {
       setTimeout(function () { doc.classList.remove('bmc-hold'); }, RELEASE_DELAY);
@@ -154,6 +177,8 @@
   });
 
   window.bmConsent = { open: open, get: function () { return choice; } };
+
+  if (choice === 'accepted') loadClarity();
 
   if (!choice) {
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', open);
